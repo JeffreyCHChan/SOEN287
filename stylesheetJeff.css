@@ -1,0 +1,14 @@
+h1.Category {color: black; font-size: xx-large;}
+.MoreDescription{color: gray; font-size:xx-large ;}
+.aisleItem{color: black; font-size: 115%; }
+h4{color: red;}
+.description {font-size: 12pt;text-align: left;}
+.AvgCost {font-style: italic;}
+.Price {text-align: right;}
+.ProductOrder {background-color: gray;}
+.Quantity {color: black;}
+.Name {text-align: left;}
+.ProductCategory {text-align: left;}
+.Weight{text-align:"left"}
+.MoreDescription{text-align:"center"}
+.Country {text-align: left;}
