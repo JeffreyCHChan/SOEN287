@@ -1,14 +1,9 @@
 h1.Category {color: black; font-size: xx-large;}
-.MoreDescription{color: gray; font-size:xx-large ;}
-.aisleItem{color: black; font-size: 115%; }
-h4{color: red;}
-.description {font-size: 12pt;text-align: left;}
-.AvgCost {font-style: italic;}
-.Price {text-align: right;}
-.ProductOrder {background-color: gray;}
+.MoreDescription{color: black; text-align: center;}
+.aisleItem{height: 30%; width: auto;}
+.description {font-size: 12pt;text-align: left; color: black;}
+.AvgCost {font-style: italic;text-align: right; font-size: 115%;}
+.Price {color: black; text-align: right; }
+.ProductOrder {background-color: gray; text-align: right;}
 .Quantity {color: black;}
-.Name {text-align: left;}
-.ProductCategory {text-align: left;}
-.Weight{text-align:"left"}
-.MoreDescription{text-align:"center"}
-.Country {text-align: left;}
+.MoreDescriptionHyper{text-align:left}
