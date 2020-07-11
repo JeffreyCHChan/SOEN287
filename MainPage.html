@@ -6,6 +6,7 @@
     <title>Document</title>
 
     <style type ="text/css">
+
         header {
             text-align:center;
             background-image: url(images/headerimage.jpg);
@@ -15,6 +16,11 @@
             background-color:rgb(41, 128, 185);
             
             }
+        footer {
+            text-align: center;
+            background-color: cadetblue;
+
+            }
         
     </style>
 </head>
@@ -23,15 +29,19 @@ h1    {background-color: rgba(0, 255, 85, 0.192);}
 </style>
 
 <header>
-    <div class="topnav">
+    <div class="topnav" id="home">
         
         <a class="active" href="#home" style="color:seashell;">Home</a>
-        <a href="Aisle1" style="color: seashell;">Aisle1</a>
-        <a href="Aisle2" style="color: seashell;">Aisle2</a>
-        <a href="Aisle3" style="color: seashell;">Aisle3</a>
-        <a href="Aisle4" style="color: seashell;">Aisle4</a>
-        <a href="Aisle5" style="color: seashell;">Aisle5</a>
-        <a href="Contact Us" style="color: seashell;">Contact Us</a> 
+        <select onchange="window.location.href=this.value">
+            <option>Select Aisle</option>
+            <option value="https://stackoverflow.com/questions/20887920/how-to-link-option-tags-to-other-pages-in-html?lq=1">Aisle 1</option>
+            <option value="https://stackoverflow.com/questions/20887920/how-to-link-option-tags-to-other-pages-in-html?lq=1">Aisle 2</option>
+            <option>Aisle 3</option>
+            <option>Aisle 4</option>
+            <option>Aisle 5</option>
+        </select>
+        <a href="#StoreInformation" style="color: seashell;">Store Information</a>
+        <a href="#StoreHours" style="color: seashell;">Store Hours</a> 
         </div>  
            
 </header>
@@ -39,7 +49,24 @@ h1    {background-color: rgba(0, 255, 85, 0.192);}
     hi
 </p>
 <body>
-     <table>Store Information
+
+    <h1 id="Weekly Sales"> Weekly Sales:</h1>
+
+    <div class="sale"> 
+        <img src="https://c1.wallpaperflare.com/preview/234/467/590/chicken-breast-food-ingredients-chicken.jpg" alt="Chicken Breast" width="450px" style="border: 5px solid black" > 
+        <p>WAS: <del>$3.49/lb</del></p><p style="color: red;">IS: $2.99/lb</p>
+       
+        <img src="https://lh3.googleusercontent.com/proxy/NgoeAEHtXVH_mCSQk0zo6B9u-JXqVy3s5Bd1FWhOusAM_qPxAf-Ya_Lpzqgrt0kXG8DBQZfnrUXIIAkkU4O6ExIlBtnKn-jZsErx" style="border: 5px solid black" width="400px">
+        <p> WAS: <del>$2.99</del></p><p style = "color: red">IS: $2.49</p>
+        
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTMqeHixXYi6FdTsLP3H-KGaQ0uhXnuvafkNA&usqp=CAU" alt="Bananas" width="350px" style="border: 5px solid black">
+        <p>WAS: <del>$0.99/lb</del></p><p style="color: red;">IS: $0.59/lb</p>
+    </div>
+
+   
+
+     <table id="StoreInformation" border="border">
+         <caption>Store Information</caption>
          <tr>
              <th> Phone Number:</th>
              <td> (514)-999-999</td>
@@ -48,6 +75,46 @@ h1    {background-color: rgba(0, 255, 85, 0.192);}
              <th> Address: </th>
              <td> 123 Main Street</td>
          </tr>
-     </table>                                                                                                      
+     </table>
+
+     <p><pre>
+     </pre></p>
+
+     <table id="StoreHours" border="border">
+         <caption>Store Hours</caption>
+         <tr>
+             <th>
+                 Mon-Fri
+             </th>
+             <th>
+                 Sat-Sun
+             </th>
+         </tr>
+         <tr>
+             <td>
+                 8a.m.-10p.m.
+             </td>
+             <td>
+                 9a.m.-10p.m.
+             </td>
+         </tr>
+
+     </table>                                                                                                  
 </body>
+<footer>
+    <div class="botnav">
+        <a class="active" href="#home" style="color:black ;">Home</a>
+        <select onchange="window.location.href=this.value">
+            <option>Select Aisle</option>
+            <option value="https://stackoverflow.com/questions/20887920/how-to-link-option-tags-to-other-pages-in-html?lq=1">Aisle 1</option>
+            <option value="https://stackoverflow.com/questions/20887920/how-to-link-option-tags-to-other-pages-in-html?lq=1">Aisle 2</option>
+            <option>Aisle 3</option>
+            <option>Aisle 4</option>
+            <option>Aisle 5</option>
+        </select>
+        <a href="#StoreInformation" style="color: black;">Store Information</a>
+        <a href="#StoreHours" style="color: black;">Store Hours</a> 
+        <a href="#Weekly Sales" style="color: black;">Weekly Sales</a>
+        </div> 
+</footer>
 </html>
