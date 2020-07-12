@@ -2,43 +2,46 @@
     <head>
         <meta charset="UTF-8">
         <title>Milk</title>
-        <link rel="stylesheet" type="text/css" href="stylesheetJeff.css"/>    
+        <link rel="stylesheet" type="text/css" href="items.css"/>    
     </head>
 
     <body>
-        <h1>2% Milk</h1>
+
+        <p class="product">2% Milk</p>
         <hr>
-        <table border="1">
+        <table border="1" style="width: 100%;">
 
         <th cellspacing = ""><img src="https://beatrice.ca/static/wp-content/uploads/sites/2/2015/03/654563_2PCT_4L_ON_LR.jpg" alt="7-UP" height="400"></tcol>
             <h6 align="left" >source: Parmalat Canada Inc.</h6>
         </th>
         <th class="ProductOrder">
-            <h4 class="Price" align=right>Price: $12.00</h4>
-        <h6 align="right" class="AvgCost">$3/Liter</h6>
-        <label for="quatity" class="Quantity">Quantity:</label>
-        <input type="number" name= "Quantity" id="quantity">
+            <p  align="right" class="brand">Brand: Beatrice</p>
+            <p class="price" align=right>Price: $12.00</p>
+        <p align="right" class="avg-Price">$3/Liter</p>
+        <label for="quatity" class="quantity">Quantity:</label>
+        <input type="number" name= "quantity" id="quantity" value="1">
         
         <br>
         <input type="submit" value="Add to Cart" class="">
         
         </th>
-    </table>
-        <table border="1" cellspacing="1" id="ProductDescription">
+    </table >
+        <table border="1" cellspacing="1" id="ProductDescription" style="width: 57%">
             <th>
-        <h3 class="ProductDescription">Product Description</h3>
-        <h4 class="description">Name: 2% Milk</h4>
-        <h4 class="description" align="left">Category: Dairy/Beverages</h4>
-        <h4 class="description">Weight: 4L</h4>
-        <a href="#MoreDescription" target="_self" class="MoreDescriptionHyper">More Description</a>
+        <p class="descriptionHeader ">Product Description</p>
+        <p class="description" align="left">Name: 2% Milk</p>
+        <p class="description" align="left">Category: Dairy/Beverages</p>
+        <p class="description" align="left">Weight: 4L</p>
+        <a href="#MoreDescription" target="_self" class="MoreDescriptionHyper" >More Description</a>
     </th>
     </table>
     <br>  
-        <table border="1" id="MoreDescription">
+        <table border="1" id="MoreDescription" style="width: 57%">
             <th>
-                <h3 class="MoreDescription">More Description</h3>
-                <p  align="left" class="description">Brand: Beatrice</pre>
-                <p class="description" align="left">Country of Origin: Canada</p>
+                <p class="descriptionHeader">More Description</p>
+                <p class="description" >Fresh from the dairy farms this pasturized milk comes from Canadian cows</p>
+
+                <h4 class="description" align="left">Country of Origin: Canada</p>
             </th>
             </th>
         </table>
