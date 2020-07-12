@@ -1,46 +1,49 @@
 <html>
     <head><meta charset="UTF-8">
     <title><h1>Add/Edit a Product</h1></title>
+    <link rel="stylesheet" type="text/css" href="ProductBackend.css"/> 
 </head>
     <body>
         <h1>Add/Edit a Product</h1>
         <hr>
-        <table border="">
+        <table border="1" class="backendAddEdit">
             <th><label for="productSearch">Product Search</label></th>
             <td><select name="product" id="productSearch">
                 <option selected disabled> Select Product</option>
                 <option value="Milk">Milk</option>
-                <option value="FullTimeJob">Full-time job</option>
-                <option value="FullTimeLearner"> Full-time Learner</option>
-                <option value="PreferNotToSay">Prefer not to say</option>
-                <option value="Other">Other</option>
+                <option value="7-UP">7-UP</option>
+                <option value="Coca-Cola"> Coca-Cola</option>
+                <option value="EnglishCucumber">English Cucumber</option>
+                <option value="Hothouse-Red-Tomato">Hothouse Red Tomato</option>
+                <option value="Romain-Lettuce">Romain Lettuce</option>
+                
             </select></td>
             <tr>
-                <th><label for="Inventory">Quantity</label></th>
+                <th><label for="Inventory" class="backendAddEdit">Quantity</label></th>
                 <td><input type="number"> </td>
             </tr>
-            <tr><th>Product Name</th>
-                <td><input type="text"></td>
+            <tr><th class="backendAddEdit">Product Name</th>
+                <td><input type="text" ></td>
             </tr>
-            <tr><th>Product Weight/Unit</th>
-                <td><input type="number" value="Enter numerical value and unit value (g,lbs,kg,etc.)"></td>
-            </tr>
-            <tr>
-                <tr><th>Product Unit of Measure</th>
-                    <td><input type="text" placeholder="Unit value (g,lbs,kg,etc.)"></td>
-            </tr>
-            <tr><th>Product Price</th>
+            <tr><th class="backendAddEdit">Product Weight/Number of Units </th>
                 <td><input type="number"></td>
             </tr>
-            <tr><th>Product Description</th>
+            <tr>
+                <tr><th class="backendAddEdit">Product Unit of Measure</th>
+                    <td><input type="text" placeholder="Unit value (g,lbs,kg,etc.)"></td>
+            </tr>
+            <tr><th class="backendAddEdit">Product Price</th>
+                <td><input type="number"></td>
+            </tr>
+            <tr><th class="backendAddEdit">Product Description</th>
                 <td><textarea name="description" rows="4" cols="25" placeholder="Enter Product Description Here" ></textarea></td>
             </tr>
             <tr>
-                <th>Product Brand</th>
+                <th class="backendAddEdit">Product Brand</th>
                 <td><input type="text"></td>
             </tr>
             <tr>
-                <th>Product Country of Origin</th>
+                <th class="backendAddEdit">Product Country of Origin</th>
                 <td><input type="text" ></td>
             </tr>
         </table>

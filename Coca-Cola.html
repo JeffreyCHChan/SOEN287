@@ -8,40 +8,45 @@
     <body>
         <p class="product">12-Pack Coca-Cola</p>
         <hr>
-        <table border="1"style="width: 100%;">
+        <div style="width: 100%;">
 
-        <th cellspacing = ""><img src="https://i5.walmartimages.ca/images/Enlarge/546/3_1/155463_1.jpg" alt="Coca-Cola" height="400"></tcol>
+        <img src="https://i5.walmartimages.ca/images/Enlarge/546/3_1/155463_1.jpg" alt="Coca-Cola" height="400">
             <h6 align="left" >source: Coca-Cola Company</h6>
-        </th>
-        <th class="ProductOrder">
-            <p class="price" align=right>Price: $4.97</p>
-        <p align="right" class="avg-Price">$0.12/100mL</p>
+        
+        <div class="ProductOrder">
+
+            <p class="price" align=left>Price: $4.97</p>
+            <p  align="left" class="brand">Brand: Coca-Cola Company</pre>
+        <p align="left" class="avg-Price">$0.12/100mL</p>
         <label for="quatity" class="quantity">Quantity:</label>
         <input type="number" name= "quantity" id="quantity" value="1">
         
         <br>
         <input type="submit" value="Add to Cart" class="">
         
-        </th>
-    </table>
-        <table border="1" cellspacing="1" id="ProductDescription" style="width: 60%">
-            <th>
+        </div>
+    </div>
+    <hr>
+        <div  id="ProductDescription" style="width: 60%">
+
         <p class="descriptionHeader">Product Description</p>
         <p class="description" align="left">Name: 12-Pack Coca-Cola</p>
         <p class="description" align="left">Category: Dairy/Beverages</p>
-        <p class="description" align="left">Weight: 12X355mL</p>
+        <p class="description" align="left">Weight: 12x355mL</p>
         <a href="#MoreDescription" target="_self" class="MoreDescriptionHyper">More Description</a>
-    </th>
-    </table>
-    <br>  
-        <table border="1" id="MoreDescription" style="width: 60%">
-            <th>
-                <p class="MoreDescription">More Description</p>
-                <p  align="left" class="brand">Brand: Coca-Cola Company</pre>
+
+    </div>
+    <br>
+    <hr>  
+        <div border="1" id="MoreDescription" style="width: 60%">
+            
+                <p class="descriptionHeader">More Description</p>
+                <p class="description" >Have a signature beverage from a company we all know.
+                </p>
+
                 <p class="description" align="left">Country of Origin: Canada</p>
-            </th>
-            </th>
-        </table>
+            
+        </div>
     </body>
 
 </html>

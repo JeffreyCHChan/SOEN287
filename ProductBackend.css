@@ -3,3 +3,4 @@
 .itemData{text-align: center; font-size: medium;}
 .table{height: min-content; width: 100%;}
 .aisle{font: bold; background-color: rgb(0, 225, 255)}
+.backendAddEdit{width: 60%; height: min-content; text-align: left;}
