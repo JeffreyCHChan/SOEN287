@@ -1,0 +1,10 @@
+<!--Jeffrey Chak-Him Chan-->
+h1.Category {color: black; font-size: xx-large;}
+.MoreDescription{color: black; text-align: center;}
+.aisleItem{height:25%; width: 25%; max-width: 150px; max-height: 150px; min-width: 110px; min-height: 100px;}
+.description {font-size: 12pt;text-align: left; color: black;}
+.AvgCost {font-style: italic;text-align: right; font-size: 115%;}
+.Price {color: black; text-align: right; }
+.ProductOrder {background-color: gray; text-align: right;}
+.Quantity {color: black;}
+.MoreDescriptionHyper{text-align:left}
