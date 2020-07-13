@@ -1,52 +1,51 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>12-Pack Coca-Cola</title>
-        <link rel="stylesheet" type="text/css" href="items.css"/>    
-    </head>
 
-    <body>
-        <p class="product">12-Pack Coca-Cola</p>
-        <hr>
-        <div style="width: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>12-Pack Coca-Cola</title>
+    <link rel="stylesheet" type="text/css" href="items.css" />
+</head>
 
-        <img src="https://i5.walmartimages.ca/images/Enlarge/546/3_1/155463_1.jpg" alt="Coca-Cola" height="400">
-            <h6 align="left" >source: Coca-Cola Company</h6>
-        
-        <div class="ProductOrder">
-
-            <p class="price" align=left>Price: $4.97</p>
-            <p  align="left" class="brand">Brand: Coca-Cola Company</pre>
-        <p align="left" class="avg-Price">$0.12/100mL</p>
-        <label for="quatity" class="quantity">Quantity:</label>
-        <input type="number" name= "quantity" id="quantity" value="1">
-        
-        <br>
-        <input type="submit" value="Add to Cart" class="">
-        
-        </div>
-    </div>
+<body>
+    <p class="product">12-Pack Coca-Cola</p>
     <hr>
-        <div  id="ProductDescription" style="width: 60%">
+    <div class="row center">
+        <div class="col-3 col-s-3">
+            <img src="https://i5.walmartimages.ca/images/Large/546/3_1/155463_1.jpg" alt="Coca-Cola" width="400px">
+            <p style="content;">source: Coca-Cola Company</p>
+        </div>
 
-        <p class="descriptionHeader">Product Description</p>
-        <p class="description" align="left">Name: 12-Pack Coca-Cola</p>
-        <p class="description" align="left">Category: Dairy/Beverages</p>
-        <p class="description" align="left">Weight: 12x355mL</p>
-        <a href="#MoreDescription" target="_self" class="MoreDescriptionHyper">More Description</a>
+        <div class="col-4 col-s-4">
+            <p class="price" align=left>Price: $4.97</p>
+            <p align="left" class="brand">Brand: Coca-Cola Company</p>
+            <p align="left" class="avg-Price">$0.12/100mL</p>
+            <label for="quatity" class="quantity">Quantity:</label>
+            <input type="number" name="quantity" id="quantity" value="1">
+            <br>
+            <input type="submit" value="Add to Cart" class="">
+            <hr>
 
+
+            <p class="descriptionHeader">Product Description</p>
+            <p class="description" align="left">Name: 12-Pack Coca-Cola</p>
+            <p class="description" align="left">Category: Dairy/Beverages</p>
+            <p class="description" align="left">Weight: 12x355mL</p>
+            <a href="#MoreDescription" target="_self" class="MoreDescriptionHyper">More Description</a>
+            <br>
+        </div>
     </div>
     <br>
-    <hr>  
-        <div border="1" id="MoreDescription" style="width: 60%">
-            
-                <p class="descriptionHeader">More Description</p>
-                <p class="description" >Have a signature beverage from a company we all know.
-                </p>
+    <hr>
 
-                <p class="description" align="left">Country of Origin: Canada</p>
-            
-        </div>
-    </body>
+    <div border="1" id="MoreDescription" style="width: 60%">
+
+        <p class="descriptionHeader">More Description</p>
+        <p class="description">Have a signature beverage from a company we all know.
+        </p>
+
+        <p class="description" align="left"><b>Country of Origin</b>: Canada</p>
+
+    </div>
+</body>
 
 </html>
