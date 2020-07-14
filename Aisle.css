@@ -2,12 +2,10 @@ body{
     background-color:moccasin;
     color: black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-<<<<<<< Updated upstream
 }
 .Bakery {
     height:250px;
     width: 400px;
-=======
     font-size: medium;
 }
 .productImage {
@@ -19,5 +17,4 @@ body{
     width: 60%;
     max-width: 400px;
     max-height: 200px;
->>>>>>> Stashed changes
 }
