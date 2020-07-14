@@ -1,33 +1,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name= "viewport"content="width=device-width, initial-scale=1.0">
     <title>12-Pack Coca-Cola</title>
     <link rel="stylesheet" type="text/css" href="items.css" />
 </head>
 
 <body>
-    <p class="product">12-Pack Coca-Cola</p>
-    <hr>
     <div class="row center">
         <div class="col-3 col-s-3">
-            <img src="https://i5.walmartimages.ca/images/Large/546/3_1/155463_1.jpg" alt="Coca-Cola" width="400px">
-            <p style="content;">source: Coca-Cola Company</p>
+            <img src="https://i5.walmartimages.ca/images/Large/546/3_1/155463_1.jpg" alt="Coca-Cola" width="">
+            <h6>source: Coca-Cola Company</h6>
         </div>
 
         <div class="col-4 col-s-4">
-            <p class="price" align=left>Price: $4.97</p>
-            <p align="left" class="brand">Brand: Coca-Cola Company</p>
-            <p align="left" class="avg-Price">$0.12/100mL</p>
-            <label for="quatity" class="quantity">Quantity:</label>
-            <input type="number" name="quantity" id="quantity" value="1">
+            <p class="brand">Brand: Coca-Cola Company</p>
+            <p class="product">12-Pack Coca-Cola</p>
+            <p class="price">Price: $4.97 ea.</p>
+            <p class="avg-price">$0.12/100mL</p>
             <br>
-            <input type="submit" value="Add to Cart" class="">
+            <label for="quatity" class="Quantity">Quantity:</label>
+            <input type="number" min="1" value="1" size="2" name= "Quantity" id="quantity">
+            <input type="submit" value="Add to Cart">
+            <br><br>
+
             <hr>
-
-
             <p class="descriptionHeader">Product Description</p>
-            <p class="description" align="left">Name: 12-Pack Coca-Cola</p>
             <p class="description" align="left">Category: Dairy/Beverages</p>
             <p class="description" align="left">Weight: 12x355mL</p>
             <a href="#MoreDescription" target="_self" class="MoreDescriptionHyper">More Description</a>
@@ -37,13 +35,12 @@
     <br>
     <hr>
 
-    <div border="1" id="MoreDescription" style="width: 60%">
+    <div border="1" id="MoreDescription" >
 
         <p class="descriptionHeader">More Description</p>
-        <p class="description">Have a signature beverage from a company we all know.
-        </p>
-
-        <p class="description" align="left"><b>Country of Origin</b>: Canada</p>
+        <p class="description">Have a signature beverage from a company we all know.</p>
+        <p class="description" align="left"><b>Country of Origin</b>: Canada
+            <br>Product number: 63595</p>
 
     </div>
 </body>
