@@ -16,11 +16,16 @@
             </a>
             <div class="navbar-links">
                <ul>
-                <li><a href="#">Beverages</a></li>
-                <li><a href="#">Fruits</a></li>
-                <li><a href="#">Vegetables</a></li>
-                <li><a href="BakedGoods.html">Baked Goods</a></li>
-                <li><a href="#">Meats</a></li>
+                <li>
+                    <select onchange="window.location.href=this.value">
+                        <option>Select Aisle</option>
+                        <option value="Fruits.html">Beverages</option>
+                        <option value="Fruits.html">Fruits</option>
+                        <option>Vegetables</option>
+                        <option>Baked Goods</option>
+                        <option>Meats</option>
+                    </select>
+                </li>
                 <li><a href="#"><i class="fa fa-unlock-alt" ></i> Login</a></li>
                 <li><a href="#"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>  
              
@@ -35,7 +40,7 @@
 
 <div class="main">
 
-    <h1 id = "BakedGoods"> Baked Goods </h1>
+    <h1 id = "BakedGoods"> Fruits </h1>
 
  <table border>
     <tr>
