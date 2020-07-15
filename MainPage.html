@@ -9,6 +9,7 @@
 </head>
 <style>
 h1    {background-color: rgba(82, 79, 79);}
+table, th, td {border: 1px solid black;}           
 </style>
 
 <header>
@@ -65,25 +66,49 @@ h1    {background-color: rgba(82, 79, 79);}
 
     <div class="sale"> 
         
-        <img src="images/Raspberry.jpg" alt="Raspberry" width="450px" style="border: 5px solid black" > 
-        <p>WAS: <del>$4.99 ea.</del></p><p style="color: red;">IS: $3.99 ea.</p></img>
+        <table align="center">
+            <caption>This Week's Specials</caption>
+            
+            <td>
+                <p align="center"><a href="Raspberry.html">Raspberries</a></p>
+                <a href="Raspberry.html"><img src="images/Raspberry.jpg" alt="Raspberry" width="450px" style="border: 5px solid black" > </a>
+                <p>WAS: <del>$4.99 ea.</del></p><p style="color: red;">IS: $3.99 ea.</p>
+            </td>
        
-        <img src="images/7-Up.jpg" alt="7-Up" width="450 px" style="border: 5px solid black" >
-        <p> WAS: <del>$8.47 ea.</del></p><p style = "color: red">IS: $5.93 ea.</p>
+            <td>
+                <p align="center"><a href="7-Up.html">7-Up</a></p>
+                <a href="7-Up.html"><img src="images/7-Up.jpg" alt="7-Up" width="420 px" height="302.5 px" style="border: 5px solid black" ></a>
+                <p> WAS: <del>$8.47 ea.</del></p><p style = "color: red">IS: $5.93 ea.</p>
+            </td>
         
-        <img src="images/english-cucumber.jpg" alt="English cucumber" width="450px" style="border: 5px solid black">
-        <p>WAS: <del>$2.49/lb</del></p><p style="color: red;">IS: $1.99/lb</p>
+            <td>
+                <p align="center"><a href="english-cucumber.html">English Cucumber</a></p>
+                <a href="english-cucumber.html"><img src="images/english-cucumber.jpg" alt="English cucumber" width="420px" height="302.5 px" style="border: 5px solid black"></a>
+                <p>WAS: <del>$2.49/lb</del></p><p style="color: red;">IS: $1.99/lb</p> 
+            </td>
+        
+        </table>
 
-        <img src="images/applepie.jfif" alt="Apple Pie" width="450px" style="border: 5px solid black">
-        <p>WAS: <del>$5.99</del></p><p style="color: red;">IS: $4.99</p>
+        <table align="center">
 
-        <img src="images/chicken wings.jpg" alt="Chicken Wings" width="350px" style="border: 5px solid black">
-        <p>WAS: <del>$10.99 ea.</del></p><p style="color: red;">IS: $9.99 ea.</p>
+            <td>
+                <p align="center"><a href="Applepie.html">Apple Pie</a></p>
+                <a href="Applepie.html"><img src="images/applepie.jfif" alt="Apple Pie" width="450px" style="border: 5px solid black"></a>
+                <p>WAS: <del>$5.99</del></p><p style="color: red;">IS: $4.99</p>
+            </td>
+
+            <td>
+                <p align="center"><a href="ChickenWings.html">Chicken Wings</a></p>
+                <a href="ChickenWings.html"><img src="images/chicken wings.jpg" alt="Chicken Wings" width="450px" height="340px" style="border: 5px solid black"></a>
+                <p>WAS: <del>$10.99 ea.</del></p><p style="color: red;">IS: $9.99 ea.</p>
+        </td>
+
+        </table>
 
     </div>
 
    
-
+        
      <table id="StoreInformation" border="border">
          <caption>Store Information</caption>
          <tr>
@@ -121,15 +146,15 @@ h1    {background-color: rgba(82, 79, 79);}
      </table>                                                                                                  
 </body>
 <footer>
-    <div class="botnav">
+    <div class="botnav" align="center">
         <a class="active" href="#home" style="color:black ;">Home</a>
         <select onchange="window.location.href=this.value">
             <option>Select Aisle</option>
-            <option value="https://stackoverflow.com/questions/20887920/how-to-link-option-tags-to-other-pages-in-html?lq=1">Aisle 1</option>
-            <option value="https://stackoverflow.com/questions/20887920/how-to-link-option-tags-to-other-pages-in-html?lq=1">Aisle 2</option>
-            <option>Aisle 3</option>
-            <option>Aisle 4</option>
-            <option>Aisle 5</option>
+            <option value="Beverages.html">Beverages</option>
+            <option value="Fruits.html">Fruits</option>
+            <option value="Vegetables.html">Vegetables</option>
+            <option value="BakedGoods.html">Baked Goods</option>
+            <option value="Meats.html">Meats</option>
         </select>
         <a href="#StoreInformation" style="color: black;">Store Information</a>
         <a href="#StoreHours" style="color: black;">Store Hours</a> 
