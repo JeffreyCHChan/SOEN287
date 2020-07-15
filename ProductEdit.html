@@ -1,12 +1,13 @@
 <!--Jeffrey Chak-Him Chan 40152579 -->
 <html>
     <head><meta charset="UTF-8">
-    <title><h1>Add/Edit a Product</h1></title>
+    <title>Add/Edit a Product</title>
     <link rel="stylesheet" type="text/css" href="ProductBackend.css"/> 
 </head>
     <body>
         <h1>Add/Edit a Product</h1>
         <hr>
+        <form action="ProductList.html" target="_self" method="POST">
         <table border="1" class="backendAddEdit">
             <th><label for="productSearch">Product Search</label></th>
             <td><select name="product" id="productSearch">
@@ -17,24 +18,33 @@
                 <option value="EnglishCucumber">English Cucumber</option>
                 <option value="Hothouse-Red-Tomato">Hothouse Red Tomato</option>
                 <option value="Romain-Lettuce">Romain Lettuce</option>
-                
+                <option value="Romain-Lettuce">Chicken Wings</option>
+                <option value="Romain-Lettuce">Groundbeef</option>
+                <option value="Romain-Lettuce">Pork Meat</option>
+                <option value="Romain-Lettuce">Smoked Salmon</option>
+                <option value="Romain-Lettuce">Apple Pie</option>
+                <option value="Romain-Lettuce">Baguette</option>
+                <option value="Romain-Lettuce">Chocolate Cake</option>
+                <option value="Romain-Lettuce">Apple</option>
+                <option value="Romain-Lettuce">Banana</option>
+                <option value="Romain-Lettuce">Raspberry</option>
             </select></td>
             <tr>
                 <th><label for="Inventory" class="backendAddEdit">Quantity</label></th>
-                <td><input type="number"> </td>
+                <td><input type="number"  min="0"> </td>
             </tr>
             <tr><th class="backendAddEdit">Product Name</th>
                 <td><input type="text" ></td>
             </tr>
             <tr><th class="backendAddEdit">Product Weight/Number of Units </th>
-                <td><input type="number"></td>
+                <td><input type="number" min="0"></td>
             </tr>
             <tr>
                 <tr><th class="backendAddEdit">Product Unit of Measure</th>
                     <td><input type="text" placeholder="Unit value (g,lbs,kg,etc.)"></td>
             </tr>
             <tr><th class="backendAddEdit">Product Price</th>
-                <td><input type="number"></td>
+                <td><input type="number" min="0"></td>
             </tr>
             <tr><th class="backendAddEdit">Product Description</th>
                 <td><textarea name="description" rows="4" cols="25" placeholder="Enter Product Description Here" ></textarea></td>
@@ -48,5 +58,7 @@
                 <td><input type="text" ></td>
             </tr>
         </table>
+        <input type="submit">
+    </form>
     </body>
 </html>
