@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="aisles.css">
+        <style type="text/css">
+
+        header {
+            text-align:center;
+            background-image: url(images/headerimage.jpg);
+            padding: 80px;
+            margin: 40px;
+            background-repeat: no-repeat;
+            background-color:rgb(41, 128, 185);
+            
+            }
+
+
+        </style>
+    </head>
+
+    <header>
+        <style background-color=black></style>
+        <div class="topnav" id="home">
+            
+            <a class="active" href="#home" style="color:seashell;">Home</a>
+            <select onchange="window.location.href=this.value">
+                <option>Select Aisle</option>
+                <option value="https://stackoverflow.com/questions/20887920/how-to-link-option-tags-to-other-pages-in-html?lq=1">Aisle 1</option>
+                <option value="https://stackoverflow.com/questions/20887920/how-to-link-option-tags-to-other-pages-in-html?lq=1">Aisle 2</option>
+                <option>Aisle 3</option>
+                <option>Aisle 4</option>
+                <option>Aisle 5</option>
+            </select>
+            <a href="#StoreInformation" style="color: seashell;">Store Information</a>
+            <a href="#StoreHours" style="color: seashell;">Store Hours</a> 
+            </div>  
+               
+    </header>
+
+    <body>
+        <div class="row center"></div>
+        <div class="col-3 col-s-3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTMqeHixXYi6FdTsLP3H-KGaQ0uhXnuvafkNA&usqp=CAU" alt="Bananas">   
+        </div>
+        <div class="col-4 col-s-4">
+            <p class="brand">Chiquita</p>
+            <p class="product">Bananas</p>
+            <p class="price">$0.26 avg. ea.</p>
+            <p class="size">(118 g avg. ea.)</p>
+            <p class="avg-price">$2.20 /kg $0.99 /lb</p>
+            <br>
+            <label for="quantity" class="Quantity">Quantity:</label>
+            <input type="number" min="1" value="1" size="2" name="Quantity" id="quantity">
+            <input type="submit" value="Add to Cart">
+            <br>
+            <br>
+            <hr>
+            <p class="descriptionHeader">Product Description</p>
+            <p class="description">
+                "This is a sweet banana"
+                <br>
+                <br>
+                <b>Origin:</b>
+                " Mexico "
+                <br>
+                <br>
+                "Product number: 1010"
+            </p>
+            <hr>
+        </div>
+     </div>
+        </body>
+        
+
+    </body>
+</html>
