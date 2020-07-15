@@ -2,6 +2,7 @@ body{
     background-color:moccasin;
     color: black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 40px;
     margin:0;
     padding:0;
 }
@@ -31,6 +32,7 @@ body{
     color: white;
     position: fixed;
     top: 0;
+    width: 100%;
 }
 
 .brand-title {
@@ -40,7 +42,7 @@ body{
 .navbar-links ul {
    margin: 0;
    padding: 0;
-   display: flex; 
+   display: flex;
 }
 
 .navbar-links li {
@@ -57,6 +59,10 @@ body{
 
 .navbar-links li:hover {
     background-color: greenyellow;
+}
+
+.navbar-links li a:hover {
+    color: black;
 }
 
 .toggle-button {
@@ -108,4 +114,33 @@ body{
     .navbar-links.active {
         display: flex;
     }
+
+    body {
+        margin-top: 50%;
+    }
+}
+
+#BakedGoods {
+    padding: 16px;
+    margin-top: 50px;
+}
+
+.main {
+    padding: 16px;
+    margin-top: 50px;
+}
+
+.pie {
+    padding: 16px;
+    margin-top: 120px;
+}
+
+.bread {
+    padding: 16px;
+    margin-top: 120px;
+}
+
+.cake {
+    padding: 16px;
+    margin-top: 120px;
 }
