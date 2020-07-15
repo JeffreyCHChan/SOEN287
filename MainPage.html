@@ -3,53 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style type ="text/css">
-
-        header {
-            text-align:center;
-            background-image: url(images/headerimage.jpg);
-            padding: 80px;
-            margin: 40px;
-            background-repeat: no-repeat;
-            background-color:rgb(41, 128, 185);
-            
-            }
-        footer {
-            text-align: center;
-            background-color: cadetblue;
-
-            }
-        
-    </style>
+    <link rel="stylesheet" type="text/css" href="Aisle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>AtoZMarketPlace</title>
 </head>
 <style>
 h1    {background-color: rgba(0, 255, 85, 0.192);}
 </style>
 
 <header>
-    <div class="topnav" id="home">
+    <nav class="navbar">
+        <div class="brand-title"><a href="BakedGoods.html"><img src="images/AtoZMarketPlace.jpg"></a></div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+
+        </a>
+        <div class="navbar-links">
+           <ul>
+            <li><br>
+                <select onchange="window.location.href=this.value">
+                    <option>Select Aisle</option>
+                    <option value="Beverages.html">Beverages</option>
+                    <option value="Fruits.html">Fruits</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="BakedGoods.html">Baked Goods</option>
+                    <option value="Meats.html">Meats</option>
+                </select>
+            </li>
+            <li><a href="#"><i class="fa fa-unlock-alt" ></i> Login</a></li>
+            <li><a href="#"><i class="fa fa-shopping-cart" ></i> My Cart</a></li> 
+            <li><a href="#StoreInformation">Store Information</a></li> 
+            <li><a href="#StoreHours">Store Hours</a> </li>
+         
+        </ul> 
+        </div>
         
-        <a class="active" href="#home" style="color:seashell;">Home</a>
-        <select onchange="window.location.href=this.value">
-            <option>Select Aisle</option>
-            <option value="https://stackoverflow.com/questions/20887920/how-to-link-option-tags-to-other-pages-in-html?lq=1">Aisle 1</option>
-            <option value="https://stackoverflow.com/questions/20887920/how-to-link-option-tags-to-other-pages-in-html?lq=1">Aisle 2</option>
-            <option>Aisle 3</option>
-            <option>Aisle 4</option>
-            <option>Aisle 5</option>
-        </select>
-        <a href="#StoreInformation" style="color: seashell;">Store Information</a>
-        <a href="#StoreHours" style="color: seashell;">Store Hours</a> 
-        </div>  
+    </nav>
            
 </header>
-<p>
-    hi
 </p>
 <body>
+    <p>
+        <pre>
 
+
+
+
+
+
+
+
+
+
+
+
+        </pre>
+    </p>
     <h1 id="Weekly Sales"> Weekly Sales:</h1>
 
     <div class="sale"> 
