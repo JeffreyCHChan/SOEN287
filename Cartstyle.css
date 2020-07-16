@@ -1,3 +1,82 @@
+body {margin:0;}
+
+.main ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+}
+
+.main li {
+  float: left;
+}
+
+.main li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.main li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+    body {
+    background: url('images/wallshopping.jpg') no-repeat center center fixed;
+    background-size: cover;
+
+    }
+    h1.white{color:white;
+    text-align:center}
+    .coin {
+    background-color:rgba(105,105,105,0.75);
+    border:1px solid #9FC6FF;
+    padding:5px;
+    margin-top: 20px:
+    -moz-border-radius:10px 0;
+    -webkit-border-radius:10px 0;
+    border-radius:10px 0;
+    }
+    .desk {
+  padding:20px;
+  margin-top:100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .desk {
+    padding:20px;
+    margin-top:200px;
+  }
+}
+.btn2 {
+              background-color:#FF7F50;
+              color: #ffffff;
+              padding: 20px 20px;
+              text-decoration: none;
+              margin: 15px 2px;
+              cursor: pointer;
+                  }
+        .btn2:hover {
+        background-color: #FF8C00;}
+
+
+
+
+
+
+
+
+
+
 *{box-sizing: border-box;
         }
         .row::after{
