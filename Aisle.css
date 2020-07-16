@@ -6,11 +6,7 @@ body{
     margin:0;
     padding:0;
 }
-.Bakery {
-    height:250px;
-    width: 400px;
-    font-size: medium;
-}
+
 .productImage {
     height:250px;
     width: 250px;
@@ -65,23 +61,6 @@ body{
     color: black;
 }
 
-.toggle-button {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-}
 
 @media (max-width: 600px) {
     .toggle-button {
@@ -120,7 +99,7 @@ body{
     }
 }
 
-#BakedGoods {
+#AisleTitle {
     padding: 16px;
     margin-top: 50px;
 }
@@ -132,5 +111,5 @@ body{
 
 .item {
     padding: 16px;
-    margin-top: 120px;
+
 }
