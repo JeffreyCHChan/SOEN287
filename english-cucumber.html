@@ -4,21 +4,41 @@
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>English Cucumber</title>
-        <link rel="stylesheet" type="text/css" href="items.css"/>    
+        <link rel="stylesheet" type="text/css" href="items.css"/>
+        <link rel="stylesheet" type="text/css" href="Aisle.css"/>    
     </head>
 
     <body>
-        <div class="row center">
+            <nav class="navbar">
+                <div class="brand-title"><a href="index.html"><img src="images/AtoZMarketPlace.jpg"></a></div>
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div class="navbar-links">
+                   <ul>
+                    <li><a href="#">Beverages</a></li>
+                    <li><a href="#">Fruits</a></li>
+                    <li><a href="vegetables.html">Vegetables</a></li>
+                    <li><a href="BakedGoods.html">Baked Goods</a></li>
+                    <li><a href="#">Meats</a></li>
+                    <li><a href="signin.html"><i class="fa fa-unlock-alt" ></i> Sign In</a></li>
+                    <li><a href="#"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>  
+                    </ul> 
+                </div>
+            </nav>
+        
+        <div class="row center" style="margin-top: 200px;">
             <div class="col-3 col-s-3">
-                <img src="pictures/english-cucumber.jpg" alt="English Cucumber" width="" height="" >
+                <img src="images/english-cucumber.jpg" alt="English Cucumber">
             </div>
             
-            <div class="col-4 col-s-4">
+            <div class="col-8 col-s-8">
                 <p class="brand"></p>
                 <p class="product">English Cucumber</p>
 
                 <p class="price">$2.49 ea. </p>
-                <p class="size">Sold Individually </p>
                 <p class="avg-price">$2.49 /un</p>
                 <br>
                 <label for="quatity" class="Quantity">Quantity:</label>
@@ -28,7 +48,13 @@
                     
                 <hr>
                 <p class="descriptionHeader">Product Description</p>
-                <p class="description">Individually wrapped cucumbers fresh from the farm. Country of origin may differ by store and region.<br>
+                <p class="size">Sold Individually </p>
+                <p class="description">Category: Vegetables</p>
+                <hr>
+                <a href="#moreDescription" class="more">More Description</a><br>
+                <hr>
+                <br>
+                <p class="description" id="moreDescription">Individually wrapped cucumbers fresh from the farm. Country of origin may differ by store and region.<br>
                 <br><b>Origin:</b> Belgium, Canada, Spain, United States, Honduras, Morocco, Mexico, Netherlands, Dominican Republic <br>
                 <br>Product number: 54321</p>
                 <hr>

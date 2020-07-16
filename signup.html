@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up</title>
+        <link rel="stylesheet" type="text/css" href="accounts.css"/>
+    </head>
+
+    <body>
+    
+    <div class="row center">
+        <div class="col-12 col-s-12" style="margin: 50px 0;">
+            <h2 style="text-align: center;">Let's Sign Up!</h2><br>
+        </div> 
+    </div>
+    <form action="signup.php" method="POST">
+        <div class="row center">
+            <div class="col-6 col-s-6">
+                <label for="fname">*First Name</label>
+                <input class="signup" type="text" id="fname" name="fname" required>
+            </div>
+            <div class="col-6 col-s-6">
+                <label for="lname">*Last Name</label>
+                <input class="signup" type="text" id="lname" name="lname" required>
+            </div>
+        </div>
+        
+        <div class="row center">
+            <div class="col-2 col-s-2">
+                <label for="snumber">*Street #</label>
+                <input class="signup" type="text" id="snumber" name="snumber" required>
+            </div>
+            <div class="col-8 col-s-8">
+                <label for="sname">*Street Name</label>
+                <input class="signup" type="text" id="sname" name="sname" required>
+            </div>
+            <div class="col-2 col-s-2">
+                <label for="apt">Apt#</label>
+                <input class="signup" type="text" id="apt" name="apt">
+            </div>
+        </div> 
+
+        <div class="row center">
+            <div class="col-4 col-s-4">
+                <label for="city">*City</label>
+                <input class="signup" type="text" id="city" name="city" required>
+            </div>
+            <div class="col-4 col-s-4">
+                <label for="province">*Province</label>
+                <input class="signup" type="text" id="province" name="province" required>
+            </div>
+            <div class="col-4 col-s-4">
+                <label for="pcode">*Postal Code</label>
+                <input class="signup" type="text" id="pcode" name="pcode" required>
+            </div>
+        </div> 
+
+        <div class="row center">
+            <div class="col-12 col-s-12">
+                <label for="email">*Email</label>
+                <input class="signup" type="email" id="email" name="email" required>
+            </div>
+        </div>
+        
+        <div class="row center">
+            <div class="col-6 col-s-6">
+                <label for="password">*Password</label>
+                <input class="signup" type="password" id="password" name="password" required>
+            </div>
+            <div class="col-6 col-s-6">
+                <label for="password">*Confirm Password</label>
+                <input class="signup" type="password" id="password" name="password" required>
+            </div>
+        </div>
+        
+        <div class="row center">
+            <div class="col-6 col-s-6" style="margin-left: 25%;">
+                <input class="signupButton" type="reset" value="Reset">
+                <br>
+                <br>
+            </div>
+        </div>
+
+        <div class="row center">
+            <div class="col-12 col-s-12">
+                <input class="signupButton" type="submit" value="Sign Up">
+            </div>
+        </div>
+
+    </form>
+    </body>
+</html>
