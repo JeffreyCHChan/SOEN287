@@ -1,6 +1,6 @@
 <!--Bogdan Podariu 40156514-->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,26 +52,52 @@
     .coin {
     background-color:rgba(105,105,105,0.75);
     border:1px solid #9FC6FF;
-    padding:20px;
+    padding:5px;
     margin-top: 20px:
     -moz-border-radius:10px 0;
     -webkit-border-radius:10px 0;
     border-radius:10px 0;
     }
+    .desk {
+  padding:20px;
+  margin-top:30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .desk {
+    padding:20px;
+    margin-top:300px;
+  }
+}
     </style>
 </head>
 <body>
 
-<div class="col-12 main">
-    <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-    </ul>
-</div>
+<nav class="navbar">
+    <div class="brand-title"><a href="BakedGoods.html"><img src="images/AtoZMarketPlace.jpg"></a></div>
+    <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
 
-<div class="row" style="padding:20px;margin-top:30px;">
+    </a>
+    <div class="navbar-links">
+        <ul>
+            <li><a href="Beverages.html">Beverages</a></li>
+            <li><a href="Fruits.html">Fruits</a></li>
+            <li><a href="vegetables.html">Vegetables</a></li>
+            <li><a href="BakedGoods.html">Baked Goods</a></li>
+            <li><a href="meat.html">Meat</a></li>
+            <li><a href="signin.html"><i class="fa fa-unlock-alt" ></i> Login</a></li>
+            <li><a href="#"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>
+
+        </ul>
+    </div>
+
+</nav>
+
+
+<div class="row desk">
 <div class="coin">
     <h1 class="white">Shopping cart</h1>
 </div>
