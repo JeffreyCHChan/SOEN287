@@ -46,3 +46,61 @@ body{
 .table{height: min-content; width: 100%;}
 .aisle{font: bold; background-color: rgb(0, 225, 255)}
 .backendAddEdit{width: 60%; height: min-content; text-align: left;}
+
+.orderView {
+  margin-top: 150px;
+  margin-left: 50px;
+}
+.ListTable {
+  border-collapse: separate;
+
+}
+.ListTable th {
+  text-align: center;
+  background-color: rgb(68, 66, 66);
+  color: white;
+  padding: 4px 8px;
+}
+
+.ListTable td {
+  border: 1px solid lightslategray;
+  padding: 4px 8px;
+}
+
+.ListTable tr:nth-child(odd) td {
+  background-color: lightgray;
+}
+
+.ListTable tr:nth-child(even) td {
+  background-color: lightcyan;
+}
+
+.ProfileTable {
+  border-collapse: separate;
+
+}
+.ProfileTable th {
+  text-align: center;
+  background-color: rgb(68, 66, 66);
+  color: white;
+  padding: 4px 8px;
+}
+
+.ProfileTable td {
+  border: 1px solid lightslategray;
+  padding: 4px 8px;
+}
+
+
+.ProfileSubHeader {
+  background-color: darkslategray;
+  color: white;
+}
+
+.ProfileRest:nth-child(odd) td {
+  background-color: whitesmoke;
+}
+
+.ProfileRest:nth-child(even) td {
+  background-color: lightcyan;
+}
