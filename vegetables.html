@@ -9,38 +9,47 @@
     </head>
     <body>
         <nav class="navbar">
-            <div class="brand-title"><a href="MainPage.html"><img src="images/AtoZMarketPlace.jpg"></a></div>
-            <a href="#" class="toggle-button">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </a>
-            <div class="navbar-links">
-               <ul>
-                <li><a href="Beverages.html">Beverages</a></li>
-                <li><a href="Fruits.html">Fruits</a></li>
-                <li><a href="vegetables.html">Vegetables</a></li>
-                <li><a href="BakedGoods.html">Baked Goods</a></li>
-                <li><a href="meat.html">Meats</a></li>
-                <li><a href="signin.html"><i class="fa fa-unlock-alt" ></i> Sign In</a></li>
-                <li><a href="Shoppindcart.html"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>  
-                </ul> 
-            </div>
+            <nav class="navbar">
+                <div class="brand-title"><a href="MainPage.html"><img src="images/AtoZMarketPlace.jpg"></a></div>
+                <a href="#" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+        
+                </a>
+                <div class="navbar-links">
+                    <ul>
+                        <select onchange="window.location.href=this.value" style=" color:white; background-color: rgb(82,79,79);">
+                            <option>Select Aisle</option>
+                            <option value="Beverages.html">Beverages</option>
+                            <option value="Fruits.html">Fruits</option>
+                            <option value="Vegetables.html">Vegetables</option>
+                            <option value="BakedGoods.html">Baked Goods</option>
+                            <option value="Meats.html">Meats</option>
+                        </select>
+                        <li><a href="signin.html"><i class="fa fa-unlock-alt" ></i> Login</a></li>
+                        <li><a href="Shoppingcart.html"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>  
+                     
+                    </ul>  
+                </div>
+                
+            </nav>
+            
         </nav>  
+        <br>
 
+    <div class="col-12 col-s-12 main">
 
-    <div class="main" style="margin-top: 200px;">
+    <h1 id = "AisleTitle"> Vegetables </h1><br>
 
-    <h1 id = "vegetables" style="text-align: center; margin-top: 0;"> Vegetables </h1><br>
-
-    <table border align="center">
+    <table border>
         <tr>
             <th>
                 <a href="hothouse-red-tomato.html" target="_self">Hothouse Red Tomato</a>
             </th>
             
             <td>
-                <a href="hothouse-red-tomato.html" target="_self"><img src="images/hothouse-red-tomato.jpg" alt="Hothouse Red Tomato" class = "productImages"> </a>
+                <a href="hothouse-red-tomato.html" target="_self"><img src="images/hothouse-red-tomato.jpg" alt="Hothouse Red Tomato" class = "item"> </a>
             </td>
         
         </tr>
@@ -49,7 +58,7 @@
                 <a href="english-cucumber.html" target="_self">English Cucumber</a>
             </th>
             <td>
-                <a href="english-cucumber.html" target="_self"><img src="images/english-cucumber.jpg" alt="English Cucumber" class = "productImages"></a>
+                <a href="english-cucumber.html" target="_self"><img src="images/english-cucumber.jpg" alt="English Cucumber" class = "item"></a>
             </td>
         </tr>
         <tr>
@@ -57,7 +66,7 @@
                 <a href="romaine-lettuce.html" target="_self">Romaine Lettuce</a>
             </th>
             <td>
-                <a href="romaine-lettuce.html" target="_self"><img src="images/romaine-lettuce.jpg" alt="Romaine Lettuce" class = "productImages"></a>
+                <a href="romaine-lettuce.html" target="_self"><img src="images/romaine-lettuce.jpg" alt="Romaine Lettuce" class = "item"></a>
             </td>
             </tr>
     </table>
