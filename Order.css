@@ -1,0 +1,27 @@
+.orderView {
+    margin-top: 150px;
+    margin-left: 50px;
+}
+.ListTable {
+    border-collapse: separate;
+
+}
+.ListTable th {
+    text-align: center;
+    background-color: rgb(68, 66, 66);
+    color: white;
+    padding: 4px 8px;
+}
+
+.ListTable td {
+    border: 1px solid lightslategray;
+    padding: 4px 8px;
+}
+
+.ListTable tr:nth-child(odd) td {
+    background-color: lightgray;
+}
+
+.ListTable tr:nth-child(even) td {
+    background-color: lightcyan;
+}
