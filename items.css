@@ -1,0 +1,173 @@
+/*Philip Arvanitis 29041931*/
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+body {background-color: white;}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.center {
+    width: 100%;
+    margin: auto;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 0;
+    width: 100%;
+}
+
+/*Mobile*/
+[class*="col-"] {
+    width: 100%;
+  }
+
+/*Laptop*/
+@media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+
+/*Desktop*/
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+
+html {
+    font-family: Arial, Helvetica, Times, sans-serif;
+}
+
+body{
+    background-color:moccasin;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 40px;
+    margin:0;
+    padding:0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(82, 79, 79);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+
+}
+
+.navbar-links li:hover {
+    background-color: greenyellow;
+}
+
+.navbar-links li a:hover {
+    color: black;
+}
+
+.brand {
+    margin: 0px; 
+    text-transform: uppercase; 
+    color: black; 
+    font-weight: normal; 
+    font-size: 15pt; 
+
+}
+
+.product {
+    margin: 0px; 
+    color: black; 
+    font-weight: bold; 
+    font-size: 20pt; 
+}
+
+.price {
+    margin: 30px 0px 0px 0px; 
+    color: black; 
+    font-weight: bold; 
+    font-size: 25pt; 
+}
+
+.size {
+    margin: 0; 
+    color: black; 
+    font-weight: normal; 
+    font-size: 15pt; 
+}
+
+.avg-price{margin: 0; 
+    color: black; 
+    font-weight: normal; 
+    font-size: 15pt; 
+}
+
+.quantity{
+    margin: 10px 0; 
+    color: black; 
+    font-weight: bold; 
+    font-size: 15pt; 
+}
+
+.descriptionHeader {
+    margin: 20px 0; 
+    color: black; 
+    font-weight: bold; 
+    font-size: 15pt; 
+}
+
+.description {
+    margin: 0; 
+    color: black; 
+    font-weight: normal; 
+    font-size: 10pt; 
+}
