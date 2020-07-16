@@ -130,17 +130,7 @@ body{
     margin-top: 50px;
 }
 
-.pie {
-    padding: 16px;
-    margin-top: 120px;
-}
-
-.bread {
-    padding: 16px;
-    margin-top: 120px;
-}
-
-.cake {
+.item {
     padding: 16px;
     margin-top: 120px;
 }
