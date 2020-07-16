@@ -9,7 +9,7 @@ img {
     height: auto;
   }
   
-body {background-color: white;}
+body {background-color: moccasin;}
 
 .row:after {
     content: "";
@@ -18,20 +18,16 @@ body {background-color: white;}
 }
 
 .center {
-    width: 100%;
+    width: 50%;
     margin: auto;
 }
 
+/*Mobile*/
 [class*="col-"] {
     float: left;
     padding: 0;
     width: 100%;
 }
-
-/*Mobile*/
-[class*="col-"] {
-    width: 100%;
-  }
 
 /*Laptop*/
 @media only screen and (min-width: 600px) {
