@@ -65,72 +65,51 @@ html {
     font-family: Arial, Helvetica, Times, sans-serif;
 }
 
+input[class= "signin"], input[class= "signup"], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, Times, sans-serif;
+    }
 
+    input[class= "signin"]:focus, input[class= "signup"]:focus{
+        border: solid blue;
+        outline: none;
+    }
 
-.more {
-    background-color: moccasin;
-    border: none;
-    color: black;
-    font-weight: bold;
-    font-size: 15pt;
-    text-decoration: none;
-    margin: 20px 0;
-    cursor: pointer;
-}
+    input[type=submit], .newSignup, input[type=reset] {
+        background-color: rgba(0, 0, 0, 0.658);
+        border: none;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 25px;
+        padding: 16px 32px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
 
-.brand {
-    margin: 0px; 
-    text-transform: uppercase; 
-    color: black; 
-    font-weight: normal; 
-    font-size: 15pt; 
+    input[class=signupButton]{
+        width: 100%;
+    }
 
-}
+    input[type=submit]:hover, .newSignup:hover, input[type=reset]:hover {
+        background-color: rgba(73, 73, 73, 0.658);
+    }
 
-.product {
-    margin: 0px; 
-    color: black; 
-    font-weight: bold; 
-    font-size: 20pt; 
-}
+    label{
+        font-family: Arial, Helvetica, Times, sans-serif;
+        color: rgb(80, 80, 80);
+        font-weight: bold;
+    }
 
-.price {
-    margin: 30px 0px 0px 0px; 
-    color: black; 
-    font-weight: bold; 
-    font-size: 25pt; 
-}
+    .forgot{
+        font-family: Arial, Helvetica, Times, sans-serif;
+        color: black;
+    }
 
-.size {
-    margin: 0; 
-    color: black; 
-    font-weight: normal; 
-    font-size: 10pt; 
-}
-
-.avg-price{margin: 0; 
-    color: black; 
-    font-weight: normal; 
-    font-size: 15pt; 
-}
-
-.quantity{
-    margin: 10px 0; 
-    color: black; 
-    font-weight: bold; 
-    font-size: 15pt; 
-}
-
-.descriptionHeader {
-    margin: 20px 0; 
-    color: black; 
-    font-weight: bold; 
-    font-size: 15pt; 
-}
-
-.description {
-    margin: 0; 
-    color: black; 
-    font-weight: normal; 
-    font-size: 10pt; 
-}
+    .forgot:hover{
+        color: rgba(218, 0, 0, 0.808)
+    }
