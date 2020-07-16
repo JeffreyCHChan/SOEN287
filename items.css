@@ -43,6 +43,7 @@ body {background-color: moccasin;}
     .col-s-10 {width: 83.33%;}
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
+    .spacing {margin-left: 8.33%;}
   }
 
 /*Desktop*/
@@ -59,6 +60,7 @@ body {background-color: moccasin;}
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+    .spacing {margin-left: 8.33%;}
   }
 
 html {
