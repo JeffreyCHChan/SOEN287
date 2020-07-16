@@ -3,58 +3,91 @@
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Baguette</title>
-        <link rel="stylesheet" type="text/css" href="Aisle.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+        <link rel="stylesheet" type="text/css" href="items.css">  
     </head>
 
-    <body>
+    <header>
         <nav class="navbar">
-            <div class="brand-title"><a href="BakedGoods.html"><img src="images/AtoZMarketPlace.jpg"></a></div>
+            <div class="brand-title"><a href="MainPage.html"><img src="images/AtoZMarketPlace.jpg"></a></div>
             <a href="#" class="toggle-button">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-
+    
             </a>
             <div class="navbar-links">
-               <ul>
-                <li><a href="#">Beverages</a></li>
-                <li><a href="#">Fruits</a></li>
-                <li><a href="#">Vegetables</a></li>
-                <li><a href="BakedGoods.html">Baked Goods</a></li>
-                <li><a href="#">Meats</a></li>
-                <li><a href="#"><i class="fa fa-unlock-alt" ></i> Login</a></li>
-                <li><a href="#"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>  
-             
-            </ul> 
+                <ul>
+                    <select onchange="window.location.href=this.value">
+                        <option>Select Aisle</option>
+                        <option value="Beverages.html">Beverages</option>
+                        <option value="Fruits.html">Fruits</option>
+                        <option value="Vegetables.html">Vegetables</option>
+                        <option value="BakedGoods.html">Baked Goods</option>
+                        <option value="Meats.html">Meats</option>
+                    </select>
+                    <li><a href="signin.html"><i class="fa fa-unlock-alt" ></i> Login</a></li>
+                    <li><a href="#"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>  
+                 
+                </ul>  
             </div>
             
         </nav>
-        <div class="bread">
-            <div class="col-3 col-s-3">
-                <img src="images/baguette.jpg" alt="Baguette" width="30%" >
-            </div>
-            
-            <div class="col-4 col-s-4">
-                <p class="brand"></p>
-                <p class="product">Baguette</p>
+               
+    </header>
 
-                <p class="price">$1.99 ea. </p>
+    <body>
 
-                <br>
-                <label for="quatity" class="Quantity">Quantity:</label>
-                <input type="number" min="1" value="1" size="2" name= "Quantity" id="quantity">
-                <input type="submit" value="Add to Cart">
-                <br><br>
-                    
-                <hr>
-                <p class="descriptionHeader"><b>Product Description</b></p>
-                <p class="description">Freshly made baguette straight from the oven.<br>
-                <br><b>Origin:</b> France <br>
-                <br><b>Product number:</b> 28459</p>
-                <hr>
-            </div>
+        <p>
+            <pre>
+
+
+
+
+
+
+
+
+
+            </pre>
+        </p>
+        
+        <div class="row center"></div>
+        <div class="col-3 col-s-3">
+            <img src="images/baguette.jpg" alt="Baguette">   
         </div>
-    
+        <div class="col-4 col-s-4">
+            <p class="brand">AtoZ FreshMarket</p>
+            <p class="product">Baguette</p>
+            <p class="price">$1.99  ea.</p>
+            <p class="size">(120 g avg.)</p>
+
+            <br>
+            <label for="quantity" class="Quantity">Quantity:</label>
+            <input type="number" min="1" value="1" size="2" name="Quantity" id="quantity">
+            <input type="submit" value="Add to Cart">
+            <br>
+            <br>
+            <hr>
+            <p class="descriptionHeader">Product Description</p>
+            <p class="description">
+                "Freshly made baguette straight from the oven."
+                <br>
+                <br>
+                <b>Origin:</b>
+                " France "
+                <br>
+                <br>
+                "Product number: 28459"
+                <a href="#MoreInfo"><h4>More Description</h4></a>
+            </p>
+            <hr>
+            <p id="MoreInfo" class="descriptionHeader">More Description</p>
+            Ingredients: Eggs, wheat , flour.
+        </div>
+
+        </body>
+        
+
     </body>
 </html>
