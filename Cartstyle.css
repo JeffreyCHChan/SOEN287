@@ -44,6 +44,18 @@
         .btn:hover {
           background-color: RoyalBlue;}
 
+	btn2 {
+                    background-color:#FF7F50;
+                    border: black;
+                    color: #ffffff;
+                    padding: 10px 20px;
+                    text-decoration: none;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                  }
+        .btn2:hover {
+        background-color: #FF8C00;}
+
 	.menu ul {
   	list-style-type: none;
   	margin: 0;
