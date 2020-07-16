@@ -7,18 +7,66 @@
     <link rel="stylesheet" type="text/css" href="items.css" />
 </head>
 
-<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="brand-title"><a href="BakedGoods.html"><img src="images/AtoZMarketPlace.jpg"></a></div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+    
+            </a>
+            <div class="navbar-links">
+               <ul>
+                <li><br>
+                    <select onchange="window.location.href=this.value">
+                        <option>Select Aisle</option>
+                        <option value="Beverages.html">Beverages</option>
+                        <option value="Fruits.html">Fruits</option>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="BakedGoods.html">Baked Goods</option>
+                        <option value="Meats.html">Meats</option>
+                    </select>
+                </li>
+                <li><a href="signin.html"><i class="fa fa-unlock-alt" ></i> Login</a></li>
+                <li><a href="#"><i class="fa fa-shopping-cart" ></i> My Cart</a></li> 
+                <li><a href="#StoreInformation">Store Information</a></li> 
+                <li><a href="#StoreHours">Store Hours</a> </li>
+             
+            </ul> 
+            </div>
+            
+        </nav>
+</header>
+    
+    <body>
+        <p>
+            <pre>
+
+
+
+
+
+
+
+
+
+            </pre>
+        </p>
     <div class="row center">
         <div class="col-3 col-s-3">
             <img src="https://i5.walmartimages.ca/images/Large/546/3_1/155463_1.jpg" alt="Coca-Cola" width="">
             <h6>source: Coca-Cola Company</h6>
         </div>
-
+<br>
         <div class="col-4 col-s-4">
-            <p class="brand">Brand: Coca-Cola Company</p>
-            <p class="product">12-Pack Coca-Cola</p>
-            <p class="price">Price: $4.97 ea.</p>
-            <p class="avg-price">$0.12/100mL</p>
+            <p class="brand">Brand: PepsiCo.</p>
+            <p class="product">24-Pack 7-UP</p>
+            <p class="price"><del>Price: $8.47 ea.</del></p>
+            <p class="price" style="color: red;">Price: $5.93 ea.</p>
+            <p class="avg-price"><del>$0.10/100mL</del></p>
+            <p class="avg-price" style="color: red;">$0.07/100ml</p>
             <br>
             <label for="quatity" class="Quantity">Quantity:</label>
             <input type="number" min="1" value="1" size="2" name= "Quantity" id="quantity">
@@ -42,7 +90,7 @@
         <p class="description">Have a signature beverage from a company we all know.</p>
         <p class="description" align="left"><b>Country of Origin</b>: Canada
             <br><b>Product number</b>: 63595</p>
-
+    </div>
     </div>
 </body>
 
