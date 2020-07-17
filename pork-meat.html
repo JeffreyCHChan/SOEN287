@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meat</title>
+    <title>Pork_meat</title>
     <link rel="stylesheet" type="text/css" href="items.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
+
 <header>
     <nav class="navbar">
         <div class="brand-title"><a href="index.html"><img src="images/atozmarketplace.jpg"></a></div>
@@ -22,7 +24,7 @@
                     <option value="beverages.html">Beverages</option>
                     <option value="fruits.html">Fruits</option>
                     <option value="vegetables.html">Vegetables</option>
-                    <option value="baked-goods.html">Baked Goods</option>
+                    <option value="bakedGoods.html">Baked Goods</option>
                     <option value="meats.html">Meats</option>
                 </select>
                 <li><a href="signin.html"><i class="fa fa-unlock-alt" ></i> Login</a></li>
@@ -34,48 +36,44 @@
     </nav>
 
 </header>
+
 <body>
-<br>
-<h1 id = "AisleTitle"> Meats </h1>
-<hr>
 
-<table border>
-    <tr>
-        <th>
-            <a href="pork-meat.html" target="_self">Pork Meat</a>
-        </th>
+<div class="row center" style="margin-top: 150px;">
+    <div class="col-4 col-s-4">
+        <img src="images/porkcut.jpg" alt="Pork Meat">
+    </div>
 
-        <td>
-            <a href="pork-meat.html" target="_self"><img src="images/porkcut.jpg" alt="Pork cut Picture" class = "item" width="300" height="300"> </a>
-        </td>
+    <div class="col-7 col-s-7">
+        <p class="brand">No name</p>
+        <p class="product">Pork Meat</p>
+        <p class="price"><del>$11.99 ea.</del></p>
+        <p class="price" style="color: red;">$10.99 ea.</p>
+        <p class="avg-price"><del>$2.40 /100g</del></p>
+        <p class="avg-price" style="color: red;">$2.20 /100g</p>
+        <br>
+        <label for="quantity" class="Quantity">Quantity:</label>
+        <input type="number" min="1" value="1" size="2" name="Quantity" id="quantity">
+        <input type="submit" value="Add to Cart">
+        <br>
+        <br>
 
-    </tr>
-    <tr>
-        <th>
-            <a href="chicken-wings.html" target="_self">Chicken Wings</a>
-        </th>
-        <td>
-            <a href="chicken-wings.html" target="_self"><img src="images/chicken-wings.jpg" alt="chicken wings Picture" class = "item" width="300" height="300"></a>
-        </td>
-    </tr>
-    <tr>
-    <th>
-        <a href="ground-beef.html" target="_self">Ground Beef</a>
-    </th>
-    <td>
-        <a href="ground-beef.html" target="_self"><img src="images/ground-beef.jpg" alt="ground beef Picture" class = "item" width="300" height="300"></a>
-    </td>
-</tr>
-    <tr>
-        <th>
-            <a href="smoked-salmon.html" target="_self">Smoked Salmon</a>
-        </th>
-        <td>
-            <a href="smoked-salmon.html" target="_self"><img src="images/smoked-salmon.jpg" alt="smoked salmon Picture" class = "item" width="300" height="300"></a>
-        </td>
-    </tr>
-</table>
-
+        <hr>
+        <p class="descriptionHeader">Product Description</p>
+        <p class="size">Sold in 500g format</p>
+        <p class="description">Category: Meat</p>
+        <hr>
+        <a href="#moreDescription" class="more">More Description</a><br>
+        <hr>
+        <br>
+        <p class="description" id="moreDescription">Pork meat from your beloved Canadian farms !help local economy!<br>
+            <br><b>Origin:</b>Canada<br>
+            <br>Product number: 25000</p>
+        </p>
+        <hr>
+    </div>
+</div>
 
 </body>
 </html>
+>
