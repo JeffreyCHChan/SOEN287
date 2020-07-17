@@ -1,0 +1,102 @@
+/*--Jeffrey Chak-Him Chan 40152579 --*/
+/*Mobile*/
+[class*="col-"] {
+    width: 100%;
+  }
+
+/*Laptop*/
+@media only screen and (min-width: 600px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+
+/*Desktop*/
+@media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+
+body{
+    background-color:aliceblue;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;}
+.productList{text-align: left; font-family: 'Times New Roman', Times, serif;}
+.headers{text-align: center; font: bold; font-size: large;}
+.itemData{text-align: center; font-size: medium;}
+.table{height: min-content; width: 100%;}
+.aisle{font: bold; background-color: rgb(0, 225, 255)}
+.backendAddEdit{width: 60%; height: min-content; text-align: left;}
+
+.ListTable {
+    border-collapse: separate;
+
+}
+.ListTable th {
+    text-align: center;
+    background-color: rgb(68, 66, 66);
+    color: white;
+    padding: 4px 8px;
+}
+
+.ListTable td {
+    border: 1px solid lightslategray;
+    padding: 4px 8px;
+}
+
+.ListTable tr:nth-child(odd) td {
+    background-color: lightgray;
+}
+
+.ListTable tr:nth-child(even) td {
+    background-color: lightcyan;
+}
+
+.ProfileTable {
+    border-collapse: separate;
+
+}
+.ProfileTable th {
+    text-align: center;
+    background-color: rgb(68, 66, 66);
+    color: white;
+    padding: 4px 8px;
+}
+
+.ProfileTable td {
+    border: 1px solid lightslategray;
+    padding: 4px 8px;
+}
+
+
+.ProfileSubHeader {
+    background-color: darkslategray;
+    color: white;
+}
+
+.ProfileRest:nth-child(odd) td {
+    background-color: whitesmoke;
+}
+
+.ProfileRest:nth-child(even) td {
+    background-color: lightcyan;
+}
