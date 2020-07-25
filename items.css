@@ -113,9 +113,13 @@ html {
     background-color: moccasin;
     border: none;
     color: black;
+    text-align: left;
     font-weight: bold;
     font-size: 15pt;
+    display: inline-block;
     text-decoration: none;
+    width: 100%;
+    outline: none;
     margin: 20px 0;
     cursor: pointer;
 }

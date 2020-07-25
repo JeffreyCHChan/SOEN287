@@ -47,8 +47,10 @@
                 <p class="brand"></p>
                 <p class="product">English Cucumber</p>
 
-                <p class="price">$2.49 ea. </p>
-                <p class="avg-price">$2.49 /un</p>
+                <p class="price"><del>$2.49 ea. </del></p>
+                <p class="price" style="color: red;">$1.99 ea.</p>
+                <p class="avg-price"><del>$2.49 /un</del></p>
+                <p class="avg-price" style="color: red;">$2.35 /100g</p>
                 <br>
                 <label for="quatity" class="Quantity">Quantity:</label>
                 <input type="number" min="1" value="1" size="2" name= "Quantity" id="quantity">
@@ -60,10 +62,10 @@
                 <p class="size">Sold Individually </p>
                 <p class="description">Category: Vegetables</p>
                 <hr>
-                <a href="#moreDescription" class="more">More Description</a><br>
+                <button class="more" onclick="myFunction()">More Description</button>
                 <hr>
                 <br>
-                <p class="description" id="moreDescription">Individually wrapped cucumbers fresh from the farm. Country of origin may differ by store and region.<br>
+                <p class="description">Individually wrapped cucumbers fresh from the farm. Country of origin may differ by store and region.<br>
                 <br><b>Origin:</b> Belgium, Canada, Spain, United States, Honduras, Morocco, Mexico, Netherlands, Dominican Republic <br>
                 <br>Product number: 54321</p>
                 <hr>
