@@ -7,6 +7,7 @@
         <title>McIntosh Apple</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
         <link rel="stylesheet" type="text/css" href="items.css">  
+        <script src="Test.js"> { }</script>
     </head>
 
     <header>
@@ -63,13 +64,15 @@
                 <p class="size">Sold by Weight</p>
                 <p class="description">Category: Fruits</p>
                 <hr>
-                <a href="#moreDescription" class="more">More Description</a><br>
+                <button class="more" onclick="hiddenSwitch()" >More Description</button>
                 <hr>
                 <br>
+                <div id="moreDescription" hidden>
                 <p class="description" id="moreDescription">Red and juicy McIntosh apples brought to you by local Canadian farmers<br>    
                     <br><b>Origin:</b>Canada<br>
                     <br>Product number: 4152</p>
                 </p>
+            </div>
                 <hr>
             </div>
         </div>

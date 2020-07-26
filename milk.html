@@ -5,6 +5,7 @@
         <meta charset="UTF-8" name= "viewport"content="width=device-width, initial-scale=1.0">
         <title>2% Milk</title>
         <link rel="stylesheet" type="text/css" href="items.css"/>    
+        <script src="product-pages.js"> { }</script>
     </head>
     <header>
         <nav class="navbar">
@@ -58,13 +59,15 @@
             <p class="size" align="left">Weight: 4L</p>
             <p class="description" align="left">Category: Dairy/Beverages</p>
             <hr>
-            <button class="more" onclick="myFunction()">More Description</button>
+            <button class="more" onclick="hiddenSwitch()" >More Description</button>
             <hr>
             <br>
+            <div id="moreDescription" hidden>
         <p class="description">Fresh from dairy farms this pasturized milk comes from Canadian cows.</p>
         <p class="description" align="left"><b>Origin</b>: Canada
             <br>Product number: 68452</p>
             </p>
+        </div>
             <hr>
         </div>
     </div>
