@@ -19,7 +19,7 @@
     let sum;
     let tps;
     let tvq;
-        function item(category_param,product_param,price_param,unit_price,quantity_param){
+        function item(category_param,product_param,unit_price,quantity_param){
         this.category=category_param;
         this.product=product_param;
 
@@ -30,7 +30,16 @@
         counter++;
         }
 
-        let
+        let productlist=[new item("meat","smoked salmon",4.99,2),new item("Baked goods","bagette",5.99,2),new item("meat","Pork meat",7.99,1),
+        new item("meat","ground beef",11.99,3)]
+
+        function displaylist(productlist){
+        for(let i=0;i<productlist.length;i++){
+        return "item: "+item[i].product
+
+
+        }
+        }
 
     </script>
     <nav class="navbar">
@@ -62,8 +71,11 @@
 </header>
 <body>
 <div class="row desk">
-<div class="coin">
-    <h1 class="white">Shopping cart</h1>
+<div class="grid-container">
+    <div class="item1">
+    
+            <h1 class="white">Shopping cart</h1>
+    </div>
 </div>
     <div class="col-4 checkout">
         <p>
