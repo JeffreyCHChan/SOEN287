@@ -85,6 +85,8 @@ body {
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
     .spacing {margin-left: 8.33%;}
+    .quantity {display: inline-flex; padding: 0;}
+    #tCost {margin-left: 25px;}
   }
 
 /*Desktop*/
@@ -102,6 +104,8 @@ body {
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
     .spacing {margin-left: 8.33%;}
+    .quantity {display: inline-flex; padding: 0;}
+    #tCost {margin-left: 25px;}
   }
 
 html {
@@ -111,17 +115,40 @@ html {
 
 .more {
     background-color: moccasin;
-    border: none;
     color: black;
+    cursor: pointer;
+    padding: 10px 0;
+    width: 100%;
+    border: none;
     text-align: left;
+    outline: none;
     font-weight: bold;
     font-size: 15pt;
-    display: inline-block;
     text-decoration: none;
-    width: 100%;
-    outline: none;
-    margin: 20px 0;
-    cursor: pointer;
+    transition: 0.4s;
+}
+
+.active, .more:hover {
+    background-color: moccasin;
+  }
+
+.more:after {
+    font-family: FontAwesome;
+    content: '\f078';
+    float: right;
+    margin-left: 5px;
+  }
+  
+.active:after {
+    content: "\f077";
+}
+
+.descriptionDisplay {
+    padding: 0;
+    background-color: moccasin;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 .brand {
@@ -154,17 +181,72 @@ html {
     font-size: 10pt; 
 }
 
-.avg-price{margin: 0; 
+.avg-price {
+    margin: 0; 
     color: black; 
     font-weight: normal; 
     font-size: 15pt; 
 }
 
-.quantity{
-    margin: 10px 0; 
-    color: black; 
-    font-weight: bold; 
-    font-size: 15pt; 
+
+.empty {
+    visibility: hidden;
+    display: none;
+    max-height: 0;
+    max-width: 0;
+}
+
+#tCost{
+    text-align: left;
+    width: auto;
+    height: 40px;
+    padding: 0;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, Times, sans-serif; 
+}
+
+.quantity input {
+    border: none;
+    background-color: moccasin;
+    text-align: center;
+    width: 50px;
+    height: 40px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, Times, sans-serif;
+    margin: 0;
+    padding: 0;
+ }
+
+button[class*=btn] {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.658);
+    color: white;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, Times, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+button[class*=cart] {
+    width: 150px;
+    height: 40px;
+}
+   
+ button:focus, input:focus {
+    outline:0;
+
+}
+button:hover {
+    background-color: rgba(73, 73, 73, 0.658);
 }
 
 .descriptionHeader {
