@@ -5,7 +5,7 @@
     <meta charset="UTF-8" name= "viewport"content="width=device-width, initial-scale=1.0">
     <title>24-Pack 7-UP</title>
     <link rel="stylesheet" type="text/css" href="items.css" />
-    <script src="product-pages.js"> { }</script>
+    <script type="text/javascript" src="product-pages-jeff.js"> { }</script>
 </head>
 
 
@@ -46,15 +46,22 @@
 
         <div class="col-7 col-s-7">
 <p class="brand">Brand: PepsiCo.</p>
-<p class="product">24-Pack 7-UP</p>
+<p class="product" id="productName">24-Pack 7-UP</p>
 <p class="price"><del>Price: $8.47 ea.</del></p>
 <p class="price" style="color: red;">Price: $5.93 ea.</p>
+<p hidden id="price">5.93</p>
 <p class="avg-price"><del>$0.10/100mL</del></p>
 <p class="avg-price" style="color: red;">$0.07/100ml</p>
             <br>
+            <form action="shoppingcart.html" method="GET"> 
             <label for="quantity" class="Quantity">Quantity:</label>
+            <input type="button" onclick="subtract(), cost()" value="-" size="20px">
+            <input type="button" onclick="add(), cost()" value="+">
             <input type="number" min="1" value="1" size="2" name="Quantity" id="quantity">
-            <input type="submit" value="Add to Cart">
+            <input type="submit" value="Add to Cart" onclick="addToCart()">
+        </form>
+        <p id="sub-total"   onload="cost()"><span class="Quantity"><b>Sub-Total: </b></span> $5.93</p>
+
             <br>
             <br>
 
@@ -71,6 +78,7 @@
     <p class="description">Have a signature beverage from a company we all know.</p>
     <p class="description" align="left"><b>Origin</b>: Canada
         <br>Product number: 63595</p>
+        <p hidden id="productNumber">63595</p>
     </p>
 </div>
             <hr>
