@@ -117,7 +117,7 @@
         }
 
         function setQuantity(index, num) {
-            listofprod[index].quantity = num;
+            listofprod[index].quantity=num;
         }
 
 
@@ -250,14 +250,19 @@
         }
 
         //trying to work on the add and substract
-
+        var quanlist=document.getElementsByClassName("quan");
         var add = document.getElementsByClassName("plus-btn");
         var minus = document.getElementsByClassName("minus-btn");
         var k;
         for (k = 0; k < add.length; k++) {
             add[k].onclick = function() {
-                quantity = listofprod[k].quantity + 1;
-                setQuantity(k, quantity);
+
+                var div2 = (this.parentElement).parentElement;
+                var ind2= mainarr.indexOf(div2);
+                
+                quantity = listofprod[ind2].quantity + 1;
+                setQuantity(ind2, quantity);
+                quanlist[ind2].value=getQuantity(ind2)
                 computetps();
                 computetvq();
                 computetot();
@@ -266,6 +271,7 @@
         }
 
         function minus(index) {
+
             var multi = listofprod[index].quantity;
             if (multi > 0) {
                 multi--;
