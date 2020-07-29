@@ -1,9 +1,9 @@
 function hiddenSwitch(){
     var x = document.getElementById("moreDescription"); //creating a instance variable looking for the id moreDescription
-    if (x.style.display === "none") {
-     x.style.display = "block";//if the variable carries the attribute of display is "none" then we set it to block which reveals the code
+    if (x.style.display === "block") {
+     x.style.display = "none";//if the variable carries the attribute of display is "none" then we set it to block which reveals the code
     } else {
-    x.style.display = "none"; //else then set the attribute to none which hides it
+    x.style.display = "block"; //else then set the attribute to none which hides it
     }
 }
 function add(){
