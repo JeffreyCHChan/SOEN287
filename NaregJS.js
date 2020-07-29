@@ -1,12 +1,7 @@
 //Nareg Mouradian 40044254
-var content = document.getElementsByClassName("description");
-var button = document.getElementsByClassName("more");
+var content = document.getElementsByClassName("content");
+var button = document.getElementsByClassName("more-description");
 
 button.onclick = function(){
 
-    if(content.className == "open"){
-        content.className = "";
-    } else{
-        content.className = "open";
-    }
 };
