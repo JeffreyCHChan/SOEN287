@@ -7,6 +7,7 @@
         <title>McIntosh Apple</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
         <link rel="stylesheet" type="text/css" href="items.css">  
+        <script style="text/javascript" src="maximeitems.js"></script>
     </head>
 
     <header>
@@ -52,10 +53,16 @@
                 <p class="size">(170 g avg.)</p>
                 <p class="avg-price">$5.05 /kg $2.29 /lb</p>
                 <br>
-                <label for="quantity" class="Quantity">Quantity:</label>
-                <input type="number" min="1" value="1" size="2" name="Quantity" id="quantity">
-                <input type="submit" value="Add to Cart">
+                <label for="quantity" class="Quantity" style="font-weight:bolder; font-size: 20px;">Quantity(kg):</label>
+
+                <div>
+                    <button onclick="increase(); applecost()">▲</button>
+                    <p id="quantity">1</p>
+                    <button onclick="decrease(); applecost()">▼</button>
+                    <p id="fruitcost">Price: $5.05</p>
+                </div>
                 <br>
+                <input type="submit" value="Add to Cart">
                 <br>
 
                 <hr>
@@ -63,13 +70,14 @@
                 <p class="size">Sold by Weight</p>
                 <p class="description">Category: Fruits</p>
                 <hr>
-                <a href="#moreDescription" class="more">More Description</a><br>
-                <hr>
-                <br>
-                <p class="description" id="moreDescription">Red and juicy McIntosh apples brought to you by local Canadian farmers<br>    
-                    <br><b>Origin:</b>Canada<br>
-                    <br>Product number: 4152</p>
-                </p>
+                <p class="more">More Description</p>
+                
+                <div>
+                    <button onclick="appleDescription()" style="margin-bottom: 30px;">↓</button>
+                </div>
+
+                <div class="description" id="description">
+                </div>
                 <hr>
             </div>
         </div>

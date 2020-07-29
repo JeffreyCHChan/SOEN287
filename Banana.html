@@ -7,6 +7,7 @@
         <title>Bananas</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
         <link rel="stylesheet" type="text/css" href="items.css">  
+        <script type="text/javascript" src="maximeitems.js"></script>
     </head>
 
     <header>
@@ -52,8 +53,18 @@
                 <p class="size">(190 g avg.)</p>
                 <p class="avg-price">$1.74 /kg $0.79 /lb</p>
                 <br>
-                <label for="quantity" class="Quantity">Quantity:</label>
-                <input type="number" min="1" value="1" size="2" name="Quantity" id="quantity">
+
+                
+                <label for="quantity" class="Quantity" style="font-weight:bolder; font-size: 20px;">Quantity(kg):</label>
+                
+                <div>
+                    <button onclick="increase(); bananacost()">▲</button>
+                    <p id="quantity">1 </p>  
+                    <button onclick="decrease(); bananacost()">▼</button>
+                    <p id="fruitcost">Price: $1.74</p>
+                </div>
+
+                <br>
                 <input type="submit" value="Add to Cart">
                 <br>
                 <br>
@@ -63,14 +74,16 @@
                 <p class="size">Sold by Weight</p>
                 <p class="description">Category: Fruits</p>
                 <hr>
-                <a href="#moreDescription" class="more">More Description</a><br>
+                <p class="more">More Description</p>
+               
+                <div>
+                    <button onclick="bananaDescription()" style="margin-bottom: 30px;">↓</button>
+                </div>
+
+                <div class="description" id="description" style="margin-bottom: 20px;">
+                </div>
                 <hr>
-                <br>
-                <p class="description" id="moreDescription">Sweet bananas that have made their way from Mexico.<br>    
-                    <br><b>Origin:</b>Mexico<br>
-                    <br>Product number: 4011</p>
-                </p>
-                <hr>
+
             </div>
         </div>
         
