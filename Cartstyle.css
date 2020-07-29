@@ -131,7 +131,16 @@ body {margin:0;}
         font-weight:bolder;
 
         }
+        .col1{
+        display:inline-block;
+        width:80%;}
 
+
+        .col2{
+        display:inline-block
+        width:20%;
+        float : right;
+        }
 
         .btn {
           background-color: #33b5e5;
@@ -141,6 +150,15 @@ body {margin:0;}
           text-decoration: none;
           margin: 4px 2px;
           cursor: pointer;
+
+
+
+
+
+
+
+
+
         }
         .btn:hover {
           background-color: RoyalBlue;}
@@ -153,6 +171,7 @@ body {margin:0;}
                     text-decoration: none;
                     margin: 4px 2px;
                     cursor: pointer;
+
                   }
         .btn2:hover {
         background-color: #FF8C00;}

@@ -14,34 +14,7 @@
     </style>
 </head>
 <header>
-    <script>
-    let counter=0;
-    let sum;
-    let tps;
-    let tvq;
-        function item(category_param,product_param,unit_price,quantity_param){
-        this.category=category_param;
-        this.product=product_param;
 
-        this.price=function(unit_price,quantity_param){
-        return unit_price*quantity_param;
-        }
-        this.quantity=quantity_param;
-        counter++;
-        }
-
-        let productlist=[new item("meat","smoked salmon",4.99,2),new item("Baked goods","bagette",5.99,2),new item("meat","Pork meat",7.99,1),
-        new item("meat","ground beef",11.99,3)]
-
-        function displaylist(productlist){
-        for(let i=0;i<productlist.length;i++){
-        return "item: "+item[i].product
-
-
-        }
-        }
-
-    </script>
     <nav class="navbar">
         <div class="brand-title"><a href="MainPage.html"><img src="images/AtoZMarketPlace.jpg"></a></div>
         <a href="#" class="toggle-button">
@@ -81,11 +54,11 @@
         <p>
             <pre>
         CHECKOUT:
-          TVS: 0.00$
-        + TVQ: 0.00$
-        price: 0.00$
+          TPS: <span id="tps"></span>$
+        + TVQ: <span id="tvq"></span>$
+        price: <span id="summ"></span>$
         __________
-        Tot: 0.00$
+        Tot: <span id="tot"></span>$
 
     </pre>
 
@@ -93,11 +66,7 @@
 
     </div>
     <div class="col-7 menu">
-        <ul>
-            <li>Item: Baguette   &nbsp;Price: 5.99$,   &nbsp; Id:12345,  &nbsp; Quantity: 500g. <button class="btn">Change</button> <button class="btn">Delete</button></li>
-            <li>Item: Baguette   &nbsp;Price: 5.99$,   &nbsp; Id:12345,  &nbsp; Quantity: 500g. <button class="btn">Change</button> <button class="btn">Delete</button></li>
-            <li>Item: Baguette   &nbsp;Price: 5.99$,   &nbsp; Id:12345,  &nbsp; Quantity: 500g. <button class="btn">Change</button> <button class="btn">Delete</button></li>
-            <li>Item: Baguette   &nbsp;Price: 5.99$,   &nbsp; Id:12345,  &nbsp; Quantity: 500g. <button class="btn">Change</button> <button class="btn">Delete</button></li>
+        <ul id="myUL">
         </ul>
     </div>
 </div>
@@ -107,9 +76,162 @@
 
     </div>
     <div class="col-6"style="text-align: center">
-        <h1 class="white">Number of Items: 4</h1>
+        <h1 class="white">Number of Items: <span id="count"></span> </h1>
     </div>
 </div>
+
+<script>
+var mainarr=new Array();
+   var sum=0;
+   var TPS;
+   var TVQ;
+   var TOT;
+
+  let counter = 0;
+function item(category_param, product_param, unit_price, quantity_param) {
+    this.category = category_param;
+    this.product = product_param;
+
+    this.price = unit_price * quantity_param;
+
+    this.quantity = quantity_param;
+    counter++;
+}
+
+let listofprod = new Array();
+listofprod.push(new item("meat", "beef", 4.99, 2));
+listofprod.push(new item("meat", "chicken wings", 11.99, 2));
+listofprod.push(new item("baked_good", "baguette", 1.99, 2));
+listofprod.push(new item("vegetables", "English Cucumber", 2.99, 2));
+
+function displaytext(index) {
+    return "Item: "+listofprod[index].product +",   "+ " Price: "+ listofprod[index].price+"$";
+}
+
+
+
+function displaylist(){
+var i;
+
+    for(i=0;i<listofprod.length;i++){
+
+        var li = document.createElement("li");
+        mainarr.push(li)
+        var t = document.createTextNode(displaytext(i));
+        var d=document.createElement("div");
+        var d2=document.createElement("div");
+        d.className="col1";
+        d2.className="col2";
+        d.appendChild(t);
+        li.appendChild(d);
+        var button= document.createElement("BUTTON");
+        var txt = document.createTextNode("Delete");
+        button.appendChild(txt);
+        button.className = "btn";
+        d2.appendChild(button)
+        li.appendChild(button);
+        if(listofprod[i].category=="meat"){
+        li.style.backgroundColor="rgba(255,99,71,0.8)";
+        li.onmouseover=function(){
+        this.style.backgroundColor="rgba(255,99,71,0.95)";}
+        li.onmouseout=function(){
+        this.style.backgroundColor="rgba(255,99,71,0.8)";}
+        }
+
+        else if(listofprod[i].category=="baked_good"){
+        li.style.backgroundColor="rgba(245,222,179,0.8)";
+        li.onmouseover=function(){
+        this.style.backgroundColor="rgba(245,222,179,0.95)";}
+        li.onmouseout=function(){
+        this.style.backgroundColor="rgba(245,222,179,0.8)";}
+        }
+
+        else if(listofprod[i].category=="vegetables"){
+        li.style.backgroundColor="rgba(0,255,127,0.8)";
+        li.onmouseover=function(){
+        this.style.backgroundColor="rgba(0,255,127,0.95)";}
+        li.onmouseout=function(){
+        this.style.backgroundColor="rgba(0,255,127,0.8)";}
+        }
+
+        document.getElementById("myUL").appendChild(li);
+    }
+    }
+
+    displaylist();
+
+
+    function computesum(){
+    var j;
+    for(j=0;j<listofprod.length;j++){
+    sum=sum+listofprod[j].price;
+        }
+    document.getElementById("summ").innerHTML=sum.toFixed(2);
+    }
+
+
+    function computetps(){
+
+    TPS=sum*0.05
+    document.getElementById("tps").innerHTML=TPS.toFixed(2);
+    }
+
+
+    function computetvq(){
+    TVQ=sum*0.0975
+    document.getElementById("tvq").innerHTML=TVQ.toFixed(2);
+    }
+
+    function computetot(){
+    TOT=sum+TPS+TVQ
+    document.getElementById("tot").innerHTML=TOT.toFixed(2);
+    }
+
+   document.getElementById("count").innerHTML=counter;
+
+
+
+
+
+
+
+
+    computesum();
+    computetps();
+    computetvq();
+    computetot();
+
+
+var close = document.getElementsByClassName("btn");
+    var i;
+    for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+    var div = this.parentElement;
+    var ind=mainarr.indexOf(div);
+    sum=sum-listofprod[ind].price;
+    delete listofprod[ind];
+    div.style.display = "none";
+    counter--;
+    document.getElementById("summ").innerHTML=sum.toFixed(2);
+    computetps();
+    computetvq();
+    computetot();
+    document.getElementById("count").innerHTML=counter;
+
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
 
 
 
