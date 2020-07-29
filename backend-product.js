@@ -13,12 +13,12 @@ function backendProductConfirmation(){
     var quantity = document.getElementById("quantity").value;
     var weight = document.getElementById("weight").value;
     var unitsOfMeasure = document.getElementById("units").value;
-    var price = document.getElementById("price").value;
+    var price =  document.getElementById("price").value;
     var productDescription = document.getElementById("productDescription").value;
     var productBrand = document.getElementById("productBrand").value;
     var countryOfOrigin = document.getElementById("origin").value;
     var productNumber = document.getElementById("productNumber").value;
-    confirm("Is this the correct information? \nSection"+section+"\nProduct Name: " + productName+"\nQuantity: "+quantity+"\nAverage Cost: "+ weight+"\nUnit of Measure: " +unitsOfMeasure+"\nPrice: " +price + "\nProduct Description: "+ productDescription 
+    confirm("Is this the correct information? \nSection"+section+"\nProduct Name: " + productName+"\nQuantity: "+quantity+"\nAverage Cost: "+ weight+"\nUnit of Measure: " +unitsOfMeasure+"\nPrice: S" +price + "\nProduct Description: "+ productDescription 
     +"\nProduct Brand: " +productBrand + "\nCountry of Origin: "+countryOfOrigin+"\nProduct Number: " + productNumber)
 }
 
