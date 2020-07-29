@@ -117,7 +117,7 @@
         }
 
         function setQuantity(index, num) {
-            listofprod[index].quantity=num;
+            listofprod[index].quantity = num;
         }
 
 
@@ -148,7 +148,6 @@
                 var txtUp = document.createTextNode("+");
                 quantityDown.appendChild(txtDown);
                 quantityDown.className = "minus-btn";
-                quantityDown.setAttribute("onclick", "minus(i)");
                 quan.className = "quan";
                 quan.type = "text";
                 quan.value = getQuantity(i);
@@ -249,8 +248,9 @@
             }
         }
 
-        //trying to work on the add and substract
-        var quanlist=document.getElementsByClassName("quan");
+        //add and subtract quantities
+
+        var quanlist = document.getElementsByClassName("quan");
         var add = document.getElementsByClassName("plus-btn");
         var minus = document.getElementsByClassName("minus-btn");
         var k;
@@ -258,24 +258,33 @@
             add[k].onclick = function() {
 
                 var div2 = (this.parentElement).parentElement;
-                var ind2= mainarr.indexOf(div2);
-                
+                var ind2 = mainarr.indexOf(div2);
+
                 quantity = listofprod[ind2].quantity + 1;
                 setQuantity(ind2, quantity);
-                quanlist[ind2].value=getQuantity(ind2)
+                quanlist[ind2].value = quantity;
+
                 computetps();
                 computetvq();
                 computetot();
-
             }
         }
 
-        function minus(index) {
+        for (k = 0; k < minus.length; k++) {
+            minus[k].onclick = function() {
 
-            var multi = listofprod[index].quantity;
-            if (multi > 0) {
-                multi--;
-                listofprod[index].quantity = multi;
+                var div2 = (this.parentElement).parentElement;
+                var ind2 = mainarr.indexOf(div2);
+
+                if (listofprod[ind2].quantity > 1) {
+                    quantity = listofprod[ind2].quantity - 1;
+                    setQuantity(ind2, quantity);
+                    quanlist[ind2].value = getQuantity(ind2)
+
+                    computetps();
+                    computetvq();
+                    computetot();
+                }
             }
         }
     </script>
