@@ -3,6 +3,7 @@
     <head><meta charset="UTF-8">
     <title>Add/Edit a Product</title>
     <link rel="stylesheet" type="text/css" href="product-backend.css"/> 
+    <script type="text/javascript" src="backend-product.js"></script>
 </head>
     <body>
         <h1>Add/Edit a Product</h1>
@@ -10,59 +11,49 @@
         <form action="product-list.html" target="_self" method="POST">
         <table border="1" class="col-s-12">
             <th class="backendAddEdit"><label for="productSearch">Product Search</label></th>
-            <td><select name="product" id="productSearch">
+            <td><select name="product" id="sectionSearch">
                 <option selected disabled> Select Product</option>
-                <option value="Milk">Milk</option>
-                <option value="7-UP">7-UP</option>
-                <option value="Coca-Cola"> Coca-Cola</option>
-                <option value="EnglishCucumber">English Cucumber</option>
-                <option value="Hothouse-Red-Tomato">Hothouse Red Tomato</option>
-                <option value="Romain-Lettuce">Romain Lettuce</option>
-                <option value="Chicken-Wings">Chicken Wings</option>
-                <option value="Groundbeef">Groundbeef</option>
-                <option value="Pork-Meat">Pork Meat</option>
-                <option value="Smoked-Salmon">Smoked Salmon</option>
-                <option value="Apple-Pie">Apple Pie</option>
-                <option value="Baguette">Baguette</option>
-                <option value="Chocolate-Cake">Chocolate Cake</option>
-                <option value="Apple">Apple</option>
-                <option value="Banana">Banana</option>
-                <option value="Raspberry">Raspberry</option>
+                <option value="Beverages">Beverages</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Vegetables">Vegetables</option>
+                <option value="Baked-Goods">Baked Goods</option>
+                <option value="Meats">Meats</option>
+                
             </select></td>
             <tr>
                 <th class="backendAddEdit"><label for="Inventory" class="backendAddEdit">Quantity</label></th>
-                <td><input type="number"  min="0"> </td>
+                <td><input type="number"  min="0" id="quantity"> </td>
             </tr>
             <tr><th class="backendAddEdit">Product Name</th>
-                <td><input type="text" ></td>
+                <td><input type="text" id="productName"></td>
             </tr>
-            <tr><th class="backendAddEdit">Product Weight/Number of Units </th>
-                <td><input type="number" min="0"></td>
+            <tr><th class="backendAddEdit" >Product Weight/Number of Units </th>
+                <td><input type="number" min="0" id="weight" ></td>
             </tr>
             <tr>
                 <tr><th class="backendAddEdit">Product Unit of Measure</th>
-                    <td><input type="text" placeholder="Unit value (g,lbs,kg,etc.)"></td>
+                    <td><input type="text" placeholder="Unit value (g,lbs,kg,etc.)" id="units"></td>
             </tr>
             <tr><th class="backendAddEdit">Product Price</th>
-                <td><input type="number" min="0"></td>
+                <td><input type="number" min="0" id="price"></td>
             </tr>
             <tr><th class="backendAddEdit">Product Description</th>
-                <td><textarea name="description" rows="4" cols="25" placeholder="Enter Product Description Here" ></textarea></td>
+                <td><textarea name="description" rows="4" cols="25" id="productDescription" placeholder="Enter Product Description Here" ></textarea></td>
             </tr>
             <tr>
                 <th class="backendAddEdit">Product Brand</th>
-                <td><input type="text"></td>
+                <td><input type="text" id="productBrand"></td>
             </tr>
             <tr>
                 <th class="backendAddEdit">Product Country of Origin</th>
-                <td><input type="text" ></td>
+                <td><input type="text" id="origin" ></td>
             </tr>
             <tr>
                 <th class="backendAddEdit">Product ID</th>
-                <td><input type="number" min="1000" ></td>
+                <td><input type="number" min="1000" id="productNumber"></td>
             </tr>
         </table>
-        <input type="submit">
+        <input type="submit" onclick="backendProductConfirmation()">
     </form>
     </body>
 </html>

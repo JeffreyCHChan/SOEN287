@@ -12,6 +12,7 @@ function add(){
     //if(){} //maybe check if it is less than the current inventory
     quantity++;
     document.getElementById("quantity").value = quantity;
+    sessionStorage.setItem(this.name, quantity);
 }
 
 function subtract(){
@@ -22,6 +23,7 @@ function subtract(){
     }
     else{
         document.getElementById("quantity").value = quantity;
+        sessionStorage.setItem(this.name, quantity);
     }
 }
 function popUp(){
@@ -37,37 +39,22 @@ function addToCart(){
     textnode.innerHTML = "Item: "+ productName+  " &nbsp;Price: "+price+"$,   &nbsp; Id:"+productNumber+",  &nbsp; Quantity: " + quantity //parse double to get the price maybe
     node.appendChild(textnode);                              // Append the text to <li>
     document.getElementById("myList").appendChild(node); //change myList to the id of the shopping cart
+    sessionStorage.setItem(this.name, quantity);
 }
 
 function cost(){
     var quantity = document.getElementById("quantity").value;
     var price = document.getElementById("price").innerHTML;
     var subTotal = quantity * (parseFloat(price)); 
-    document.getElementById("sub-total").innerHTML = ("<span class=Quantity><b>Sub-Total: </b></span> $"+subTotal.toFixed(2));//toFixed limits the digits after the decimals
+    document.getElementById("sub-total").innerHTML = ("<span class=sub-total><b>Sub-Total: </b></span> $"+subTotal.toFixed(2));//toFixed limits the digits after the decimals
 }
 
-
-function editProduct(){
-
-    var productName;
-    var quantity;
-    var averageCost;
-    var units;
-    var price;
-    var productDescription;
-    var productBrand;
-    var countryOfOrigin;
-    var productNumber;
-}
-
-function addProduct(){
-    var productName;
-    var quantity;
-    var averageCost;
-    var units;
-    var price;
-    var productDescription;
-    var productBrand;
-    var countryOfOrigin;
-    var productNumber;
+function quantityCheck(){
+    if (sessionStorage.getItem(this.name) !== null) {
+        if (sessionStorage.getItem(this.name) != ""){
+            quantity = parseInt(sessionStorage.getItem(this.name), 10); //sessionStorage only stores it until as the tab is closed, 10 is the base number system
+            document.getElementById("quantity").value = quantity;
+        }
+    }
+    cost();
 }

@@ -6,6 +6,21 @@
         <title>2% Milk</title>
         <link rel="stylesheet" type="text/css" href="items.css"/>    
         <script type="text/javascript" src="product-pages-jeff.js"> </script>
+        <style>
+
+.quantity {
+            background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+        </style>
     </head>
     <header>
         <nav class="navbar">
@@ -34,7 +49,8 @@
             
         </nav>
 </header>
-<body>
+<body onload="quantityCheck(), cost()"><!--Calls the quantityCheck and cost methods and updates the values for quantity and the 
+    corresponding cost on loading of the page-->
 
     <div class="row center" style="margin-top: 150px;">
         <div class="col-4 col-s-4">
@@ -43,20 +59,22 @@
 
         <div class="col-7 col-s-7">
             <p class="brand">Brand: Beatrice</p>
-            <p class="product" id="productName">2% Milk</p>
+            <p class="product" id="productName" class="productName">2% Milk</p>
             <p class="price">Price: $12.00 ea.</p>
-            <p hidden id="price">12.00</p>
+            <p hidden id="price" class="price">12.00</p>
           <p class="size">(4L)</p>
             <p class="avg-price">$3/1L</p>
             <br>
             <form action="shoppingcart.html" method="GET">
-            <label for="quantity" class="Quantity">Quantity:</label>
-            <input type="button" onclick="subtract(), cost()" value="-">
-            <input type="button" onclick="add(), cost()" value="+">
-            <input type="number" min="1" value="1" size="2" name="Quantity" id="quantity" >
-            <input type="submit" value="Add to Cart" onclick="addToCart()">
+            <label for="quantity" >Quantity:</label>
+            <button type="button" onclick="subtract(), cost()"  class="quantity" > -</button>
+            <button type="button" onclick="add(), cost()"  class="quantity" > +</button>
+            <br>
+            <input type="number" min="1" value="1" size="2" style="font-size: 16pt;" onkeyup="cost()" name="Quantity" id="quantity">
+      
+            <input type="submit" value="Add to Cart" class="quantity" onclick="addToCart()">
         </form>
-            <p id="sub-total"   onload="cost()"><span class="Quantity"><b>Sub-Total: </b></span> $12.00</p>
+            <p id="sub-total" class="sub-total"  ><b>Sub-Total: </b> $12.00</p>
             <br>
             <br>
 
@@ -68,14 +86,14 @@
             <button class="more" onclick="hiddenSwitch()" >More Description</button>
             <hr>
             <br>
-            <div id="moreDescription" hidden>
+            <div id="moreDescription" class="moreDescription" hidden>
         <p class="description">Fresh from dairy farms this pasturized milk comes from Canadian cows.</p>
         <p class="description" align="left"><b>Origin</b>: Canada
             <br>Product number: 68452</p>
-            <p hidden id="productNumber">68452</p>
+            <p hidden id="productNumber" class="productNumber">68452</p>
             </p>
         </div>
-            <hr>
+
         </div>
     </div>
 
