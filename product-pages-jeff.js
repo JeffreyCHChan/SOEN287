@@ -36,7 +36,7 @@ function addToCart(){
     var productName = document.getElementById("productName").innerHTML //takes the text value
     var productNumber = document.getElementById("productNumber").innerHTML
     var price = document.getElementById("price").innerHTML
-    textnode.innerHTML = "Item: "+ productName+  " &nbsp;Price: "+price+"$,   &nbsp; Id:"+productNumber+",  &nbsp; Quantity: " + quantity //parse double to get the price maybe
+    textnode.innerHTML = "Item: "+ productName+  " &nbsp;Price: "+parseFloat(price)+"$,   &nbsp; Id:"+productNumber+",  &nbsp; Quantity: " + quantity //parse double to get the price maybe
     node.appendChild(textnode);                              // Append the text to <li>
     document.getElementById("myList").appendChild(node); //change myList to the id of the shopping cart
     sessionStorage.setItem(this.name, quantity);
