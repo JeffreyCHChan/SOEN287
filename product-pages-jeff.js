@@ -1,6 +1,8 @@
 function hiddenSwitch(){
+    var descr = document.getElementsByClassName("more");
+    descr[0].classList.toggle("active"); //if the link is active or in use then the arrow is flipped
     var x = document.getElementById("moreDescription"); //creating a instance variable looking for the id moreDescription
-    if (x.style.display === "none") {
+    if (x.style.display) {
      x.style.display = "block";//if the variable carries the attribute of display is "none" then we set it to block which reveals the code
     } else {
     x.style.display = "none"; //else then set the attribute to none which hides it
