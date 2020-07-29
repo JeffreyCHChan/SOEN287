@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body onload="cartCheck()">
     <nav class="navbar">
         <nav class="navbar">
             <div class="brand-title"><a href="index.html"><img src="images/atozmarketplace.jpg"></a></div>
@@ -47,7 +47,7 @@
 
         <div class="col-7 col-s-7 spacing">
             <p class="brand"></p>
-            <p class="product">English Cucumber</p>
+            <p id="productName" class="product">English Cucumber</p>
 
             <p class="price"><del>$2.49 ea. </del></p>
             <p id="amount" class="price" style="color: red;">$1.99 ea.</p>
