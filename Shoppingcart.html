@@ -83,6 +83,14 @@
 </div>
 
 <script>
+
+
+
+
+
+
+
+
         var mainarr = new Array();
         var secondarr= new Array();
         var sum = 0;
@@ -99,15 +107,39 @@
             this.unit_price=unit_price_param;
             this.price = unit_price_param * quantity_param;
             this.quantity = quantity_param;
-            counter++;
+
         }
 
         let listofprod = new Array();
+
+        if (sessionStorage.getItem("listofprod") == null) {
         listofprod.push(new item("meat", "beef", 4.99, 2));
         listofprod.push(new item("meat", "chicken wings", 11.99, 2));
         listofprod.push(new item("baked_good", "baguette", 1.99, 2));
         listofprod.push(new item("vegetables", "English Cucumber", 2.99, 3));
 
+        }else{
+        listofprod = JSON.parse(sessionStorage.getItem("listofprod"));}
+
+
+
+
+
+
+
+        function Storeupdate(){
+         if (typeof(Storage) !== "undefined") {
+             // Store
+             sessionStorage.setItem("listofprod",JSON.stringify(listofprod));
+
+            } else {
+             document.getElementById("myUL").innerHTML = "Sorry, your browser does not support Web Storage...";
+                }
+
+
+
+
+        }
         function displaytext(index) {
             return "Item: " + listofprod[index].product + "," + " Price: " + listofprod[index].price + "$";
         }
@@ -123,8 +155,9 @@
         function displaylist() {
             var i;
 
-            for (i = 0; i < listofprod.length; i++) {
 
+            for (i = 0; i < listofprod.length; i++) {
+                counter++;
                 var li = document.createElement("li");
                 mainarr.push(li)
 
@@ -239,6 +272,7 @@
                 var ind = mainarr.indexOf(div);
                 sum = sum - listofprod[ind].price;
                 delete listofprod[ind];
+                listofprod.splice(ind,1);
                 div.style.display = "none";
                 counter--;
                 document.getElementById("summ").innerHTML = sum.toFixed(2);
@@ -246,6 +280,7 @@
                 computetvq();
                 computetot();
                 document.getElementById("count").innerHTML = counter;
+                Storeupdate();
             }
         }
 
@@ -274,6 +309,7 @@
                 computetps();
                 computetvq();
                 computetot();
+                Storeupdate();
             }
         }
 
@@ -299,6 +335,7 @@
                 computetps();
                 computetvq();
                 computetot();
+                Storeupdate();
                 }
             }
         }
@@ -310,6 +347,8 @@
                 listofprod[index].quantity = multi;
             }
         }
+        Storeupdate()
+
     </script>
 
 </body>
