@@ -39,7 +39,7 @@
                
     </header>
 
-    <body>
+    <body onload="savednumberapple(), applecost()">
 
         <div class="row center" style="margin-top: 150px;">
             <div class="col-4 col-s-4">
@@ -56,9 +56,9 @@
                 <label for="quantity" class="Quantity" style="font-weight:bolder; font-size: 20px;">Quantity(kg):</label>
 
                 <div>
-                    <button onclick="increase(); applecost()">▲</button>
-                    <p id="quantity">1</p>
-                    <button onclick="decrease(); applecost()">▼</button>
+                    <button onclick="increaseapple(); applecost()">▲</button>
+                    <p id="quantity"></p>
+                    <button onclick="decreaseapple(); applecost()">▼</button>
                     <p id="fruitcost">Price: $5.05</p>
                 </div>
                 <br>

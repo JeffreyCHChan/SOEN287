@@ -1,7 +1,13 @@
 
 var x = 0;
-var amount = 1;
-var price;
+var amountapple = 1;
+var priceapple;
+var amountbanana=1;
+var pricebanana;
+var amountraspberry=1;
+var priceraspberry;
+
+
 
 function bananaDescription(){
     if(x==0){
@@ -36,40 +42,89 @@ function appleDescription(){
     }
 }
 
-function increase(){
-    amount = amount+1;
-    document.getElementById("quantity").innerHTML=amount;
+function increaseapple(){
+    amountapple = parseInt(sessionStorage.getItem('refreshapple'),10)+1;
+    document.getElementById("quantity").innerHTML=amountapple;
+    parseInt(sessionStorage.setItem('refreshapple', amountapple), 10); 
 }
 
-function decrease(){
-    if(amount>1){
-        amount = amount-1;
-        document.getElementById("quantity").innerHTML=amount;
+function decreaseapple(){
+    if(parseInt(sessionStorage.getItem('refreshapple'),10)>1){
+        amountapple = parseInt(sessionStorage.getItem('refreshapple'),10)-1;
+        document.getElementById("quantity").innerHTML=amountapple;
+        parseInt(sessionStorage.setItem('refreshapple', amountapple), 10);
+    }
+}
+
+function increasebanana(){
+    amountbanana = parseInt(sessionStorage.getItem('refreshbanana'),10)+1;
+    document.getElementById("quantity").innerHTML=amountbanana;
+    parseInt(sessionStorage.setItem('refreshbanana', amountbanana), 10); 
+}
+
+function decreasebanana(){
+    if(parseInt(sessionStorage.getItem('refreshbanana'),10)>1){
+        amountbanana = parseInt(sessionStorage.getItem('refreshbanana'),10)-1;
+        document.getElementById("quantity").innerHTML=amountbanana;
+        parseInt(sessionStorage.setItem('refreshbanana', amountbanana), 10);
+    }
+}
+
+function increaseraspberry(){
+    amountraspberry = parseInt(sessionStorage.getItem('refreshraspberry'),10)+1;
+    document.getElementById("quantity").innerHTML=amountraspberry;
+    parseInt(sessionStorage.setItem('refreshraspberry', amountraspberry), 10); 
+}
+
+function decreaseraspberry(){
+    if(parseInt(sessionStorage.getItem('refreshraspberry'),10)>1){
+        amountraspberry = parseInt(sessionStorage.getItem('refreshraspberry'),10)-1;
+        document.getElementById("quantity").innerHTML=amountraspberry;
+        parseInt(sessionStorage.setItem('refreshraspberry', amountraspberry), 10);
     }
 }
 
 function bananacost(){
-    price = amount*1.74;
-    var n = price.toFixed(2);
+    pricebanana = parseInt(sessionStorage.getItem('refreshbanana'),10)*1.74;
+    var n = pricebanana.toFixed(2);
     document.getElementById("fruitcost").innerHTML=("Price: $"+n);
 }
 
 function raspberrycost(){
-    price = amount*3.99;
-    var n = price.toFixed(2);
+    priceraspberry = parseInt(sessionStorage.getItem('refreshraspberry'),10)*3.99;
+    var n = priceraspberry.toFixed(2);
     document.getElementById("fruitcost").innerHTML=("Price: $"+n);
 }
 
 function applecost(){
-    price = amount*5.05;
-    var n = price.toFixed(2);
+    priceapple = parseInt(sessionStorage.getItem('refreshapple'),10)*5.05;
+    var n = priceapple.toFixed(2);
     document.getElementById("fruitcost").innerHTML=("Price: $"+n);
 }
 
-window.onbeforeunload=function(){
-    sessionStorage.setItem('quantity', amount);
+function savednumberapple(){
+if(sessionStorage.getItem("hasCodeRunBeforeap")===null){
+    sessionStorage.setItem('refreshapple', 1);
+    sessionStorage.setItem("hasCodeRunBeforeap", true);
+}
+document.getElementById("quantity").innerHTML=(parseInt(sessionStorage.getItem('refreshapple'),10));
 }
 
-window.onload = function(){
-    amount=sessionStorage.getItem('quantity');
+function savednumberbanana(){
+    if(sessionStorage.getItem("hasCodeRunBeforeba")===null){
+        sessionStorage.setItem('refreshbanana', 1);
+        sessionStorage.setItem("hasCodeRunBeforeba", true);
+    }
+    document.getElementById("quantity").innerHTML=(parseInt(sessionStorage.getItem('refreshbanana'),10));
 }
+
+function savednumberraspberry(){
+    if(sessionStorage.getItem("hasCodeRunBeforera")===null){
+        sessionStorage.setItem('refreshraspberry', 1);
+        sessionStorage.setItem("hasCodeRunBeforera", true);
+    }
+    document.getElementById("quantity").innerHTML=(parseInt(sessionStorage.getItem('refreshraspberry'),10));
+}
+
+    
+

@@ -39,14 +39,11 @@
                
     </header>
 
-    <body>
+    <body onload="savednumberraspberry(),raspberrycost()">
 
         <div class="row center" style="margin-top: 150px;">
             <div class="col-4 col-s-4">
-  
-
                <img src="images/raspberry.jpg" alt="Raspberry">   
-
             </div>
 
             <div class="col-7 col-s-7">
@@ -57,13 +54,12 @@
                 <p class="avg-price"><del>$2.94 /100g</del></p>
                 <p class="avg-price" style="color: red;">$2.35 /100g</p>
                 <br>
-
                 <label for="quantity" class="Quantity" style="font-weight:bolder; font-size: 20px;">Quantity:</label>
                 
                 <div>
-                    <button onclick="increase(); raspberrycost()">▲</button>
+                    <button onclick="increaseraspberry(); raspberrycost()">▲</button>
                     <p id="quantity">1</p>
-                    <button onclick="decrease(); raspberrycost()">▼</button>
+                    <button onclick="decreaseraspberry(); raspberrycost()">▼</button>
                     <p id="fruitcost">Price: $3.99</p>
                 </div>
 
