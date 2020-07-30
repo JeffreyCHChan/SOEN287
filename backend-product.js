@@ -18,7 +18,7 @@ function backendProductConfirmation(){
     var productBrand = document.getElementById("productBrand").value;
     var countryOfOrigin = document.getElementById("origin").value;
     var productNumber = document.getElementById("productNumber").value;
-    confirm("Is this the correct information? \nSection"+section+"\nProduct Name: " + productName+"\nQuantity: "+quantity+"\nAverage Cost: "+ weight+"\nUnit of Measure: " +unitsOfMeasure+"\nPrice: S" +price + "\nProduct Description: "+ productDescription 
+    confirm("Is this the correct information? \nSection: "+section+"\nProduct Name: " + productName+"\nQuantity: "+quantity+"\nAverage Cost: "+ weight+"\nUnit of Measure: " +unitsOfMeasure+"\nPrice: $" +price + "\nProduct Description: "+ productDescription 
     +"\nProduct Brand: " +productBrand + "\nCountry of Origin: "+countryOfOrigin+"\nProduct Number: " + productNumber)
 }
 
