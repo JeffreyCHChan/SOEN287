@@ -120,8 +120,6 @@
             listofprod[index].quantity=num;
         }
 
-
-
         function displaylist() {
             var i;
 
@@ -129,13 +127,9 @@
 
                 var li = document.createElement("li");
                 mainarr.push(li)
-                var des = document.createElement("input");
 
-                des.type = "text";
-                des.value = displaytext(i);
                 var t = document.createTextNode(displaytext(i));
                 t.className="description";
-                secondarr.push(t);
 
                 var d = document.createElement("div");
                 var d2 = document.createElement("div");
@@ -143,11 +137,12 @@
                 d.className = "col1";
                 d2.className = "col2";
                 d3.className = "col3";
-                d.appendChild(secondarr[i]);
+
+                d.appendChild(t);
                 li.appendChild(d);
+
                 var button = document.createElement("BUTTON");
                 var txt = document.createTextNode("Delete");
-
                 var quantityDown = document.createElement("BUTTON");
                 var txtDown = document.createTextNode("-");
                 var quan = document.createElement("input");
@@ -170,6 +165,7 @@
                 li.appendChild(d2);
                 d3.appendChild(button);
                 li.appendChild(button);
+
                 if (listofprod[i].category == "meat") {
                     li.style.backgroundColor = "rgba(255,99,71,0.8)";
                     li.onmouseover = function() {
@@ -178,7 +174,9 @@
                     li.onmouseout = function() {
                         this.style.backgroundColor = "rgba(255,99,71,0.8)";
                     }
-                } else if (listofprod[i].category == "baked_good") {
+                }
+
+                else if (listofprod[i].category == "baked_good") {
                     li.style.backgroundColor = "rgba(245,222,179,0.8)";
                     li.onmouseover = function() {
                         this.style.backgroundColor = "rgba(245,222,179,0.95)";
@@ -186,7 +184,9 @@
                     li.onmouseout = function() {
                         this.style.backgroundColor = "rgba(245,222,179,0.8)";
                     }
-                } else if (listofprod[i].category == "vegetables") {
+                }
+
+                else if (listofprod[i].category == "vegetables") {
                     li.style.backgroundColor = "rgba(0,255,127,0.8)";
                     li.onmouseover = function() {
                         this.style.backgroundColor = "rgba(0,255,127,0.95)";
@@ -199,9 +199,7 @@
                 document.getElementById("myUL").appendChild(li);
             }
         }
-
         displaylist();
-
 
         function computesum() {
             var j;
@@ -211,13 +209,10 @@
             document.getElementById("summ").innerHTML = sum.toFixed(2);
         }
 
-
         function computetps() {
-
             TPS = sum * 0.05
             document.getElementById("tps").innerHTML = TPS.toFixed(2);
         }
-
 
         function computetvq() {
             TVQ = sum * 0.0975
@@ -236,7 +231,6 @@
         computetvq();
         computetot();
 
-
         var close = document.getElementsByClassName("btn");
         var i;
         for (i = 0; i < close.length; i++) {
@@ -252,45 +246,53 @@
                 computetvq();
                 computetot();
                 document.getElementById("count").innerHTML = counter;
-
             }
         }
 
-        //trying to work on the add and substract
+        var divarr=document.getElementsByClassName("col1");
         var quanlist=document.getElementsByClassName("quan");
         var add = document.getElementsByClassName("plus-btn");
         var minus = document.getElementsByClassName("minus-btn");
         var k;
         for (k = 0; k < add.length; k++) {
             add[k].onclick = function() {
-
                 var div2 = (this.parentElement).parentElement;
                 var ind2= mainarr.indexOf(div2);
                 quantity = listofprod[ind2].quantity + 1;
                 setQuantity(ind2, quantity);
-                quanlist[ind2].value=getQuantity(ind2)
+                quanlist[ind2].value=getQuantity(ind2);
+                listofprod[ind2].price=quantity*listofprod[ind2].unit_price;
+                var newtxt=document.createTextNode(displaytext(ind2));
+                var newdiv=document.createElement("div");
+                newdiv.className="col1";
+                newdiv.appendChild(newtxt);
+                mainarr[ind2].replaceChild(newdiv,divarr[ind2]);
+                divarr[ind2]=newdiv;
+                sum=sum+listofprod[ind2].unit_price;
+                if(sum<=0)sum=0.00;
+                document.getElementById("summ").innerHTML = sum.toFixed(2);
                 computetps();
                 computetvq();
                 computetot();
-
             }
         }
 
         var k;
         for (k = 0; k < add.length; k++) {
             minus[k].onclick = function() {
-
                 var div2 = (this.parentElement).parentElement;
                 var ind2= mainarr.indexOf(div2);
                 quantity = listofprod[ind2].quantity - 1;
-                if(quantity>=0){
+                if(quantity>=1){
                 setQuantity(ind2, quantity);
                 quanlist[ind2].value=getQuantity(ind2);
                 listofprod[ind2].price=quantity*listofprod[ind2].unit_price;
-
-                var g=document.createTextNode(displaytext(ind2));
-
-                mainarr[ind2].replaceChild( g,secondarr[ind2].parentElement);
+                var newtxt=document.createTextNode(displaytext(ind2));
+                var newdiv=document.createElement("div");
+                newdiv.className="col1";
+                newdiv.appendChild(newtxt);
+                mainarr[ind2].replaceChild(newdiv,divarr[ind2]);
+                divarr[ind2]=newdiv;
                 sum=sum-listofprod[ind2].unit_price;
                 if(sum<=0)sum=0.00;
                 document.getElementById("summ").innerHTML = sum.toFixed(2);
@@ -298,14 +300,10 @@
                 computetvq();
                 computetot();
                 }
-
             }
         }
 
-
-
         function minus(index) {
-
             var multi = listofprod[index].quantity;
             if (multi > 0) {
                 multi--;
