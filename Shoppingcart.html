@@ -268,12 +268,15 @@
         var i;
         for (i = 0; i < close.length; i++) {
             close[i].onclick = function() {
-                var div = this.parentElement;
+                var div = (this.parentElement);
                 var ind = mainarr.indexOf(div);
                 sum = sum - listofprod[ind].price;
+
                 delete listofprod[ind];
                 listofprod.splice(ind,1);
                 div.style.display = "none";
+                delete mainarr[ind];
+                mainarr.splice(ind,1);
                 counter--;
                 document.getElementById("summ").innerHTML = sum.toFixed(2);
                 computetps();
