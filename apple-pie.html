@@ -5,7 +5,7 @@
         <title>Apple Pie</title>
         <link rel="stylesheet" type="text/css" href="items.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="NaregJS.js"></script>    
+        <script src="NaregJS.js" defer></script>    
     </head>
 
     <body>
@@ -34,7 +34,6 @@
             </div>
             
         </nav>
-        <div class="pie">
           
            <div class="row center" style="margin-top: 150px;">
             <div class="col-4 col-s-4">
@@ -73,12 +72,12 @@
                 Category: Baked Goods
                 </p>
                  <hr>
-                  <button class="more" onclick="myFunction()">More Description</button><br>
-                <hr>
-                <br>
+                  <button class="more">More Description</button>
+                  <div class="descriptionDisplay">
                 <p class="description">Ingredients: Eggs, flour,  freshly cut apples , milk, butter , granulated sugar.<br>
                 <br>
                 </p>
+                </div>
                 <hr>
         </div>
         </div>

@@ -1,7 +1,23 @@
 //Nareg Mouradian 40044254
-var content = document.getElementsByClassName("content");
-var button = document.getElementsByClassName("more-description");
 
-button.onclick = function(){
+//More Description button implementation of the accordion feature
+var descInfo = document.getElementsByClassName("more");
 
-};
+    for( var i=0; i<descInfo.length; i++) {
+        descInfo[i].onclick = function() {
+            descInfo[0].classList.toggle("active");
+           var content = this.nextElementSibling;
+           
+           if(content.style.maxHeight) {
+               content.style.maxHeight = null;
+           } else {
+               content.style.maxHeight = content.scrollHeight + "px";
+
+        }
+      
+    }
+    
+}
+
+
+
