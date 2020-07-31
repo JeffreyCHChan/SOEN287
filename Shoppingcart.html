@@ -151,7 +151,7 @@
 
         }
         function displaytext(index) {
-            return "Item: " + listofprod[index].product + "," + " Price: " + listofprod[index].price + "$";
+            return "Item: " + listofprod[index].product + "," + " Price: " + listofprod[index].price.toFixed(2) + "$";
         }
 
         function getQuantity(index) {
@@ -193,7 +193,7 @@
                 var txtUp = document.createTextNode("+");
                 quantityDown.appendChild(txtDown);
                 quantityDown.className = "minus-btn";
-                quantityDown.setAttribute("onclick", "minus(i)");
+
                 quan.className = "quan";
                 quan.type = "text";
                 quan.value = getQuantity(i);
@@ -362,13 +362,7 @@
             }
         }
 
-        function minus(index) {
-            var multi = listofprod[index].quantity;
-            if (multi > 0) {
-                multi--;
-                listofprod[index].quantity = multi;
-            }
-        }
+       
 
 
     </script>
