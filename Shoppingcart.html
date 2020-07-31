@@ -119,7 +119,17 @@
         listofprod.push(new item("vegetables", "English Cucumber", 2.99, 3));
 
         }else{
-        listofprod = JSON.parse(sessionStorage.getItem("listofprod"));}
+        listofprod = JSON.parse(sessionStorage.getItem("listofprod"));
+
+        for(var i = listofprod.length - 1; i >= 0; i--) {
+        if(listofprod[i] == undefined) {
+        listofprod.splice(i, 1);
+             }
+        }
+
+
+
+        }
 
 
 
@@ -189,6 +199,7 @@
                 quan.value = getQuantity(i);
                 quantityUp.appendChild(txtUp);
                 quantityUp.className = "plus-btn";
+
 
                 button.appendChild(txt);
                 button.className = "btn";
@@ -264,6 +275,8 @@
         computetvq();
         computetot();
 
+
+
         var close = document.getElementsByClassName("btn");
         var i;
         for (i = 0; i < close.length; i++) {
@@ -273,10 +286,15 @@
                 sum = sum - listofprod[ind].price;
 
                 delete listofprod[ind];
-                listofprod.splice(ind,1);
+
+
                 div.style.display = "none";
                 delete mainarr[ind];
-                mainarr.splice(ind,1);
+
+
+
+
+
                 counter--;
                 document.getElementById("summ").innerHTML = sum.toFixed(2);
                 computetps();
@@ -291,6 +309,7 @@
         var quanlist=document.getElementsByClassName("quan");
         var add = document.getElementsByClassName("plus-btn");
         var minus = document.getElementsByClassName("minus-btn");
+
         var k;
         for (k = 0; k < add.length; k++) {
             add[k].onclick = function() {
@@ -350,7 +369,7 @@
                 listofprod[index].quantity = multi;
             }
         }
-        Storeupdate()
+
 
     </script>
 
