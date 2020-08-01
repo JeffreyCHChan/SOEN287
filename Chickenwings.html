@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chicken_wings</title>
     <link rel="stylesheet" type="text/css" href="items.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="jsformeat.js"></script>
+
+
 
 </head>
 
@@ -54,7 +57,8 @@
         <br>
         <label for="quantity" class="Quantity">Quantity:</label>
         <input type="number" min="1" value="1" size="2" name="Quantity" id="quantity">
-        <input type="submit" value="Add to Cart">
+        <span id="pricetag"></span>
+        <input type="submit" value="Add to Cart" id="button">
         <br>
         <br>
 
@@ -63,7 +67,7 @@
         <p class="size">Sold in 500g format</p>
         <p class="description">Category: Meat</p>
         <hr>
-        <a href="#moreDescription" class="more">More Description</a><br>
+        <p class="more">More Description<input type="button"value="&#8593" style='font-size:16px; float: right; background-color: transparent; border:none;' id="downbtn"> </p>
         <hr>
         <br>
         <p class="description" id="moreDescription">Bio chicken from your beloved Canadian farms !help local economy!<br>
