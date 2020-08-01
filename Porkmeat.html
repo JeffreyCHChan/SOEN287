@@ -48,7 +48,7 @@
         <p class="brand">No name</p>
         <p class="product">Pork meat</p>
         <p class="price"><del>$11.99 ea.</del></p>
-        <p class="price" style="color: red;">$10.99 ea.</p>
+        <p class="price" id="unit" style="color: red;">$10.99 ea.</p>
         <p class="avg-price"><del>$2.40 /100g</del></p>
         <p class="avg-price" style="color: red;">$2.20 /100g</p>
         <br>
@@ -76,40 +76,7 @@
 
     </div>
 </div>
-<script>
-    var quantity=document.getElementById("quantity");
-    var price;
-    quantity.onclick=function(){
-    price=(quantity.value*10.99).toFixed(2);
-    document.getElementById("pricetag").innerHTML="price: "+price+" $";
-
-    }
-
-    document.getElementById("button").onclick=function(){
-    alert("The item has been added to your cart");}
-
-    var btn= document.getElementById("downbtn");
-
-   btn.onclick=function(){
-
-   var x = document.getElementById("moreDescription");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-   btn.value = "↑"
-  } else {
-    x.style.display = "none";
-    btn.value="↓"
-  }
-
-    }
-
-
-
-
-
-
-
-</script>
+<script src="jsformeat.js"></script>
 
 </body>
 </html>

@@ -1,7 +1,10 @@
 var quantity=document.getElementById("quantity");
     var price;
+    var name;
+    var unit=document.getElementById("unit").innerHTML.match(/\d{1,}.\d\d/);
+    
     quantity.onclick=function(){
-    price=(quantity.value*10.99).toFixed(2);
+    price=(quantity.value*unit).toFixed(2);
     document.getElementById("pricetag").innerHTML="price: "+price+" $";
 
     }
