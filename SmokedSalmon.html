@@ -48,13 +48,14 @@
         <p class="brand">Atlantis fish</p>
         <p class="product">Smoked Salmont</p>
         <p class="price"><del>$5.99 ea.</del></p>
-        <p class="price" style="color: red;">$4.99 ea.</p>
+        <p class="price" id="unit" style="color: red;">$4.99 ea.</p>
         <p class="avg-price"><del>$1.20 /100g</del></p>
         <p class="avg-price" style="color: red;">$2.00 /100g</p>
         <br>
         <label for="quantity" class="Quantity">Quantity:</label>
         <input type="number" min="1" value="1" size="2" name="Quantity" id="quantity">
-        <input type="submit" value="Add to Cart">
+        <span id="pricetag"></span>
+        <input type="submit" value="Add to Cart" id="button">
         <br>
         <br>
 
@@ -63,7 +64,7 @@
         <p class="size">Sold in 85g format</p>
         <p class="description">Category: Meat</p>
         <hr>
-        <a href="#moreDescription" class="more">More Description</a><br>
+        <p class="more">More Description<input type="button"value="&#8593" style='font-size:16px; float: right; background-color: transparent; border:none;' id="downbtn"> </p>
         <hr>
         <br>
         <p class="description" id="moreDescription">From the Newfoundland coast into your hands<br>
@@ -73,6 +74,7 @@
         <hr>
     </div>
 </div>
+<script src="jsformeat.js"></script>
 
 </body>
 </html>
