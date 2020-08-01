@@ -56,11 +56,11 @@
         <p>
         <pre>
         CHECKOUT:
-          TPS: <span id="tps"></span>$
+            TPS: <span id="tps"></span>$
         + TVQ: <span id="tvq"></span>$
         price: <span id="summ"></span>$
         __________
-        Tot: <span id="tot"></span>$
+         Tot: <span id="tot"></span>$
 
     </pre>
 
@@ -117,6 +117,8 @@
         listofprod.push(new item("meat", "chicken wings", 11.99, 2));
         listofprod.push(new item("baked_good", "baguette", 1.99, 2));
         listofprod.push(new item("vegetables", "English Cucumber", 2.99, 3));
+        listofprod.push(new item("beverages", "English Cucumber", 2.99, 3));
+
 
         }else{
         listofprod = JSON.parse(sessionStorage.getItem("listofprod"));
@@ -362,7 +364,7 @@
             }
         }
 
-       
+
 
 
     </script>
