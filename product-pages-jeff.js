@@ -1,3 +1,5 @@
+//Jeffrey Chak-Him Chan 40152579
+
 function hiddenSwitch(){
     var x = document.getElementById("moreDescription"); //creating a instance variable looking for the id moreDescription
     if (x.style.display === "block") {
