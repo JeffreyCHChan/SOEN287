@@ -1,3 +1,5 @@
+//Jeffrey Chak-Him Chan 40152579
+
 function deleteItem(rowId){
     var row = document.getElementById(rowId);
     var table = row.parentNode;
