@@ -125,7 +125,11 @@ function savednumberraspberry(){
         sessionStorage.setItem("hasCodeRunBeforera", true);
     }
     document.getElementById("quantity").innerHTML=(parseInt(sessionStorage.getItem('refreshraspberry'),10));
+<<<<<<< HEAD
 }
 
     
 
+=======
+}
+>>>>>>> master
