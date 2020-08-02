@@ -1,6 +1,5 @@
-var quantity=document.getElementById("quantity");
+    var quantity=document.getElementById("quantity");
     var price;
-    var name;
     var unit=document.getElementById("unit").innerHTML.match(/\d{1,}.\d\d/);
 
     quantity.onclick=function(){
