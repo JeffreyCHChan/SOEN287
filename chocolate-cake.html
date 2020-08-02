@@ -4,7 +4,8 @@
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Chocolate Cake</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-        <link rel="stylesheet" type="text/css" href="items.css">  
+        <link rel="stylesheet" type="text/css" href="items.css">
+        <script src="naregJSitem3.js" defer></script>   
     </head>
 
     <header>
@@ -47,18 +48,26 @@
             <p class="brand">AtoZ FreshMarket</p>
             <p class="product">Chocolate Cake</p>
             <p class="price">$12.50  ea.</p>
+            <p class="calcPrice" hidden>12.50</p>
             <p class="size">(720 g avg.)</p>
 
             <br>
-            <label for="quantity" class="Quantity">Quantity:</label>
-            <input type="number" min="1" value="1" size="2" name="Quantity" id="quantity">
-            <input type="submit" value="Add to Cart">
+            <button class="cart-btn" data-action="AddToCart">Add to Cart</button>
             <br>
-            <br>
+            <div class="itemCartInfo"></div>
             <hr>
             <p class="descriptionHeader">Product Description</p>
             <p class="description">
-                Cake made with fresh chocolate and covered with more chocolate inside and out, perfect for chocolate lovers.
+                Sold Individually
+                <br>
+                <br>
+                Category: Baked Goods
+                </p>
+                 <hr>
+                  <button class="more">More Description</button>
+                  <div class="descriptionDisplay">
+                <p class="description">
+                    Cake made with fresh chocolate and covered with more chocolate inside and out, perfect for chocolate lovers.
                 <br>
                 <br>
                 <b>Origin:</b>
@@ -68,18 +77,10 @@
                 Product number: 97124
                  <br>
                 <br>
-                Sold Individually
-                <br>
-                <br>
-                Category: Baked Goods
-                </p>
-                 <hr>
-                  <button class="more" onclick="myFunction()">More Description</button><br>
-                <hr>
-                <br>
-                <p class="description">Ingredients: Eggs, flour,  freshly ground cocoa beans , milk, butter , icing sugar, glucose.<br>
+                    Ingredients: Eggs, flour,  freshly ground cocoa beans , milk, butter , icing sugar, glucose.<br>
                 <br>
                 </p>
+                </div>
                 <hr>
         </div>
         </div>
