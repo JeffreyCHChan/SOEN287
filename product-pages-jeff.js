@@ -22,6 +22,7 @@ function subtract(){
     if(quantity>1){
     quantity--;
     document.getElementById("quantity").value = quantity;
+    sessionStorage.setItem(this.name, quantity);
     }
     else{
         document.getElementById("quantity").value = quantity;
