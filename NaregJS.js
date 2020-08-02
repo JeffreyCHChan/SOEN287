@@ -30,6 +30,7 @@ if(itemList.length > 0){
         const item = itemInfo;
 
         insertItem(item);
+        totalPrice();
 
                 //For increasing the amount of the item to be purchased.
                 const bakeryItem = itemCartDOM.querySelectorAll('.item_');
@@ -47,6 +48,7 @@ aTCButtonDOM.forEach(itemDescription => {
         const item = {
             name: itemDOM.querySelector('.product').innerText,
             price: itemDOM.querySelector('.price').innerText,
+            calculationPrice: itemDOM.querySelector('.calcPrice').innerText,
             quantity: 1,
         };
 
@@ -58,6 +60,7 @@ aTCButtonDOM.forEach(itemDescription => {
         itemList.push(item);
         //To allow refreshing the page and keeping the content.
         localStorage.setItem('itemList' , JSON.stringify(itemList) );
+        totalPrice();
         buttonHandler(item);
 
         
@@ -69,12 +72,14 @@ aTCButtonDOM.forEach(itemDescription => {
 function insertItem(item) {
     itemCartDOM.insertAdjacentHTML('beforeend' , `
     <div class="item_">
-        <h3 class="item_name">${item.name}</h3>
-        <h3 class="item_price">${item.price}</h3>
+    <br>
+        <h3 class="item_name" hidden>${item.name}</h3>
+        <h3 class="item_price" hidden>${item.price}</h3>
         <button class="cart-btn" data-action="IncreaseItem" style="width: 5%; height: 3%;">&plus;</button>
         <h3 class="item_quantity">${item.quantity}</h3>
         <button class="cart-btn" data-action="DecreaseItem" style="width: 5%; height: 3%;">&minus;</button>
         <button class="cart-btn" data-action="RemoveItem" style="width: 5%; height: 3%;background-color:red">&times;</button>
+        <button class="cart-btn" data-action="ShowTotal" >Total Price</button>
     </div>
     `); 
 }
@@ -89,6 +94,7 @@ function buttonHandler(item) {
                 if(itemInfo.name === item.name) {
                     individualInfo.querySelector('.item_quantity').innerText = ++itemInfo.quantity;
                     localStorage.setItem('itemList' , JSON.stringify(itemList) );
+                    totalPrice();
                 }
             });
         });
@@ -99,10 +105,12 @@ function buttonHandler(item) {
                     if(itemInfo.quantity > 1){ 
                     individualInfo.querySelector('.item_quantity').innerText = --itemInfo.quantity;
                     localStorage.setItem('itemList' , JSON.stringify(itemList) );
+                    totalPrice();
                 } else {
                     individualInfo.remove();
                     itemList = itemList.filter(itemInfo => itemInfo.name !== item.name);
                     localStorage.setItem('itemList' , JSON.stringify(itemList) );
+                    totalPrice();
                     }
                 }
             });
@@ -114,6 +122,7 @@ function buttonHandler(item) {
                     individualInfo.remove();
                     itemList = itemList.filter(itemInfo => itemInfo.name !== item.name);
                     localStorage.setItem('itemList' , JSON.stringify(itemList) );
+                    totalPrice();
                 }
             });
         });
@@ -121,6 +130,18 @@ function buttonHandler(item) {
 
     }
     });
+}
+
+//Function to calcualte the total amount.
+function totalPrice() {
+    let itemTotalPrice = 0;
+    itemList.forEach(itemInfo => {
+        itemTotalPrice += itemInfo.quantity * itemInfo.calculationPrice;
+    });
+
+    document.querySelector('[data-action="ShowTotal"]').innerText = `$ ${itemTotalPrice.toFixed(2)}`;
+   
+
 }
  
 
