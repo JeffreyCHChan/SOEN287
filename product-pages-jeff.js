@@ -51,7 +51,7 @@ function cost(){
     var subTotal = quantity * (parseFloat(price)); 
     document.getElementById("sub-total").innerHTML = ("<span class=sub-total><b>Sub-Total: </b></span> $"+subTotal.toFixed(2));//toFixed limits the digits after the decimals
 }
-var name = document.getElementById("productName").innerHTML; 
+
 function quantityCheck(){
     if (sessionStorage.getItem(this.name) !== null) {
         if (sessionStorage.getItem(this.name) != ""){
