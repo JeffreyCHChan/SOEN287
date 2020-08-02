@@ -1,10 +1,30 @@
     var quantity=document.getElementById("quantity");
     var price;
+    var name=document.title;
     var unit=document.getElementById("unit").innerHTML.match(/\d{1,}.\d\d/);
+    function Storeupdate(){
+    if (typeof(Storage) !== "undefined") {
+                 // Store
+        sessionStorage.setItem("quan",(quantity.value));
+        sessionStorage.setItem("title",name)
+
+    } else {
+        document.getElementById("pricetag").innerHTML = "Sorry, your browser does not support Web Storage...";
+                    }
+                     }
+
+
+    if(sessionStorage.getItem("quan")!=null&& name==sessionStorage.getItem("title")){
+    quantity.value=sessionStorage.getItem("quan");
+    price=(quantity.value*unit).toFixed(2);
+     document.getElementById("pricetag").innerHTML="price: "+price+" $";
+    }
+
 
     quantity.onclick=function(){
     price=(quantity.value*unit).toFixed(2);
     document.getElementById("pricetag").innerHTML="price: "+price+" $";
+    Storeupdate()
 
     }
 
