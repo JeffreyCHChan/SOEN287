@@ -5,6 +5,7 @@
 
 <head>
 <link rel="stylesheet" type="text/css" href="ProductBackend.css">
+<script type = "text/javascript" src="userlistdelete.js"></script>
 </head>
 
 <header>
@@ -12,7 +13,7 @@
 </header>
 
 <body>
-<table border="2" style="width: 100%; height: min-content;">
+<table border="2" style="width: 100%; height: min-content;" id="userlist">
 
     
         <th class="headers">First Name</th>
@@ -48,9 +49,8 @@
             </form>
         </td>
         <td>
-            <form action="delete">
-                <input type="submit" id="userDelete" value="Delete User">
-            </form>
+
+                <input type="button" id="userDelete" value="Delete User" onclick="deleteRow(this)">
         </td>
     </tr>
     <tr>
@@ -65,9 +65,7 @@
             </form>
         </td>
         <td>
-            <form action="delete">
-                <input type="submit" id="userDelete" value="Delete User">
-            </form>
+                <input type="button" id="userDelete" value="Delete User" onclick="deleteRow(this)">
         </td>
     </tr>
 
@@ -83,9 +81,7 @@
             </form>
         </td>
         <td>
-            <form action="delete">
-                <input type="submit" id="userDelete" value="Delete User">
-            </form>
+                <input type="button" id="userDelete" value="Delete User" onclick="deleteRow(this)">
         </td>
     </tr>
 
@@ -101,9 +97,7 @@
             </form>
         </td>
         <td>
-            <form action="delete">
-                <input type="submit" id="userDelete" value="Delete User">
-            </form>
+                <input type="button" id="userDelete" value="Delete User" onclick="deleteRow(this)">
         </td>
     </tr>
     
@@ -119,9 +113,7 @@
             </form>
         </td>
         <td>
-            <form action="delete">
-                <input type="submit" id="userDelete" value="Delete User">
-            </form>
+                <input type="button" id="userDelete" value="Delete User" onclick="deleteRow(this)">
         </td>
     </tr>
 </table>

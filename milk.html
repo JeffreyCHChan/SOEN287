@@ -1,10 +1,27 @@
 <!--Jeffrey Chak-Him Chan 40152579 -->
 <html lang="en">
-
+    <!-- check your 287 folder for test.js-->
     <head>
         <meta charset="UTF-8" name= "viewport"content="width=device-width, initial-scale=1.0">
         <title>2% Milk</title>
         <link rel="stylesheet" type="text/css" href="items.css"/>    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="product-pages-jeff.js"> </script>
+        <style>
+
+.quantity {
+            background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+        </style>
     </head>
     <header>
         <nav class="navbar">
@@ -33,43 +50,55 @@
             
         </nav>
 </header>
-    <body>
-        <div class="row center" style="margin-top: 150px;">
-            <div class="col-4 col-s-4">
-                <img src="images/milk.jpg" alt="Milk" width="">
-                <h6>source: Parmalat Canada Inc.</h6>
-            </div>
-    
-            <div class="col-7 col-s-7">
-                <p class="brand">Brand: Beatrice</p>
-                <p class="product">2% Milk</p>
-                <p class="price">Price: $12.00 ea.</p>
-                <p class="avg-price">$3/1L</p>
-                <br>
-                <label for="quatity" class="Quantity">Quantity:</label>
-                <input type="number" min="1" value="1" size="2" name= "Quantity" id="quantity">
-                <input type="submit" value="Add to Cart">
-                <br><br>
-    
-                <hr>
-                <p class="descriptionHeader">Product Description</p>
-                <p class="description" align="left">Category: Dairy/Beverages</p>
-                <p class="description" align="left">Weight: 4L</p>
-                <a href="#MoreDescription" target="_self" class="more">More Description</a>
-                <br>
-            </div>
-        </div>
-        <br>
-        <hr>
-        <div border="1" id="MoreDescription" style="padding-left: 2%;" class="col-10 col-s-10">
-    
-            <p class="descriptionHeader">More Description</p>
-            <p class="description">Fresh from dairy farms this pasturized milk comes from Canadian cows.</p>
-            <p class="description" align="left"><b>Country of Origin</b>: Canada
-                <br><b>Product number</b>: 68452</p>
-                <br>
+<body onload="quantityCheck(), cost()"><!--Calls the quantityCheck and cost methods and updates the values for quantity and the 
+    corresponding cost on loading of the page-->
+
+    <div class="row center" style="margin-top: 150px;">
+        <div class="col-4 col-s-4">
+            <img src="images/milk.jpg" alt="Milk" width="">
         </div>
 
-    </body>
+        <div class="col-7 col-s-7 spacing">
+            <p class="brand">Brand: Beatrice</p>
+            <p class="product" id="productName" class="productName">2% Milk</p>
+            <p class="price">Price: $12.00 ea.</p>
+            <p hidden id="price" class="price">12.00</p>
+          <p class="size">(4L)</p>
+            <p class="avg-price">$3/1L</p>
+            <br>
+            <form action="shoppingcart.html" method="GET">
+            <label for="quantity" >Quantity:</label>
+            <button type="button" onclick="subtract(), cost()"  class="quantity" > -</button>
+            <button type="button" onclick="add(), cost()"  class="quantity" > +</button>
+            <br>
+            <input type="number" min="1" value="1" size="2" style="font-size: 16pt;" onkeyup="cost()" name="Quantity" id="quantity">
+      
+            <input type="submit" value="Add to Cart" class="quantity" onclick="addToCart()">
+        </form>
+            <p id="sub-total" class="sub-total"  ><b>Sub-Total: </b> $12.00</p>
+            <br>
+            <br>
+
+            <hr>
+            <p class="descriptionHeader">Product Description</p>
+            <p class="size" align="left">Weight: 4L</p>
+            <p class="description" align="left">Category: Dairy/Beverages</p>
+            <hr>
+            <button class="more" onclick="hiddenSwitch()" >More Description</button>
+            <hr>
+            <br>
+            <div id="moreDescription" class="moreDescription" hidden>
+                
+        <p class="description">Fresh from dairy farms this pasturized milk comes from Canadian cows.</p>
+        <p class="description" align="left"><b>Origin</b>: Canada
+            <br>Product number: 68452</p>
+            <p hidden id="productNumber" class="productNumber">68452</p>
+            </p>
+        </div>
+
+        </div>
+    </div>
+
+</body>
 
 </html>

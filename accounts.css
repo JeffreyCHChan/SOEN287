@@ -9,7 +9,11 @@ img {
     height: auto;
   }
   
-body {background-color: moccasin;}
+body {
+    background-color: moccasin;
+    margin: 0;
+    padding: 0;
+}
 
 .row:after {
     content: "";
@@ -108,7 +112,7 @@ html {
     color: black;
 }
 
-input[class= "signin"], input[class= "signup"], select {
+input[class= "signin"], input[class= "signup"] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
