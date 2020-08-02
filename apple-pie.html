@@ -4,7 +4,8 @@
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Apple Pie</title>
         <link rel="stylesheet" type="text/css" href="items.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="naregJS.js" defer></script>    
     </head>
 
     <body>
@@ -33,7 +34,6 @@
             </div>
             
         </nav>
-        <div class="pie">
           
            <div class="row center" style="margin-top: 150px;">
             <div class="col-4 col-s-4">
@@ -44,40 +44,39 @@
                 <p class="brand">AtoZ FreshMarket</p>
                 <p class="product">Apple Pie</p>
 
-                <p class="price"><del>$5.99 ea. </del></p>
+                <h1><p class="original-price"><del>$5.99 ea. </del></p></h1>
                 (500g avg.)
                 <p class="price" style="color: red;">$4.99 ea.</p>
-
+                <p class="calcPrice" hidden>4.99</p>
+                <button class="cart-btn" data-action="AddToCart">Add to Cart</button>
                 <br>
-                <label for="quantity" class="Quantity">Quantity:</label>
-                <input type="number" min="1" value="1" size="2" name= "Quantity" id="quantity">
-                <input type="submit" value="Add to Cart">
-                <br><br>
+                <div class="itemCartInfo"></div>
                     
                 <hr>
                 <p class="descriptionHeader"><b>Product Description</b></p>
                 <p class="description">
-                Apple pie made with love and care right in front of you.
-                <br>
-                <br>
-                <b>Origin:</b> 
-                Canada <br>
-                <br><b>
-                Product number:</b> 124973
-                <br>
-                <br>
                 Sold Individually
                 <br>
                 <br>
                 Category: Baked Goods
                 </p>
                  <hr>
-                  <button class="more" onclick="myFunction()">More Description</button><br>
-                <hr>
-                <br>
-                <p class="description">Ingredients: Eggs, flour,  freshly cut apples , milk, butter , granulated sugar.<br>
+                  <button class="more">More Description</button>
+                  <div class="descriptionDisplay">
+                <p class="description">
+                    Apple pie made with love and care right in front of you.
+                    <br>
+                    <br>
+                    <b>Origin:</b> 
+                    Canada <br>
+                    <br><b>
+                    Product number:</b> 124973
+                    <br>
+                    <br>
+                    Ingredients: Eggs, flour,  freshly cut apples , milk, butter , granulated sugar.<br>
                 <br>
                 </p>
+                </div>
                 <hr>
         </div>
         </div>

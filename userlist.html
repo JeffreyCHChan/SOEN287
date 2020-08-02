@@ -5,6 +5,7 @@
 
 <head>
 <link rel="stylesheet" type="text/css" href="ProductBackend.css">
+<script type = "text/javascript" src="userlistdelete.js"></script>
 </head>
 
 <header>
@@ -12,7 +13,7 @@
 </header>
 
 <body>
-<table border="2" style="width: 100%; height: min-content;">
+<table border="2" style="width: 100%; height: min-content;" id="userlist">
 
     
         <th class="headers">First Name</th>
@@ -43,14 +44,13 @@
         <td>h9j 8e3</td>
         <td>giroux2000@gmail.com</td>
         <td>
-            <form action="user-edit.html">
+            <form action="Useredit.html">
                 <input type="submit" id="userEdit" value="Edit Item">
             </form>
         </td>
         <td>
-            <form action="delete">
-                <input type="submit" id="userDelete" value="Delete User">
-            </form>
+
+                <input type="button" id="userDelete" value="Delete User" onclick="deleteRow(this)">
         </td>
     </tr>
     <tr>
@@ -60,14 +60,12 @@
         <td>r7j 3t4</td>
         <td>RobbieT@gmail.com</td>
         <td>
-            <form action="user-edit.html">
+            <form action="Useredit.html">
                 <input type="submit" id="inventoryAdd" value="Edit Item">
             </form>
         </td>
         <td>
-            <form action="delete">
-                <input type="submit" id="userDelete" value="Delete User">
-            </form>
+                <input type="button" id="userDelete" value="Delete User" onclick="deleteRow(this)">
         </td>
     </tr>
 
@@ -78,14 +76,12 @@
         <td>h3k 9d3</td>
         <td>blogs@gmail.com</td>
         <td>
-            <form action="user-edit.html">
+            <form action="Useredit.html">
                 <input type="submit" id="inventoryAdd" value="Edit Item">
             </form>
         </td>
         <td>
-            <form action="delete">
-                <input type="submit" id="userDelete" value="Delete User">
-            </form>
+                <input type="button" id="userDelete" value="Delete User" onclick="deleteRow(this)">
         </td>
     </tr>
 
@@ -96,14 +92,12 @@
         <td>b3p 4n1</td>
         <td>clems99@gmail.com</td>
         <td>
-            <form action="user-edit.html">
+            <form action="Useredit.html">
                 <input type="submit" id="inventoryAdd" value="Edit Item">
             </form>
         </td>
         <td>
-            <form action="delete">
-                <input type="submit" id="userDelete" value="Delete User">
-            </form>
+                <input type="button" id="userDelete" value="Delete User" onclick="deleteRow(this)">
         </td>
     </tr>
     
@@ -114,19 +108,17 @@
         <td>k3g 9d6</td>
         <td>benditlikebeckham@gmail.com</td>
         <td>
-            <form action="user-edit.html">
+            <form action="Useredit.html">
                 <input type="submit" id="inventoryAdd" value="Edit Item">
             </form>
         </td>
         <td>
-            <form action="delete">
-                <input type="submit" id="userDelete" value="Delete User">
-            </form>
+                <input type="button" id="userDelete" value="Delete User" onclick="deleteRow(this)">
         </td>
     </tr>
 </table>
 
-<form action="user-edit.html">
+<form action="Useredit.html">
     <input type="submit" id="userAdd" value="Add New User">
 </form>
 

@@ -6,7 +6,8 @@
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Raspberry</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-        <link rel="stylesheet" type="text/css" href="items.css">  
+        <link rel="stylesheet" type="text/css" href="items.css"> 
+        <script type="text/javascript" src="maximeitems.js"></script> 
     </head>
 
     <header>
@@ -21,7 +22,7 @@
             <div class="navbar-links">
                 <ul>
                     <select onchange="window.location.href=this.value" style="color:white; background-color: rgb(82,79,79);"> 
-                        <option>Select Aisle</option>
+                        <option value="aisle.html">Select Aisle</option>
                         <option value="beverages.html">Beverages</option>
                         <option value="fruits.html">Fruits</option>
                         <option value="vegetables.html">Vegetables</option>
@@ -38,17 +39,14 @@
                
     </header>
 
-    <body>
+    <body onload="savednumberraspberry(),raspberrycost()">
 
         <div class="row center" style="margin-top: 150px;">
             <div class="col-4 col-s-4">
-  
-
                <img src="images/raspberry.jpg" alt="Raspberry">   
-
             </div>
 
-            <div class="col-7 col-s-7 spacing">
+            <div class="col-7 col-s-7">
                 <p class="brand">Driscoll's</p>
                 <p class="product">Organic Raspberries</p>
                 <p class="price"><del>$4.99 ea.</del></p>
@@ -56,10 +54,18 @@
                 <p class="avg-price"><del>$2.94 /100g</del></p>
                 <p class="avg-price" style="color: red;">$2.35 /100g</p>
                 <br>
-                <label for="quantity" class="Quantity">Quantity:</label>
-                <input type="number" min="1" value="1" size="2" name="Quantity" id="quantity">
-                <input type="submit" value="Add to Cart">
+                <label for="quantity" class="Quantity" style="font-weight:bolder; font-size: 20px;">Quantity:</label>
+                
+                <div>
+                    <button onclick="increaseraspberry(); raspberrycost()">▲</button>
+                    <p id="quantity">1</p>
+                    <button onclick="decreaseraspberry(); raspberrycost()">▼</button>
+                    <p id="fruitcost">Price: $3.99</p>
+                </div>
+
+
                 <br>
+                <input type="submit" value="Add to Cart">
                 <br>
 
                 <hr>
@@ -67,14 +73,16 @@
                 <p class="size">Sold Individually</p>
                 <p class="description">Category: Fruits</p>
                 <hr>
-                <button class="more" onclick="myFunction()">More Description</button>
+                <p class="more">More Description</p><br>
+                
+                <div>
+                    <button onclick="raspberryDescription()" style="margin-bottom: 30px;">↓</button>
+                </div>
+
+                <div class="description" id="description" style="margin-bottom: 20px;">
+                </div>
                 <hr>
-                <br>
-                <p class="description">Raspberries that have been harvested organically to protect our environment.<br>    
-                    <br><b>Origin:</b>Mexico<br>
-                    <br>Product number: 94054</p>
-                </p>
-                <hr>
+                
             </div>
         </div>
         

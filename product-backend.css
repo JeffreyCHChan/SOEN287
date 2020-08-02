@@ -103,19 +103,3 @@ body{
 .ProfileRest:nth-child(even) td {
     background-color: lightcyan;
 }
-        .btn {
-          background-color: #33b5e5;
-          border: black;
-          color: #ffffff;
-          padding: 10px 20px;
-          text-decoration: none;
-          margin: 4px 2px;
-          cursor: pointer;
-        }
-.main li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
