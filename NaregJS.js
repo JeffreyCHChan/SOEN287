@@ -19,7 +19,7 @@ var descInfo = document.getElementsByClassName("more");
     
 }
 
-//Add to Cart implementation
+//Add to Cart button implementation to show us an option to increase or decrease the amount of the item to be purchased.
 let itemList = [];
 const itemCartDOM = document.querySelector('.itemCartInfo');
 const aTCButtonDOM = document.querySelectorAll('[data-action="AddToCart"]');
@@ -47,6 +47,7 @@ aTCButtonDOM.forEach(itemDescription => {
         `); 
         itemList.push(item);    
 
+        //For increasing the amount of the item to be purchased.
         const bakeryItem = itemCartDOM.querySelectorAll('.item_');
         bakeryItem.forEach(individualInfo => {
             if(individualInfo.querySelector('.item_name').innerText === item.name) {
@@ -57,9 +58,31 @@ aTCButtonDOM.forEach(itemDescription => {
                     }
                 });
             });
-            }
-           
+            //For decreasing the amount of the item to be purchased.
+            individualInfo.querySelector('[data-action="DecreaseItem"]').addEventListener('click', () => {
+                itemList.forEach(itemInfo => {
+                    if(itemInfo.name === item.name) {
+                        if(itemInfo.quantity > 1){ 
+                        individualInfo.querySelector('.item_quantity').innerText = --itemInfo.quantity;
+                    } else {
+                        individualInfo.remove();
+                        itemList = itemList.filter(itemInfo => itemInfo.name !== item.name);
+                        }
+                    }
+                });
+            });
+            //For the removing button
+            individualInfo.querySelector('[data-action="RemoveItem"]').addEventListener('click', () => {
+                itemList.forEach(itemInfo => {
+                    if(itemInfo.name === item.name) {
+                        individualInfo.remove();
+                        itemList = itemList.filter(itemInfo => itemInfo.name !== item.name);
+                    }
+                });
+            });
 
+
+        }
         });
         }
     }); 
