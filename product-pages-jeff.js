@@ -51,11 +51,11 @@ function cost(){
     var subTotal = quantity * (parseFloat(price)); 
     document.getElementById("sub-total").innerHTML = ("<span class=sub-total><b>Sub-Total: </b></span> $"+subTotal.toFixed(2));//toFixed limits the digits after the decimals
 }
-var name = document.getElementById("productName").innerHTML; 
+var names = document.getElementById("productName").innerHTML; 
 function quantityCheck(){
-    if (sessionStorage.getItem(this.name) !== null) {
-        if (sessionStorage.getItem(this.name) != ""){
-            quantity = parseInt(sessionStorage.getItem(this.name), 10); //sessionStorage only stores it until as the tab is closed, 10 is the base number system
+    if (sessionStorage.getItem(this.names) !== null) {
+        if (sessionStorage.getItem(this.names) != ""){
+            quantity = parseInt(sessionStorage.getItem(this.names), 10); //sessionStorage only stores it until as the tab is closed, 10 is the base number system
             document.getElementById("quantity").value = quantity;
         }
     }
