@@ -45,3 +45,23 @@
   }
 
     }
+
+ function addbtn(){
+   quantity.value=Number(quantity.value)+1;
+   price=(quantity.value*unit).toFixed(2);
+       document.getElementById("pricetag").innerHTML="price: "+price+" $";
+       Storeupdate()
+
+   }
+   function minusbtn(){
+   if(quantity.value<=1){
+   quantity.value=1;
+   }
+      else quantity.value=Number(quantity.value)-1;
+
+
+      price=(quantity.value*unit).toFixed(2);
+          document.getElementById("pricetag").innerHTML="price: "+price+" $";
+          Storeupdate()
+
+      }

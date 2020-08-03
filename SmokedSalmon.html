@@ -51,13 +51,16 @@
         <p class="price" id="unit" style="color: red;">$4.99 ea.</p>
         <p class="avg-price"><del>$1.20 /100g</del></p>
         <p class="avg-price" style="color: red;">$2.00 /100g</p>
+
         <br>
         <label for="quantity" class="Quantity">Quantity:</label>
         <input type="number" min="1" value="1" size="2" name="Quantity" id="quantity">
         <span id="pricetag"></span>
         <br>
         <br>
-        <button class="cart-btn" type="button" name="cart" id="button" style=" width:50%;">Add to cart</button>
+        <button class="cart-btn" type="button" name="cart" id="button" style=" width:40%;">Add to cart</button>
+        <button class="plus-btn" type="button" name="plus" onclick="addbtn()" style=" width:15%;">+</button>
+        <button class="minus-btn" type="button" name="minus" onclick="minusbtn()" style=" width:15%;">-</button>
 
         <br>
         <br>
