@@ -38,10 +38,10 @@
    var x = document.getElementById("moreDescription");
   if (x.style.display === "none") {
     x.style.display = "block";
-   btn.value = "↑"
+
   } else {
     x.style.display = "none";
-    btn.value="↓"
+
   }
 
     }
