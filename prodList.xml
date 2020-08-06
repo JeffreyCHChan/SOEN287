@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productList>
+   <Beverages>
+      Beverages
+      <productName>2% Milk</productName>
+      <quantity>100</quantity>
+      <weight>4</weight>
+      <units>L</units>
+      <price>12.00</price>
+      <weight>Fresh from dairy farms this pasturized milk comes from Canadian cows.</weight>
+      <brand>Beatrice</brand>
+      <countryOfOrigin>Canada</countryOfOrigin>
+      <productNumber>68452</productNumber>
+   </Beverages>
+   <Beverages>
+      Beverages
+      <productName>7-UP</productName>
+      <quantity>100</quantity>
+      <weight>355</weight>
+      <units>mL</units>
+      <price>8.47</price>
+      <weight>The citrus taste from PepsiCo.'s 7-UP will leave you wanting more.</weight>
+      <brand>PEPSICO</brand>
+      <countryOfOrigin>Canada</countryOfOrigin>
+      <productNumber>63595</productNumber>
+   </Beverages>
+   <Beverages>
+      Beverages
+      <productName>Coca-Cola</productName>
+      <quantity>100</quantity>
+      <weight>355</weight>
+      <units>mL</units>
+      <price>5.05</price>
+      <weight>Have a signature beverage from a company we all know.</weight>
+      <brand>COCA-COLA CO.</brand>
+      <countryOfOrigin>Canada</countryOfOrigin>
+      <productNumber>63495</productNumber>
+   </Beverages>
+   <Fruits>
+      Fruits
+      <productName>McIntosh Apple</productName>
+      <quantity>100</quantity>
+      <weight>170</weight>
+      <units>g</units>
+      <price>0.86</price>
+      <weight>Have a signature beverage from a company we all know.</weight>
+      <brand>APPLES AND APPLES</brand>
+      <countryOfOrigin>Canada</countryOfOrigin>
+      <productNumber>4152</productNumber>
+   </Fruits>
+   <Fruits>
+      Fruits
+      <productName>Banana</productName>
+      <quantity>100</quantity>
+      <weight>190</weight>
+      <units>g</units>
+      <price>0.33</price>
+      <weight>Sweet bananas that have made their way from Mexico ;</weight>
+      <brand>Chiquita</brand>
+      <countryOfOrigin>Mexico</countryOfOrigin>
+      <productNumber>4011</productNumber>
+   </Fruits>
+   <Fruits>
+      Fruits
+      <productName>Organic Raspberries</productName>
+      <quantity>100</quantity>
+      <weight>100</weight>
+      <units>g</units>
+      <price>4.99</price>
+      <weight>Raspberries that have been harvested organically to protect our environment.;</weight>
+      <brand>Driscoll</brand>
+      <countryOfOrigin>Mexico</countryOfOrigin>
+      <productNumber>94054</productNumber>
+   </Fruits>
+   <Vegetables>
+      Vegetables
+      <productName>Hothouse Red Tomato</productName>
+      <quantity>100</quantity>
+      <weight>200</weight>
+      <units>g</units>
+      <price>2.2</price>
+      <weight>This is a very red and juicy tomato;</weight>
+      <brand>Savoura</brand>
+      <countryOfOrigin>Canada</countryOfOrigin>
+      <productNumber>12345</productNumber>
+   </Vegetables>
+   <Vegetables>
+      Vegetables
+      <productName>English Cucumber</productName>
+      <quantity>100</quantity>
+      <weight>200</weight>
+      <units>unit</units>
+      <price>2.49</price>
+      <weight>Individually wrapped cucumbers fresh from the farm. Country of origin may differ by store and region. ;</weight>
+      <brand>N/A</brand>
+      <countryOfOrigin>Belgium, Canada, Spain, United States, Honduras, Morocco, Mexico, Netherlands, Dominican Republic</countryOfOrigin>
+      <productNumber>54321</productNumber>
+   </Vegetables>
+   <Vegetables>
+      Vegetables
+      <productName>Romaine Lettuce</productName>
+      <quantity>100</quantity>
+      <weight>200</weight>
+      <units>unit</units>
+      <price>0.99</price>
+      <weight>Crispy lettuce great for salad or sandwhiches. Country of origin may differ by store and region. ;</weight>
+      <brand>N/A</brand>
+      <countryOfOrigin>Canada, Spain, United States, Mexico</countryOfOrigin>
+      <productNumber>98765</productNumber>
+   </Vegetables>
+   <Baked-Goods>
+      Baked-Goods
+      <productName>Baguette</productName>
+      <quantity>100</quantity>
+      <weight>120</weight>
+      <units>g</units>
+      <price>1.99</price>
+      <weight>Freshly made baguette straight from the oven.;</weight>
+      <brand>ATOZ FRESHMARKET</brand>
+      <countryOfOrigin>France</countryOfOrigin>
+      <productNumber>28459</productNumber>
+   </Baked-Goods>
+   <Baked-Goods>
+      Baked-Goods
+      <productName>Apple Pie</productName>
+      <quantity>100</quantity>
+      <weight>500</weight>
+      <units>g</units>
+      <price>5.99</price>
+      <weight>Apple pie made with love and care right in front of you.;</weight>
+      <brand>ATOZ FRESHMARKET</brand>
+      <countryOfOrigin>Canada</countryOfOrigin>
+      <productNumber>124973</productNumber>
+   </Baked-Goods>
+   <Baked-Goods>
+      Baked-Goods
+      <productName>Chocolate Cake</productName>
+      <quantity>100</quantity>
+      <weight>720</weight>
+      <units>g</units>
+      <price>12.5</price>
+      <weight>Cake made with fresh chocolate and covered with more chocolate inside and out, perfect for chocolate lovers.;</weight>
+      <brand>ATOZ FRESHMARKET</brand>
+      <countryOfOrigin>Italy</countryOfOrigin>
+      <productNumber>97124</productNumber>
+   </Baked-Goods>
+   <Meats>
+      Meats
+      <productName>Smoked Salmon</productName>
+      <quantity>100</quantity>
+      <weight>85</weight>
+      <units>g</units>
+      <price>5.99</price>
+      <weight>From the Newfoundland coast into your hands</weight>
+      <brand>Atlantis Fish</brand>
+      <countryOfOrigin>Canada</countryOfOrigin>
+      <productNumber>25003</productNumber>
+   </Meats>
+   <Meats>
+      Meats
+      <productName>Ground Beef</productName>
+      <quantity>100</quantity>
+      <weight>500</weight>
+      <units>g</units>
+      <price>11.99</price>
+      <weight>Ground beef from your beloved Canadian farms !help local economy!</weight>
+      <brand>Behind Beef</brand>
+      <countryOfOrigin>Canada</countryOfOrigin>
+      <productNumber>25002</productNumber>
+   </Meats>
+   <Meats>
+      Meats
+      <productName>Chicken Wings</productName>
+      <quantity>100</quantity>
+      <weight>500</weight>
+      <units>g</units>
+      <price>6.99</price>
+      <weight>Bio chicken from your beloved Canadian farms !help local economy!</weight>
+      <brand>POULAILLER ST-JE</brand>
+      <countryOfOrigin>Canada</countryOfOrigin>
+      <productNumber>25001</productNumber>
+   </Meats>
+   <Meats>
+      Meats
+      <productName>Pork Meat</productName>
+      <quantity>100</quantity>
+      <weight>500</weight>
+      <units>g</units>
+      <price>11.99</price>
+      <weight>Pork meat from your beloved Canadian farms !help local economy!</weight>
+      <brand>No Name</brand>
+      <countryOfOrigin>Canada</countryOfOrigin>
+      <productNumber>25000</productNumber>
+   </Meats>
+</productList>
