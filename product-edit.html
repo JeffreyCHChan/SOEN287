@@ -6,10 +6,12 @@
     <script type="text/javascript" src="backend-product.js"></script>
 </head>
     <body>
+        
         <h1>Edit a Product</h1>
         <hr>
         <form action="product-list.html" target="_self" method="POST" action="editProd.php">
         <table border="1" class="col-s-12">
+            
             <th class="backendAddEdit"><label for="productSearch">Product Search</label></th>
             <td><select name="product" id="sectionSearch" name="section">
                 <option selected disabled> Select Product</option>
@@ -22,7 +24,7 @@
             </select></td>
             <tr>
                 <th class="backendAddEdit"><label for="Inventory" class="backendAddEdit">Quantity</label></th>
-                <td><input type="number"  min="0" id="quantity" name="quantity"> </td>
+                <td><input type="number"  min="0" id="quantity" name="quantity" value="<?php echo $quantity; ?>"> </td>
             </tr>
             <tr><th class="backendAddEdit">Product Name</th>
                 <td><input type="text" id="productName" name="productName"></td>

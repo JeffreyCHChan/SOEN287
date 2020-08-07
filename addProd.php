@@ -40,7 +40,7 @@ echo print_r($_POST);
 //items themself
 
 $pSection=c_element("$section",$root);//$_POST['product']
-c_value("$section",$pSection);
+c_value("Type",$pSection);
 
 
 $pName=c_element("productName", $pSection);

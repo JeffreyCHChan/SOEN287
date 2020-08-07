@@ -16,9 +16,6 @@ function c_value($value, $parent){
 
 }
 
-
-
-
 $xml = new DomDocument('1.0', 'utf-8');
 $xml->load("prodList.xml");
 $root=$xml->getElementByTagName("prodList")->item(0); //first element
@@ -36,35 +33,40 @@ echo print_r($_POST);
 
 //items themself
 
-$pSection=$xml->createElement($_POST['product']);
-$prodList->appendChild($pSection);//appends to the whole product list
+$pSection=c_element("$section",$root);//$_POST['product']
+c_value("$section",$pSection);
 
-$name=$xml->c_element("productName", $_POST['productName']);
-$c_value("productName",$name);//appends to the section
-/*
-$quantity=c_element("quantity", $_POST['quantity']);
-$name->appendChild($quantity);//appends to the item name
 
-$weight=$xml->createElement("weight", $_POST['weight']);
-$name->appendChild($weight);//appends to the item name
+$pName=c_element("productName", $pSection);
+c_value("$productName", $pName);//appends to the section
 
-$units=$xml->createElement("units", $_POST['units']);
-$name->appendChild($units);//appends to the item name
+$pQuantity=c_element("quantity", $pName);
+c_value("$quantity",$pQuantity);//appends to the item name
 
-$price=$xml->createElement("price", $_POST['price']);
-$name->appendChild($price);//appends to the item name
+$pWeight=c_element("weight", $pName);
+c_value("$weight",$pWeight);//appends to the item name
 
-$productDescription=$xml->createElement("description", $_POST['description']);
-$name->appendChild($productDescription);//appends to the item name
+$pUnits=c_element("units", $pName);
+c_value("$units",$pUnits);//appends to the item name
 
-$productBrand=$xml->createElement("productBrand", $_POST['productBrand']);
-$name->appendChild($productBrand);//appends to the item name
+$pPrice=c_element("price", $pName);
+c_value("$price",$pPrice);//appends to the item name
 
-$countryOfOrigin=$xml->createElement("countryOfOrigin", $_POST['countryOfOrigin']);
-$name->appendChild($countryOfOrigin);//appends to the item name
+$pProductDescription=c_element("weight", $pName);
+c_value("$productDescription",$pProductDescription);//appends to the item name
 
-*/
+$pProductBrand=c_element("brand", $pName);
+c_value("$productBrand",$pProductBrand);//appends to the item name
+
+$pCountryOfOrigin=c_element("countryOfOrigin", $pName);
+c_value("$countryOfOrigin",$pCountryOfOrigin);//appends to the item name
+
+$pProductNumber=c_element("productNumber", $pName);
+c_value("$productNumber",$pProductNumber);//appends to the item name
+
+
+
+$xml->formatOutput=true;
 $xml->saveXML();
 $xml->save("prodList.xml");
-
 ?>
