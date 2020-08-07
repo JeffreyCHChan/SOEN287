@@ -46,28 +46,28 @@ c_value("$section",$pSection);
 $pName=c_element("productName", $pSection);
 c_value("$productName", $pName);//appends to the section
 
-$pQuantity=c_element("quantity", $pSection);
+$pQuantity=c_element("quantity", $pName);
 c_value("$quantity",$pQuantity);//appends to the item name
 
-$pWeight=c_element("weight", $pSection);
+$pWeight=c_element("weight", $pName);
 c_value("$weight",$pWeight);//appends to the item name
 
-$pUnits=c_element("units", $pSection);
+$pUnits=c_element("units", $pName);
 c_value("$units",$pUnits);//appends to the item name
 
-$pPrice=c_element("price", $pSection);
+$pPrice=c_element("price", $pName);
 c_value("$price",$pPrice);//appends to the item name
 
-$pProductDescription=c_element("weight", $pSection);
+$pProductDescription=c_element("weight", $pName);
 c_value("$productDescription",$pProductDescription);//appends to the item name
 
-$pProductBrand=c_element("brand", $pSection);
+$pProductBrand=c_element("brand", $pName);
 c_value("$productBrand",$pProductBrand);//appends to the item name
 
-$pCountryOfOrigin=c_element("countryOfOrigin", $pSection);
+$pCountryOfOrigin=c_element("countryOfOrigin", $pName);
 c_value("$countryOfOrigin",$pCountryOfOrigin);//appends to the item name
 
-$pProductNumber=c_element("productNumber", $pSection);
+$pProductNumber=c_element("productNumber", $pName);
 c_value("$productNumber",$pProductNumber);//appends to the item name
 
 

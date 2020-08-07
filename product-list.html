@@ -1,4 +1,5 @@
 <!--Jeffrey Chak-Him Chan 40152579 -->
+<!--read the info from xml-->
 <html>
     <head lang="en">
         <meta charset="UTF-8">
@@ -22,23 +23,23 @@
             <tr id="7-up">
                 <td class="itemData" id="productName">7-UP</td>
                 <td class="itemData" id="quantity">15</td>
-                <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td>   
-                <td><input type="button" onclick="deleteItem('7-up')" value="Remove"></td>
-                <td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>     
+                <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item" /></form></td>                 
+                <td><form          ><input type="button" onclick="deleteItem('7-up')" value="Remove" name="7-UP"></form></td>
+                <td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="7-UP"/></form></td>     
             </tr>
             <tr id="milk">
                 <td class="itemData" id="productName">Milk</td>
                 <td class="itemData" id="quantity">6</td>
                 <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td>                   
-                <td><input type="button" onclick="deleteItem('milk')" value="Remove"  ></td>
-                <td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>
+                <td><form><input type="button" onclick="deleteItem('milk')" value="Remove" name="milk" ></form></td>
+                <td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="milk"/></form></td>
             </tr>
             <tr id="coca-cola">
                 <td class="itemData" id="productName">Coca-Cola</td>
                 <td class="itemData" id="quantity">92</td>
                 <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td> 
-                <td><input type="button" onclick="deleteItem('coca-cola')" value="Remove"></td>
-                <td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>
+                <td><form><input type="button" onclick="deleteItem('coca-cola')" value="Remove" name="Coca-Cola"></form></td>
+                <td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="Coca-Cola"/></form></td>
             </tr>
             </tr>
             <tr> <th colspan="5" class="aisle">Fruits</th></tr>
@@ -46,22 +47,22 @@
                 <td class="itemData" id="productName">Apple</td>
                 <td class="itemData" id="quantity">6</td>
                 <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td>                   
-                <td><input type="button" onclick="deleteItem('apple')" value="Remove"></td>
-<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>          
+                <td><form><input type="button" onclick="deleteItem('apple')" value="Remove" name="McIntosh Apple"></form></td>
+<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="McIntosh Apple"/></form></td>          
             </tr>
             <tr id="banana">
                 <td class="itemData" id="productName">Banana</td>
                 <td class="itemData" id="quantity">6</td>
                 <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td>                   
-                <td><input type="button" onclick="deleteItem('banana')" value="Remove"></td>
-<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>          
+                <td><form><input type="button" onclick="deleteItem('banana')" value="Remove" name="Banana"></form></td>
+<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="Banana"/></form></td>          
             </tr>
             <tr id="raspberry">
                 <td class="itemData" id="productName">Raspberry</td>
                 <td class="itemData" id="quantity">6</td>
                 <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td>                   
-                <td><input type="button" onclick="deleteItem('raspberry')" value="Remove"></td>
-<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>          
+                <td><form><input type="button" onclick="deleteItem('raspberry')" value="Remove" name="Organic Raspberries"></form></td>
+<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="Organic Raspberries"/></form></td>          
             </tr>
             </tr>
             <tr> <th colspan="5"class="aisle">Vegetables</th></tr>
@@ -69,22 +70,22 @@
                 <td class="itemData" id="productName">English Cucumber</td>
                 <td class="itemData" id="quantity">4</td>
                 <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td>   
-                <td><input type="button" onclick="deleteItem('english-cucumber')" value="Remove"></td>
-<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>          
+                <td><form><input type="button" onclick="deleteItem('english-cucumber')" value="Remove" name="English Cucumber"></form></td>
+<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="English Cucumber"/></form></td>          
             </tr>
             <tr id="hothouse-red-tomato">
                 <td class="itemData" id="productName">Hothouse Red Tomato</td>
                 <td class="itemData" id="quantity">44</td>
                 <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td>   
-                <td><input type="button" onclick="deleteItem('hothouse-red-tomato')" value="Remove"></td>
-<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>          
+                <td><form><input type="button" onclick="deleteItem('hothouse-red-tomato')" value="Remove" name="Hothouse Red Tomato"></form></td>
+<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="Hothouse Red Tomato"/></form></td>          
             </tr>
             <tr id="romaine-lettuce">
                 <td class="itemData" id="productName">Romaine Lettuce</td>
                 <td class="itemData" id="quantity">4</td>
                 <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td>   
-                <td><input type="button" onclick="deleteItem('romaine-lettuce')" value="Remove"></td>
-<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>          
+                <td><form><input type="button" onclick="deleteItem('romaine-lettuce')" value="Remove" name="Romaine Lettuce"></form></td>
+<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="Romaine Lettuce"/></form></td>          
             </tr>
             </tr>
             <tr>                <th colspan="5" class="aisle">Baked Goods</th></tr>
@@ -92,22 +93,22 @@
                 <td class="itemData" id="productName">Apple Pie</td>
                 <td class="itemData" id="quantity">6</td>
                 <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td>   
-                <td><input type="button" onclick="deleteItem('apple-pie')" value="Remove"></td>
-<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>          
+                <td><form><input type="button" onclick="deleteItem('apple-pie')" value="Remove" name="Apple Pie"></form></td>
+<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="Apple Pie"/></form></td>          
             </tr>
             <tr id="baguette" >
                 <td class="itemData" id="productName">Baguette</td>
                 <td class="itemData" id="quantity">35</td>
                 <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td>   
-                <td><input type="button" onclick="deleteItem('baguette')" value="Remove"></td>
-<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>          
+                <td><form><input type="button" onclick="deleteItem('baguette')" value="Remove" name="Baguette"></form></td>
+<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="Baguette"/></form></td>          
             </tr>
             <tr id="chocolate-cake">
                 <td class="itemData" id="productName">Chocolate Cake</td>
                 <td class="itemData" id="quantity">96</td>
                 <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td>   
-                <td><input type="button" onclick="deleteItem('chocolate-cake')" value="Remove"></td>
-<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>          
+                <td><form><input type="button" onclick="deleteItem('chocolate-cake')" value="Remove" name="Chocolate Cake"></form></td>
+<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="Chocolate Cake"/></form></td>          
             </tr>
             </tr>
             <tr>                <th colspan="5" class="aisle">Meats</th></tr>
@@ -115,29 +116,29 @@
                 <td class="itemData" id="productName">Chicken Wings</td>
                 <td class="itemData" id="quantity">69</td>
                 <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td>   
-                <td><input type="button" onclick="deleteItem('chicken-wings')" value="Remove"></td>
-<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>          
+                <td><form><input type="button" onclick="deleteItem('chicken-wings')" value="Remove" name="Chicken Wings"></form></td>
+<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="Chicken Wings"/></form></td>          
             </tr>
             <tr id="groundbeef">
                 <td class="itemData" id="productName">Groundbeef</td>
                 <td class="itemData" id="quantity">46</td>
                 <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td>   
-                <td><input type="button" onclick="deleteItem('groundbeef')" value="Remove"></td>
-<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>          
+                <td><form><input type="button" onclick="deleteItem('groundbeef')" value="Remove" name="Groundbeef"></form></td>
+<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="Groundbeef"/></form></td>          
             </tr>
             <tr id="pork-meat">
                 <td class="itemData" id="productName">Pork Meat</td>
                 <td class="itemData" id="quantity">86</td>
                 <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td>   
-                <td><input type="button" onclick="deleteItem('pork-meat')" value="Remove"></td>
-<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>          
+                <td><form><input type="button" onclick="deleteItem('pork-meat')" value="Remove" name="Pork Meat"></form></td>
+<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="Pork Meat"/></form></td>          
             </tr>
             <tr id="smoked-salmon">
                 <td class="itemData" id="productName">Smoked Salmon</td>
                 <td class="itemData" id="quantity">106</td>
                 <td><form action="product-add.html"> <input type="submit" id="inventoryAdd" value="Add Item"/></form></td>   
-                <td><input type="button" onclick="deleteItem('smoked-salmon')" value="Remove"></td>
-<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item"/></form></td>          
+                <td><form><input type="button" onclick="deleteItem('smoked-salmon')" value="Remove" name="Smoked Salmon"></form></td>
+<td><form action="product-edit.html"> <input type="submit" id="inventoryEdit" value="Edit Item" name="Smoked Salmon"/></form></td>          
             </tr>
         </form>
         <input type="submit" formaction=""></button>
