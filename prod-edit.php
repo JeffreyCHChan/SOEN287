@@ -112,13 +112,15 @@ echo "Product Modified";
     <link rel="stylesheet" type="text/css" href="product-backend.css">
 </head>
 <body>
+        <script type="text/javascript" src="backend-product.js"></script>
 <h1 class="productList">Product Edit</h1>
+<h4 class="productList"> Enter Product Name then click 'Find' and check the Section dropbox, click 'Modify' to submit the change</h4>
 <a href ="prod-list.php"> Back to Product List</a>
 <hr>
 <form  method="POST" action="prod-edit.php">
         <table border="1" class="col-s-12">
             <tr><th class="backendAddEdit">Product Name </th>
-                <td><input type="text" id="productName" name="productName" height="200" width="500" placeholder="<?php echo $name?>" value="<?php echo $name?>"> Enter Product Name then click 'Find' check the section </td>
+                <td><input type="text" id="productName" name="productName" height="200" width="500" placeholder="<?php echo $name?>" value="<?php echo $name?>"> </td>
             </tr>
             <th class="backendAddEdit"><label for="productSearch">Section</label></th>
             <td><select id="sectionSearch" name="section" placeholder="" value="<?php echo $section?>">
