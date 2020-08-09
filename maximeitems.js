@@ -127,5 +127,9 @@ function savednumberraspberry(){
     document.getElementById("quantity").innerHTML=(parseInt(sessionStorage.getItem('refreshraspberry'),10));
 }
 
+function addtocart(){
+    alert("This item has been added to your cart!")
+}
+
     
 
