@@ -4,6 +4,7 @@
     $username = $password = $c_password = "";
     $fname = $lname = $email = $admin = "";
     $snumber = $sname = $apt = $city = $province = $pcode = "";
+    $users = simplexml_load_file("users/users.xml");
 
     //Error Variables
     $errors = array();
@@ -16,8 +17,11 @@
             $username = test_input($_POST["username"]);
             if (!preg_match("/^[A-Za-z0-9]*$/", $username)){
                 $errors["username"] = "Username name must only contain letter and numbers";
-            } elseif (file_exists('users/' . $username . '.xml')){
-                $errors["username"] = "Username already exists";
+            } 
+            foreach ($users->user as $checkUser){
+                if ($checkUser->username == $username){
+                    $errors["username"] = "Username already exists";
+                }
             }
         }
 
@@ -126,20 +130,21 @@
 
         //Create XML Files
         if(count($errors) == 0){
-            $xml = new SimpleXMLElement('<user></user>');
-            $xml->addChild('username', $username);
-            $xml->addChild('password', md5($password));
-            $xml->addChild('email', $email);
-            $xml->addChild('fname', $fname);
-            $xml->addChild('lname', $lname);
-            $xml->addChild('snumber', $snumber);
-            $xml->addChild('sname', $sname);
-            $xml->addChild('apt', $apt);
-            $xml->addChild('city', $city);
-            $xml->addChild('province', $province);
-            $xml->addChild('pcode', $pcode);
-            $xml->addChild('admin', "y");
-            $xml->asXML('users/' . $username . '.xml');
+            
+            $user = $users->addChild('user');
+            $user->addChild('username', $username);
+            $user->addChild('password', md5($password));
+            $user->addChild('email', $email);
+            $user->addChild('fname', $fname);
+            $user->addChild('lname', $lname);
+            $user->addChild('snumber', $snumber);
+            $user->addChild('sname', $sname);
+            $user->addChild('apt', $apt);
+            $user->addChild('city', $city);
+            $user->addChild('province', $province);
+            $user->addChild('pcode', $pcode);
+            $user->addChild('admin', "y");
+            $users->asXML("users/users.xml");
             header('Location: signin.php');
             die;
         }
