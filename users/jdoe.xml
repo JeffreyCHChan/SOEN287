@@ -1,0 +1,14 @@
+<user>
+    <username>jdoe</username>
+    <password>827ccb0eea8a706c4c34a16891f84e7b</password>
+    <email>test@example.com</email>
+    <fname>John</fname>
+    <lname>Doe</lname>
+    <snumber>1234</snumber>
+    <sname>some street</sname>
+    <apt></apt>
+    <city>Montreal</city>
+    <province>Quebec</province>
+    <pcode>H1A 2B3</pcode>
+    <admin></admin>
+</user>
