@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <users>
-
     <user>
         <username>jdoe</username>
         <password>827ccb0eea8a706c4c34a16891f84e7b</password>
@@ -15,20 +14,4 @@
         <pcode>H1A 2B3</pcode>
         <admin/>
     </user>
-
-    <user>
-        <username>janedoe</username>
-        <password>232fcd0267d00af924afeb32b00f7c8c</password>
-        <email>janedoe@gmail.com</email>
-        <fname>Jane</fname>
-        <lname>Doe</lname>
-        <snumber>1234</snumber>
-        <sname>Alpha Street</sname>
-        <apt/>
-        <city>Montreal</city>
-        <province>Quebec</province>
-        <pcode>H1A 1B1</pcode>
-        <admin>y</admin>
-    </user>
-    
-<user><username>arvanitisp</username><password>cd0a3162f77d5a0a9ba7eb9ae6f9c13e</password><email>p_arvan@hotmail.com</email><fname>Philip</fname><lname>Arvanitis</lname><snumber>7120</snumber><sname>rue de Lanivet</sname><apt>5</apt><city>Brossard</city><province>Quebec</province><pcode>J4Y 0M1</pcode><admin>y</admin></user><user><username>ctriandos</username><password>cd0a3162f77d5a0a9ba7eb9ae6f9c13e</password><email>ctriandos@live.ca</email><fname>Christina</fname><lname>Triandos</lname><snumber>7120</snumber><sname>rue de Lanivet</sname><apt>5</apt><city>Brossard</city><province>Quebec</province><pcode>J4Y 0M1</pcode><admin>y</admin></user></users>
+<user><username>arvanitisp</username><password>cd0a3162f77d5a0a9ba7eb9ae6f9c13e</password><email>p_arvan@hotmail.com</email><fname>Philip</fname><lname>Arvanitis</lname><snumber>7120</snumber><sname>rue de Lanivet</sname><apt>5</apt><city>Brossard</city><province>Quebec</province><pcode>J4Y 0M1</pcode><admin>on</admin></user></users>

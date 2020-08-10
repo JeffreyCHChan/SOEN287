@@ -1,29 +1,12 @@
 <!--Philip Arvanitis 29041931 -->
-<?php
-$error = false;
-$users = simplexml_load_file("users/users.xml");
-if(isset($_POST['signin'])){
-    $username = preg_replace('/[^A-Za-z]/', '', $_POST['username']);
-    $password = md5($_POST['password']);
-
-    foreach ($users->user as $checkUser){
-        if ($checkUser->username == $username){
-            if ($checkUser->password == $password){
-                session_start();
-                $_SESSION['username'] = $username;
-                if ($checkUser->admin == "on"){
-                    $_SESSION['admin'] = "yes";
-                } else{
-                    $_SESSION['admin'] = "no";
-                }
-                header('Location: signinconf.php');
-                die;
-            }
-        }
+<?php 
+    session_start(); 
+    if (!isset($_SESSION['admin']) || $_SESSION['admin'] != "yes"){
+        header ('location: index.php');
     }
-    $error = true;
-}
+    
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -74,32 +57,23 @@ if(isset($_POST['signin'])){
     </nav>
 
     <div class="row center">
-        <div class="col-12 col-s-12" style="border: solid;  border-radius: 25px; padding: 10px; margin-top: 150px;">
-            <h2 style="text-align: center;">Please sign in to your account</h2><br>
-            <form action="" method="POST">
-                <label for="username">Username</label><br>
-                <input class="signin" type="text" id="account" name="username"><br>
-                <label for="password">Password</label>
-                <a href="forgot-password.html" class="forgot">Forgot password?</a><br>
-                <input class="signin" type="password" id="password" name="password"><br>
-                <input type="submit" value="Sign in" name="signin">
-                <?php
-                    if($error){
-                         print "<p style='color: red;'>Invalid username and/or password</p>";
-                    }
-                ?>
-            </form>
+        <div class="col-12 col-s-12" style="margin-top: 200px; text-align: center;">
+            <a href="userlist.php" class="newSignup">User List</a>
         </div>
     </div>
 
     <div class="row center">
-        <div class="col-4 col-s-4" style="margin-top: 25px;">
-            <h3>No account? Sign up now!</h3>
-        </div>
-        <div class="col-8 col-s-8" style="margin-top: 45px;">
-            <a href="signup.php" class="newSignup">Sign Up</a>
+        <div class="col-12 col-s-12" style="margin-top: 50px; text-align: center;">
+            <a href="product-list.php" class="newSignup">Product List</a>
         </div>
     </div>
+
+    <div class="row center">
+        <div class="col-12 col-s-12" style="margin-top: 50px; text-align: center;">
+            <a href="order-list.php" class="newSignup">order List</a>
+        </div>
+    </div>
+
 </body>
 
 </html>

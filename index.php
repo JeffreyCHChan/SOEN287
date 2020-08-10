@@ -39,6 +39,10 @@ table, th, td {border: 1px solid black;}
                         <option value="meats.html">Meats</option>
                     </select>
                    <?php
+                        if (isset($_SESSION['admin']) && $_SESSION['admin'] == "yes"){
+                            echo '<li><a href="admin.php"><i class="fa fa-cogs" aria-hidden="true"></i>Admin</a></li>';
+                        }   
+                                             
                         if (isset($_SESSION['username'])){
                             echo '<li><a href="signout.php"><i class="fa fa-unlock-alt"></i>Log Out</a></li>';
                         } else {

@@ -128,6 +128,8 @@
             }
         }
 
+        $admin = test_input($_POST["admin"]);
+
         //Create XML Files
         if(count($errors) == 0){
             
@@ -143,11 +145,17 @@
             $user->addChild('city', $city);
             $user->addChild('province', $province);
             $user->addChild('pcode', $pcode);
-            $user->addChild('admin', "y");
+            $user->addChild('admin', $admin);
             $users->asXML("users/users.xml");
-            header('Location: signin.php');
+            header('Location: signupconf.php');
             die;
         }
+    }
+
+    function clear(){
+        unset($username, $password, $c_password, $fname, $lname, $email, $admin, $snumber, $sname, $apt, $city, $province, $pcode);
+        unset($errors);
+        $errors = array();
     }
 
     function test_input($data) {
@@ -196,7 +204,17 @@
                     <option value="baked-goods.html">Baked Goods</option>
                     <option value="meats.html">Meats</option>
                 </select>
-                <li><a href="signin.php"><i class="fa fa-unlock-alt"></i> Login</a></li>
+                <?php   
+                        if (isset($_SESSION['admin']) && $_SESSION['admin'] == "yes"){
+                            echo '<li><a href="admin.php"><i class="fa fa-cogs" aria-hidden="true"></i>Admin</a></li>';
+                        }
+                        
+                        if (isset($_SESSION['username'])){
+                            echo '<li><a href="signout.php"><i class="fa fa-unlock-alt"></i>Log Out</a></li>';
+                        } else {
+                            echo '<li><a href="signin.php"><i class="fa fa-unlock-alt"></i>Login</a></li>';
+                        }
+                ?>
                 <li><a href="shoppingcart.html"><i class="fa fa-shopping-cart"></i> My Cart</a></li>
 
             </ul>
@@ -282,6 +300,7 @@
                 <span class="error"><?php if(array_key_exists("username", $errors)) print $errors["username"];?></span>
                 <span class="error"><?php print $username;?></span>
                 <input class="signup" type="text" id="username" name="username" value="<?php print $username?>">
+                <input type="checkbox" id="admin" name="admin">
             </div>
         </div>
 
@@ -302,7 +321,7 @@
 
         <div class="row center">
             <div class="col-6 col-s-6 spacing">
-                <input class="signupButton" type="reset" name="reset" value="Reset">
+                <input class="signupButton" type="reset" name="reset" value="Reset" onclick="<?php clear();?>">
                 <br>
                 <br>
             </div>
