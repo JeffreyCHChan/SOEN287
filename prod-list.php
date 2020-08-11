@@ -1,3 +1,10 @@
+<?php 
+    session_start(); 
+    if (!isset($_SESSION['admin']) || $_SESSION['admin'] != "yes"){
+        header ('location: index.php');
+    }
+    
+?>
 <html>
     <head>
     <link rel="stylesheet" type="text/css" href="product-backend.css">

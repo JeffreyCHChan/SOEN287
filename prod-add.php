@@ -1,3 +1,10 @@
+<?php 
+    session_start(); 
+    if (!isset($_SESSION['admin']) || $_SESSION['admin'] != "yes"){
+        header ('location: index.php');
+    }
+    
+?>
 <html>
 <head>
     <meta charset="UTF-8">

@@ -1,3 +1,10 @@
+<?php 
+    session_start(); 
+    if (!isset($_SESSION['admin']) || $_SESSION['admin'] != "yes"){
+        header ('location: index.php');
+    }
+    
+?>
 <?php
 //have all delete buttons redirect to here and add styling to the html
 if(isset($_POST['submit'])){
