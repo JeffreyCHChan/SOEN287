@@ -1,0 +1,65 @@
+<?php
+session_start();
+class cartitem{
+
+public $category;
+public $name;
+public $unit_price;
+public $quantity;
+
+function __construct($category,$name,$unit_price,$quantity) {
+
+    $this->category=$category;
+    $this->name = $name;
+    $this->unit_price=$unit_price;
+    $this->quantity=$quantity;
+  }
+
+}
+$exist=0;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if(empty($_SESSION["cart"]))
+        $cartarray=array();
+
+    else{
+        $cartarray=json_decode($_SESSION['cart']);
+
+
+        for($i=0;$i<count($cartarray);$i++){
+            echo json_decode($_SESSION['cart'])[$i]->quantity;
+           if($cartarray[$i]->name==$_POST['name']){
+
+           $exist=1;
+
+            }
+
+
+        }
+    }
+
+    if($exist==0){
+    $xml=simplexml_load_file("xmlmeat.xml") or die("Error: Cannot create object");
+    foreach($xml->children() as $food){
+        if($food->name==$_POST['name']){
+        $cat=$food->category;
+        $nam=$food->name;
+        $un=$food->unit_price;
+
+        array_push($cartarray,new cartitem("$cat","$nam","$un",$_POST['Quantity']));
+
+        }
+        }
+
+    $_SESSION['cart']=json_encode($cartarray);
+
+
+
+}
+else echo"<script type='text/javascript'>alert('the item already exist');</script>";
+}
+
+
+
+
+?>

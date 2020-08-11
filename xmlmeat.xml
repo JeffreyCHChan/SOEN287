@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<backstore>
+    <food>
+        <name>chicken wings</name>
+        <category>meat</category>
+        <unit_price>5.99</unit_price>
+    </food>
+
+    <food>
+        <name>ground beef</name>
+        <category>meat</category>
+        <unit_price>7.99</unit_price>
+    </food>
+
+    <food>
+        <name>smoked salmon</name>
+        <category>meat</category>
+        <unit_price>4.99</unit_price>
+    </food>
+
+    <food>
+        <name>pork meat</name>
+        <category>meat</category>
+        <unit_price>10.99</unit_price>
+    </food>
+
+</backstore>

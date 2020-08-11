@@ -1,0 +1,12 @@
+Main address:
+
+https://storage.googleapis.com/atozmarketplace/index.html
+
+backend addresses:
+
+https://storage.googleapis.com/atozmarketplace/order-list.html
+https://storage.googleapis.com/atozmarketplace/order-profile.html
+https://storage.googleapis.com/atozmarketplace/product-edit.html
+https://storage.googleapis.com/atozmarketplace/product-list.html
+https://storage.googleapis.com/atozmarketplace/user-edit.html
+https://storage.googleapis.com/atozmarketplace/userlist.html
