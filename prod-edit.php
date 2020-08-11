@@ -118,8 +118,90 @@ echo "Product Modified";
 <head>
     <link rel="stylesheet" type="text/css" href="product-backend.css">
 </head>
+
+<header>
+    <nav class="navbar">
+        <div class="brand-title">
+            <a href="index.php"><img src="images/atozmarketplace.jpg"></a>
+        </div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <select onchange="window.location.href=this.value" style="color:white; background-color: rgb(82,79,79);"> 
+                            <option value="aisle.php">Select Aisle</option>
+                            <option value="beverages.php">Beverages</option>
+                            <option value="fruits.php">Fruits</option>
+                            <option value="vegetables.php">Vegetables</option>
+                            <option value="baked-goods.php">Baked Goods</option>
+                            <option value="meats.php">Meats</option>
+                    </select>
+                    <?php
+                        if (isset($_SESSION['admin']) && $_SESSION['admin'] == "yes"){
+                            echo '<li><a href="admin.php"><i class="fa fa-cogs" aria-hidden="true"></i>Admin</a></li>';
+                        }   
+                                             
+                        if (isset($_SESSION['username'])){
+                            echo '<li><a href="signout.php"><i class="fa fa-unlock-alt"></i>Log Out</a></li>';
+                        } else {
+                            echo '<li><a href="signin.php"><i class="fa fa-unlock-alt"></i>Login</a></li>';
+                        }
+                    ?>
+                <li><a href="shoppingcart.html"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>
+
+            </ul>
+        </div>
+
+    </nav>
+</header>
 <body>
+
+
+<nav class="navbar">
+        <div class="brand-title">
+            <a href="index.php"><img src="images/atozmarketplace.jpg"></a>
+        </div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <select onchange="window.location.href=this.value" style="color:white; background-color: rgb(82,79,79);"> 
+                            <option value="aisle.php">Select Aisle</option>
+                            <option value="beverages.php">Beverages</option>
+                            <option value="fruits.php">Fruits</option>
+                            <option value="vegetables.php">Vegetables</option>
+                            <option value="baked-goods.php">Baked Goods</option>
+                            <option value="meats.php">Meats</option>
+                    </select>
+                    <?php
+                        if (isset($_SESSION['admin']) && $_SESSION['admin'] == "yes"){
+                            echo '<li><a href="admin.php"><i class="fa fa-cogs" aria-hidden="true"></i>Admin</a></li>';
+                        }   
+                                             
+                        if (isset($_SESSION['username'])){
+                            echo '<li><a href="signout.php"><i class="fa fa-unlock-alt"></i>Log Out</a></li>';
+                        } else {
+                            echo '<li><a href="signin.php"><i class="fa fa-unlock-alt"></i>Login</a></li>';
+                        }
+                    ?>
+                <li><a href="shoppingcart.html"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>
+
+            </ul>
+        </div>
+
+    </nav>
+
+
         <script type="text/javascript" src="backend-product.js"></script>
+        <div style="margin-top: 150px;"> 
 <h1 class="productList">Product Edit</h1>
 <h4 class="productList"> Enter Product Name then click 'Find' and check the Section dropbox, click 'Modify' to submit the change</h4>
 <a href ="prod-list.php"> Back to Product List</a>
@@ -161,6 +243,7 @@ echo "Product Modified";
         <input type="submit" name="find" value="Find">
         <input type="submit" name="modify" onclick="backendProductConfirmation()" value="Modify">
     </form>
+    </div>
 </body>
 
 
