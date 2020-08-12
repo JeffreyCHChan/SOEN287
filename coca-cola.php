@@ -95,10 +95,11 @@
             <p hidden id="price">5.05</p>
             <p class="avg-price">$0.12/100mL</p>
             <br>
-            <form action="shoppingcart.html" method="GET">
+            <form action="" method="POST">
                 <label for="quantity">Quantity:</label>
                 <button type="button" onclick="cokeSubtract(), cokeCost()" class="quantity"> -</button>
                 <button type="button" onclick="cokeAdd(), cokeCost()" class="quantity"> +</button>
+                <input type="hidden" value="63495" name="id">
                 <br>
                 <input id="quantity" type="number" min="1" value="1" size="2" style="font-size: 16pt;" onkeyup="cost()" name="Quantity">
                 <input type="submit" value="Add to Cart" class="quantity" onclick="popUp(),addToCart()">
@@ -130,7 +131,9 @@
 
     <script type="text/javascript" src="product-pages-jeff.js">
     </script>
-
+<?php
+            include 'additem.php';
+            ?>
 </body>
 
 </html>

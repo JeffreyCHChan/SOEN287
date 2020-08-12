@@ -59,7 +59,7 @@
                             echo '<li><a href="signin.php"><i class="fa fa-unlock-alt"></i>Login</a></li>';
                         }
                     ?>
-                <li><a href="shoppingcart.html"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>
+                <li><a href="shoppingcart.php"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>
 
             </ul>
         </div>
@@ -85,16 +85,18 @@
             <p class="avg-price"><del>$0.10/100mL</del></p>
             <p class="avg-price" style="color: red;">$0.07/100ml</p>
             <br>
-            <form action="shoppingcart.php" method="GET">
+            <form action="" method="POST">
                 <label for="quantity">Quantity:</label>
                 <button type="button" onclick="sodaSubtract(), sodaCost()" class="quantity"> -</button>
                 <button type="button" onclick="sodaAdd(), sodaCost()" class="quantity"> +</button>
+                <input type="hidden" value="63595" name="id">
                 <br>
                 <input id="quantity" type="number" min="1" value="1" size="2" style="font-size: 16pt;" onkeyup="cost()" name="Quantity">
+
+
                 <input type="submit" value="Add to Cart" class="quantity" onclick="popUp(),addToCart()">
             </form>
             <p id="sub-total" onload="cost()"><span><b>Sub-Total: </b></span> $5.93</p>
-
             <br>
             <br>
 
@@ -114,14 +116,14 @@
                 <p hidden id="productNumber">63595</p>
                 </p>
             </div>
-
         </div>
     </div>
-
     <script type="text/javascript" src="product-pages-jeff.js">
         {}
     </script>
-
+<?php
+            include 'additem.php';
+            ?>
 </body>
 
 </html>

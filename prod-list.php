@@ -36,7 +36,7 @@
                         if (isset($_SESSION['admin']) && $_SESSION['admin'] == "yes"){
                             echo '<li><a href="admin.php"><i class="fa fa-cogs" aria-hidden="true"></i>Admin</a></li>';
                         }   
-                                             
+                                            
                         if (isset($_SESSION['username'])){
                             echo '<li><a href="signout.php"><i class="fa fa-unlock-alt"></i>Log Out</a></li>';
                         } else {
@@ -56,7 +56,7 @@
 
 <a href= "prod-add.php"> Add Product</a>
 <a href ="prod-delete.php"> Delete a Product</a>
-<a href ="prod-edit.php"> Edit a Product</a>
+
 <br>
 <hr>
 <table border="2" style="width: 100%; height: min-content;">
@@ -71,6 +71,7 @@
         <th>Brand</th>
         <th>Country Of Origin</th>
         <th>Product Id</th>
+        <th>Product Edit</th>
 </thead>
 
 <tbody>
@@ -92,6 +93,9 @@ foreach($xml->Product as $node)//will iterate over products
     <td> <?php echo "$node->brand"?></td>
     <td> <?php echo "$node->origin"?></td>
     <td> <?php echo "$node->productId"?></td>
+    <td> <form action="prod-edit.php?prodEdit=<?php echo "$node->name"?>" method="GET"> 
+    <input type="submit" value="<?php echo "$node->name"?>" name="pEdit" id="pEdit"> 
+    </td>
 </tr>
 <?php endforeach ?>
 </tbody>

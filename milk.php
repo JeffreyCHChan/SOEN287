@@ -57,7 +57,7 @@
                             echo '<li><a href="signin.php"><i class="fa fa-unlock-alt"></i>Login</a></li>';
                         }
                     ?>
-                <li><a href="shoppingcart.html"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>
+                <li><a href="shoppingcart.php"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>
 
             </ul>
         </div>
@@ -82,10 +82,11 @@
             <p class="size">(4L)</p>
             <p class="avg-price">$3/1L</p>
             <br>
-            <form action="shoppingcart.html" method="GET">
+            <form action="" method="POST">
                 <label for="quantity">Quantity:</label>
                 <button type="button" onclick="milkSubtract(), milkCost()" class="quantity"> -</button>
                 <button type="button" onclick="milkAdd(), milkCost()" class="quantity"> +</button>
+                <input type="hidden" value="68452" name="id">
                 <br>
                 <input id="quantity" type="number" min="1" value="1" size="2" style="font-size: 16pt;" onkeyup="cost()" name="Quantity">
 
@@ -117,7 +118,9 @@
 
     <script type="text/javascript" src="product-pages-jeff.js">
     </script>
-
+<?php
+            include 'additem.php';
+            ?>
 </body>
 
 </html>

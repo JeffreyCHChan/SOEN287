@@ -6,55 +6,44 @@
     
 ?>
 <?php
-//on load
-if(!isset($_POST['find'])){
-    $name = "";
-    $section =  "";
-    $quantity= "";
 
-    $weight = "";
-    $units= "";
-    $price = "";
-    $description= "";
+pre_r($_GET);
 
-    $brand = "";
-    $origin = "";
-    $productId= "";
-    ;
 
+function pre_r($array){
+    echo"<pre>";
+    print_r($array);
+    echo"</pre>";
 }
 
 //once find is given
-if(isset($_POST['find'])){
+if(isset($_GET['pEdit'])){
     //copy add stuff
     $xml = new DOMDocument("1.0", "UTF-8");
     $xml->load('prodList.xml');
     
     //variables
-    $productName=$_POST['productName'];
+    $name=$_GET['pEdit'];
     $xpath = new DOMXPATH($xml);
 
-foreach($xpath->query("/root/Product[name='$productName']") as $node){//selects all products that have the name we searched for
+    foreach($xpath->query("/root/Product[name='$name']") as $node){//selects all products that have the name we searched for
 
-    $name = $node->getElementsByTagName('name')[0]->nodeValue; 
-    $section =  $node->getElementsByTagName('section')[0]->nodeValue; 
-    $quantity= $node->getElementsByTagName('quantity')[0]->nodeValue; 
+        //$name = $node->getElementsByTagName('name')[0]->nodeValue; 
+        $section =  $node->getElementsByTagName('section')[0]->nodeValue; 
+        $quantity= $node->getElementsByTagName('quantity')[0]->nodeValue; 
 
-    $weight = $node->getElementsByTagName('weight')[0]->nodeValue; 
-    $units= $node->getElementsByTagName('units')[0]->nodeValue;
-    $price =  $node->getElementsByTagName('price')[0]->nodeValue; 
-    $description= $node->getElementsByTagName('description')[0]->nodeValue;
+        $weight = $node->getElementsByTagName('weight')[0]->nodeValue; 
+        $units= $node->getElementsByTagName('units')[0]->nodeValue;
+        $price =  $node->getElementsByTagName('price')[0]->nodeValue; 
+        $description= $node->getElementsByTagName('description')[0]->nodeValue;
 
-    $brand = $node->getElementsByTagName('brand')[0]->nodeValue; 
-    $origin =  $node->getElementsByTagName('origin')[0]->nodeValue; 
-    $productId= $node->getElementsByTagName('productId')[0]->nodeValue;  
-    ;
-    
-    
-    
-}
-    $xml->formatoutput = true;
-    $xml->save('prodList.xml');
+        $brand = $node->getElementsByTagName('brand')[0]->nodeValue; 
+        $origin =  $node->getElementsByTagName('origin')[0]->nodeValue; 
+        $productId= $node->getElementsByTagName('productId')[0]->nodeValue;  
+        ;
+    }
+        $xml->formatoutput = true;
+        $xml->save('prodList.xml');
 }
 ?>
 
@@ -63,8 +52,10 @@ if(isset($_POST['modify'])){
     $xml = new DOMDocument("1.0", "UTF-8");
     $xml->load('prodList.xml');
     $xpath = new DOMXPATH($xml);
+
     $productName=$_POST['productName'];
-    foreach($xpath->query("/root/Product[name='$productName']") as $node){// iterate through and if the name matches then delete
+
+    foreach($xpath->query("/root/Product[name='$productName']")  as $node){// iterate through and if the name matches then delete
         $node->parentNode->removeChild($node);
     }
 //variables
@@ -209,10 +200,10 @@ echo "Product Modified";
 <form  method="POST" action="prod-edit.php">
         <table border="1" class="col-s-12">
             <tr><th class="backendAddEdit">Product Name </th>
-                <td><input type="text" id="productName" name="productName" height="200" width="500" placeholder="<?php echo $name?>" value="<?php echo $name?>"> </td>
+                <td><input type="text" id="productName" name="productName" height="200" width="500"  value="<?php echo $name?>"> </td>
             </tr>
             <th class="backendAddEdit"><label for="productSearch">Section</label></th>
-            <td><select id="sectionSearch" name="section" placeholder="" value="<?php echo $section?>">
+            <td><select id="sectionSearch" name="section"  value="<?php echo $section?>">
                 <option selected disabled> Select Product</option>
                 <option value="Beverages">Beverages</option>
                 <option value="Fruits">Fruits</option>
@@ -223,24 +214,23 @@ echo "Product Modified";
             </select></td>
 
             </tr><tr><th class="backendAddEdit">Quantity </th>
-                <td><input type="text" id="quantity" name="quantity" placeholder="" value="<?php echo $quantity?>"></td>
+                <td><input type="text" id="quantity" name="quantity"  value="<?php echo $quantity?>"></td>
             </tr><tr><th class="backendAddEdit">Weight </th>
-                <td><input type="text" id="weight" name="weight" placeholder="" value="<?php echo $weight?>"></td>
+                <td><input type="text" id="weight" name="weight"  value="<?php echo $weight?>"></td>
             </tr><tr><th class="backendAddEdit">Units </th>
-                <td><input type="text" id="units" name="units" placeholder="" value="<?php echo $units?>"></td>
+                <td><input type="text" id="units" name="units"  value="<?php echo $units?>"></td>
             </tr><tr><th class="backendAddEdit">Price </th>
-                <td><input type="text" id="price" name="price" placeholder="" value="<?php echo $price?>"></td>
+                <td><input type="text" id="price" name="price"  value="<?php echo $price?>"></td>
             </tr><tr><th class="backendAddEdit">Description </th>
-                <td><input type="text" id="description" name="description" placeholder="" value="<?php echo $description?>"></td>
+                <td><input type="text" id="description" name="description"  value="<?php echo $description?>"></td>
             </tr><tr><th class="backendAddEdit">Brand </th>
-                <td><input type="text" id="productBrand" name="productBrand" placeholder="" value="<?php echo $brand?>"></td>
+                <td><input type="text" id="productBrand" name="productBrand"  value="<?php echo $brand?>"></td>
             </tr><tr><th class="backendAddEdit">Country of Origin </th>
-                <td><input type="text" id="countryOfOrigin" name="countryOfOrigin" placeholder="" value="<?php echo $origin?>"></td>
+                <td><input type="text" id="countryOfOrigin" name="countryOfOrigin"  value="<?php echo $origin?>"></td>
             </tr><tr><th class="backendAddEdit">Product Id </th>
-                <td><input type="text" id="productNumber" name="productNumber" placeholder="" value="<?php echo $productId?>"></td>
+                <td><input type="text" id="productNumber" name="productNumber"  value="<?php echo $productId?>"></td>
             </tr>
         </table>
-        <input type="submit" name="find" value="Find">
         <input type="submit" name="modify" onclick="backendProductConfirmation()" value="Modify">
     </form>
     </div>
