@@ -50,7 +50,7 @@
                         if (isset($_SESSION['admin']) && $_SESSION['admin'] == "yes"){
                             echo '<li><a href="admin.php"><i class="fa fa-cogs" aria-hidden="true"></i>Admin</a></li>';
                         }   
-                                             
+                                            
                         if (isset($_SESSION['username'])){
                             echo '<li><a href="signout.php"><i class="fa fa-unlock-alt"></i>Log Out</a></li>';
                         } else {
@@ -86,7 +86,7 @@
                 <label for="quantity">Quantity:</label>
                 <button type="button" onclick="milkSubtract(), milkCost()" class="quantity"> -</button>
                 <button type="button" onclick="milkAdd(), milkCost()" class="quantity"> +</button>
-                <input type="hidden" value="68452" name="id">
+                <input type="hidden" value="Milk" name="name">
                 <br>
                 <input id="quantity" type="number" min="1" value="1" size="2" style="font-size: 16pt;" onkeyup="cost()" name="Quantity">
 

@@ -71,7 +71,7 @@
                             echo '<li><a href="signin.php"><i class="fa fa-unlock-alt"></i>Login</a></li>';
                         }
                     ?>
-                <li><a href="shoppingcart.html"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>
+                <li><a href="shoppingcart.php"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>
 
             </ul>
         </div>
@@ -99,7 +99,7 @@
                 <label for="quantity">Quantity:</label>
                 <button type="button" onclick="cokeSubtract(), cokeCost()" class="quantity"> -</button>
                 <button type="button" onclick="cokeAdd(), cokeCost()" class="quantity"> +</button>
-                <input type="hidden" value="63495" name="id">
+                <input type="hidden" value="Coca-Cola" name="name">
                 <br>
                 <input id="quantity" type="number" min="1" value="1" size="2" style="font-size: 16pt;" onkeyup="cost()" name="Quantity">
                 <input type="submit" value="Add to Cart" class="quantity" onclick="popUp(),addToCart()">

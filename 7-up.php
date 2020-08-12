@@ -89,10 +89,9 @@
                 <label for="quantity">Quantity:</label>
                 <button type="button" onclick="sodaSubtract(), sodaCost()" class="quantity"> -</button>
                 <button type="button" onclick="sodaAdd(), sodaCost()" class="quantity"> +</button>
-                <input type="hidden" value="63595" name="id">
+                <input type="hidden" value="7-UP" name="name">
                 <br>
                 <input id="quantity" type="number" min="1" value="1" size="2" style="font-size: 16pt;" onkeyup="cost()" name="Quantity">
-
 
                 <input type="submit" value="Add to Cart" class="quantity" onclick="popUp(),addToCart()">
             </form>

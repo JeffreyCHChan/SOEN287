@@ -7,15 +7,6 @@
 ?>
 <?php
 
-pre_r($_GET);
-
-
-function pre_r($array){
-    echo"<pre>";
-    print_r($array);
-    echo"</pre>";
-}
-
 //once find is given
 if(isset($_GET['pEdit'])){
     //copy add stuff
@@ -194,7 +185,7 @@ echo "Product Modified";
         <script type="text/javascript" src="backend-product.js"></script>
         <div style="margin-top: 150px;"> 
 <h1 class="productList">Product Edit</h1>
-<h4 class="productList"> Enter Product Name then click 'Find' and check the Section dropbox, click 'Modify' to submit the change</h4>
+<h4 class="productList"> Enter changes and check the Section dropdown menu, click 'Modify' to submit the change</h4>
 <a href ="prod-list.php"> Back to Product List</a>
 <hr>
 <form  method="POST" action="prod-edit.php">

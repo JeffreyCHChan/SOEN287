@@ -79,7 +79,7 @@ foreach($xpath->query("/root/Product[name='$productName']") as $node){// iterate
                 <td><input type="text" id="productName" name="productName"></td>
             </tr>
         </table>
-        <input type="submit" name="submit" onclick="backendProductConfirmation()">    
+        <input type="submit" name="submit" onclick="deleteItem()">    
     </form>
     </div>
 </body>
