@@ -55,17 +55,20 @@
                 <p class="avg-price" style="color: red;">$2.35 /100g</p>
                 <br>
                 <label for="quantity" class="Quantity" style="font-weight:bolder; font-size: 20px;">Quantity:</label>
-                
+                <form action="" method="post">
                 <div>
-                    <button onclick="increaseraspberry(); raspberrycost()">▲</button>
+                    <button type="button" onclick="increaseraspberry(); raspberrycost();add()">▲</button>
                     <p id="quantity">1</p>
-                    <button onclick="decreaseraspberry(); raspberrycost()">▼</button>
+                    <input type="hidden" name="Quantity" id="quan" value="1">
+                    <input type="hidden" value="Organic Raspberries" name="name">
+                    <button type="button" onclick="decreaseraspberry(); raspberrycost();min()">▼</button>
                     <p id="fruitcost">Price: $3.99</p>
                 </div>
 
 
                 <br>
                 <input type="submit" value="Add to Cart">
+                </form>
                 <br>
 
                 <hr>
@@ -81,6 +84,27 @@
                 
             </div>
         </div>
+    <script>
+        var c = document.getElementById("quantity").innerHTML;
+
+        function add(){
+        c++;
+        document.getElementById("quan").value=c;
+
+        }
+          function min(){
+          if(document.getElementById("quan").value>1){
+        c--;
+        document.getElementById("quan").value=c;
+        }
+        }
+
+
+    </script>
+
+        <?php
+    include 'additem.php';
+    ?>
         
     </body>
 </html>

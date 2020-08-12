@@ -54,15 +54,17 @@
                 <p class="avg-price">$5.05 /kg $2.29 /lb</p>
                 <br>
                 <label for="quantity" class="Quantity" style="font-weight:bolder; font-size: 20px;">Quantity(kg):</label>
-
+                <form action="" method="post">
                 <div>
-                    <button onclick="increaseapple(); applecost()">▲</button>
-                    <p id="quantity"></p>
-                    <button onclick="decreaseapple(); applecost()">▼</button>
+                    <button type="button" onclick="increaseapple(); applecost()">▲</button>
+                    <input type="number" min="1" value="1" size="2" name="Quantity" id="quantity">
+                    <button type="button" onclick="decreaseapple(); applecost()">▼</button>
+                    <input type="hidden" value="McIntosh Apple" name="name">
                     <p id="fruitcost">Price: $5.05</p>
                 </div>
                 <br>
                 <input type="submit" value="Add to Cart">
+                </form>
                 <br>
 
                 <hr>
@@ -77,6 +79,10 @@
                 <hr>
             </div>
         </div>
+
+        <?php
+    include 'additem.php';
+    ?>
 
     </body>
 </html>

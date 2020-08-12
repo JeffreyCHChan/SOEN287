@@ -39,12 +39,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if($exist==0){
-    $xml=simplexml_load_file("xmlmeat.xml") or die("Error: Cannot create object");
-    foreach($xml->children() as $food){
-        if($food->name==$_POST['name']){
-        $cat=$food->category;
-        $nam=$food->name;
-        $un=$food->unit_price;
+    $xml=simplexml_load_file("prodList.xml") or die("Error: Cannot create object");
+    foreach($xml->children() as $Product){
+        if($Product->name==$_POST['name']){
+        $cat=$Product->section;
+        $nam=$Product->name;
+        $un=$Product->price;
 
         array_push($cartarray,new cartitem("$cat","$nam","$un",$_POST['Quantity']));
 

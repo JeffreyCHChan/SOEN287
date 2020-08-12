@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background: url('images/wallshopping.jpg') no-repeat center center fixed;
+    background: url("images/wallshopping.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -125,7 +125,7 @@ h1.white {
 @media only screen and (max-width: 800px) {
     .desk {
         padding: 20px;
-        margin-top: 200px;
+        margin-top: 100px;
     }
     .col1 {
         width: 100%;

@@ -31,7 +31,7 @@ session_start();
             <ul>
                 <select onchange="window.location.href=this.value" style="color:white; background-color: rgb(82,79,79);">
                     <option>Select Aisle</option>
-                    <option value="beverages.html">Beverages</option>
+                    <option value="beverages.php">Beverages</option>
                     <option value="fruits.html">Fruits</option>
                     <option value="vegetables.html">Vegetables</option>
                     <option value="baked-goods.html">Baked Goods</option>
@@ -50,7 +50,30 @@ session_start();
 
 <body>
 <?php
+
+if(isset($_POST['btn1'])){
+
+
+        include 'orderphp.php';
+
+        }
+?>
+<?php
+
+if(isset($_POST['btn1'])){
+
+
+
+
+        }
+
+        else{
+
+
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
+
 
 
 
@@ -66,8 +89,13 @@ session_start();
 
         $_SESSION['cart']=json_encode($main);
         }
+        }
+
+
 
     ?>
+
+
     <div class="row desk">
         <div class="grid-container">
             <div class="item1">
@@ -83,11 +111,14 @@ session_start();
         + TVQ: <span id="tvq"></span>$
         price: <span id="summ"></span>$
         __________
-         Tot: <span id="tot"></span>$
+         <form action=""method="post"> <button type="submit" class="btn2" name="btn1" style="width:60%; font-size: 14px; text-align: left;; "> Buy--> Tot: <span id="tot"></span>$</button>
+
+         </form>
 
     </pre>
 
             </p>
+
 
         </div>
         <div class="col-7 menu">
@@ -106,9 +137,17 @@ session_start();
     </div>
     <p hidden id="json"> <?php echo $_SESSION['cart'];?> </p>
 
-    <form  action="" method="post" id="form">
-        <input type="hidden" id="return" name="newarr" value="0">
-    </form>
+<form  action="" method="post" id="form">
+    <input type="hidden" id="return" name="newarr" value="0">
+</form>
+
+
+
+
+
+
+
+
 
 
 
@@ -168,7 +207,7 @@ session_start();
            }
 
            document.getElementById("return").value=JSON.stringify(cartt);
-            
+
            document.getElementById("form").submit();
         }
 
@@ -232,7 +271,7 @@ session_start();
                 d3.appendChild(button);
                 li.appendChild(button);
 
-                if (listofprod[i].category == "meat") {
+                if (listofprod[i].category == "Meats") {
                     li.style.backgroundColor = "rgba(255,99,71,0.8)";
                     li.onmouseover = function() {
                         this.style.backgroundColor = "rgba(255,99,71,0.95)";
@@ -255,6 +294,15 @@ session_start();
                     }
                     li.onmouseout = function() {
                         this.style.backgroundColor = "rgba(0,255,127,0.8)";
+                    }
+                }
+                else if (listofprod[i].category == "Fruits") {
+                    li.style.backgroundColor = "rgba(173, 255, 47,0.8)";
+                    li.onmouseover = function() {
+                        this.style.backgroundColor = "rgba(173, 255, 47,0.95)";
+                    }
+                    li.onmouseout = function() {
+                        this.style.backgroundColor = "rgba(173, 255, 47,0.8)";
                     }
                 }
 

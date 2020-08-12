@@ -45,14 +45,14 @@ function appleDescription(){
 
 function increaseapple(){
     amountapple = parseInt(sessionStorage.getItem('refreshapple'),10)+1;
-    document.getElementById("quantity").innerHTML=amountapple;
+    document.getElementById("quantity").value=amountapple;
     parseInt(sessionStorage.setItem('refreshapple', amountapple), 10); 
 }
 
 function decreaseapple(){
     if(parseInt(sessionStorage.getItem('refreshapple'),10)>1){
         amountapple = parseInt(sessionStorage.getItem('refreshapple'),10)-1;
-        document.getElementById("quantity").innerHTML=amountapple;
+        document.getElementById("quantity").value=amountapple;
         parseInt(sessionStorage.setItem('refreshapple', amountapple), 10);
     }
 }
