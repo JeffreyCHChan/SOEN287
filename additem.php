@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         for($i=0;$i<count($cartarray);$i++){
-            echo json_decode($_SESSION['cart'])[$i]->quantity;
+
            if($cartarray[$i]->name==$_POST['name']){
 
            $exist=1;

@@ -52,12 +52,15 @@
             <p class="brand">AtoZ FreshMarket</p>
             <p class="product">Baguette</p>
             <p class="price">$1.99 ea.</p>
-            <p class="calcPrice" hidden>1.99</p>
+            <p class="calcPrice" >1.99</p>
             <p class="size">(120 g avg.)</p>
 
             <br>
             <button class="cart-btn" data-action="AddToCart">Add to Cart</button>
             <br>
+            <form action="" method="post" id="form">
+                <input type="hidden" name="Quantity" value="0" id="quan">
+            </form>
             <div class="itemCartInfo"></div>
             <hr>
             <p class="descriptionHeader">Product Description</p>
@@ -85,6 +88,14 @@
         </div>
     </div>
     <script src="naregJSitem2.js"></script>
+<script>
+    window.onbeforeunload = closingCode;
+function closingCode(){
+   document.etElementById("quan").value = document.etElementById("quan").innerHTML
+   document.getElementById("form").submit();
+   return null; //<-- this prevents the dialog confirm box
+}
+</script>
 
 </body>
 

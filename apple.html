@@ -7,7 +7,7 @@
         <title>McIntosh Apple</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
         <link rel="stylesheet" type="text/css" href="items.css">  
-        <script style="text/javascript" src="maximeitems.js"></script>
+
     </head>
 
     <header>
@@ -40,6 +40,9 @@
     </header>
 
     <body onload="savednumberapple(), applecost()">
+    <?php
+    include 'additem.php';
+    ?>
 
         <div class="row center" style="margin-top: 150px;">
             <div class="col-4 col-s-4">
@@ -55,15 +58,19 @@
                 <br>
                 <label for="quantity" class="Quantity" style="font-weight:bolder; font-size: 20px;">Quantity(kg):</label>
                 <form action="" method="post">
-                <div>
-                    <button type="button" onclick="increaseapple(); applecost()">▲</button>
-                    <input type="number" min="1" value="1" size="2" name="Quantity" id="quantity">
-                    <button type="button" onclick="decreaseapple(); applecost()">▼</button>
-                    <input type="hidden" value="McIntosh Apple" name="name">
-                    <p id="fruitcost">Price: $5.05</p>
-                </div>
-                <br>
-                <input type="submit" value="Add to Cart">
+                    <div>
+                        <button type="button" onclick="increaseapple(); applecost(); add()">▲</button>
+                        <p id="quantity">1</p>
+                        <input type="hidden" name="Quantity" id="quan" value="1">
+                        <input type="hidden" value="McIntosh Apple" name="name">
+                        <button type="button" onclick="decreaseapple(); applecost(); min()">▼</button>
+                        <p id="fruitcost">Price: $0.86</p>
+                    </div>
+
+
+                    <br>
+                    <input type="submit" value="Add to Cart">
+
                 </form>
                 <br>
 
@@ -80,9 +87,47 @@
             </div>
         </div>
 
-        <?php
-    include 'additem.php';
-    ?>
+
+
+        <script>
+var c;
+if (sessionStorage.getItem("numm") == null)
+         c = 1;
+
+else
+c= Number(sessionStorage.getItem("numm"));
+
+        function Storeupdate() {
+            if (typeof(Storage) !== "undefined") {
+                // Store
+                sessionStorage.setItem("numm", c);
+
+            } else {
+                document.getElementById("quan").value = "Sorry, your browser does not support Web Storage...";
+            }
+            }
+
+        function add(){
+        c++;
+        document.getElementById("quan").value=c;
+        Storeupdate();
+
+        }
+          function min(){
+          if(c>1){
+        c--;
+        document.getElementById("quan").value=c;
+
+        }
+        alert(document.getElementById("quan").value);
+        Storeupdate();
+        }
+
+
+    </script>
+
+
+    <script style="text/javascript" src="maximeitems.js"></script>
 
     </body>
 </html>

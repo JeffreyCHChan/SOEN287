@@ -54,18 +54,21 @@
                 <p class="avg-price">$1.74 /kg $0.79 /lb</p>
                 <br>
 
-                
-                <label for="quantity" class="Quantity" style="font-weight:bolder; font-size: 20px;">Quantity(kg):</label>
-                
-                <div>
-                    <button onclick="increasebanana(); bananacost()">▲</button>
-                    <p id="quantity"></p>  
-                    <button onclick="decreasebanana(); bananacost()">▼</button>
-                    <p id="fruitcost">Price: $1.74</p>
-                </div>
+                <form action="" method="post">
+                    <div>
+                        <button type="button" onclick="increasebanana(); bananacost();add()">▲</button>
+                        <p id="quantity">1</p>
+                        <input type="hidden" name="Quantity" id="quan" value="1">
+                        <input type="hidden" value="Banana" name="name">
+                        <button type="button" onclick="decreasebanana(); bananacost();min()">▼</button>
+                        <p id="fruitcost">Price: $3.99</p>
+                    </div>
 
-                <br>
-                <input type="submit" value="Add to Cart">
+
+                    <br>
+                    <input type="submit" value="Add to Cart">
+
+                </form>
                 <br>
                 <br>
 
@@ -83,6 +86,48 @@
 
             </div>
         </div>
+
+        <?php
+    include 'additem.php';
+    ?>
+
+
+        <script>
+var c;
+if (sessionStorage.getItem("num1") == null)
+         c = 1;
+
+else
+c= Number(sessionStorage.getItem("num1"));
+
+        function Storeupdate() {
+            if (typeof(Storage) !== "undefined") {
+                // Store
+                sessionStorage.setItem("num1", c);
+
+            } else {
+                document.getElementById("quan").value = "Sorry, your browser does not support Web Storage...";
+            }
+            }
+
+        function add(){
+        c++;
+        document.getElementById("quan").value=c;
+        Storeupdate();
+
+        }
+          function min(){
+          if(c>1){
+        c--;
+        document.getElementById("quan").value=c;
+
+        }
+        alert(document.getElementById("quan").value);
+        Storeupdate();
+        }
+
+
+    </script>
         
     </body>
 </html>

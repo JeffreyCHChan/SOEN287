@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 if(isset($_POST['btn1'])){
     $xml = new DOMDocument("1.0", "UTF-8");
     $xml->load('orderxml.xml');
