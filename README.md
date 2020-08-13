@@ -1,7 +1,7 @@
 #SOEN 287- Web Programming 
 ######Created by Jeffrey Chak-Him Chan, Maxime Giroux, Philip Arvanitis, Nareg Mouradian, Bogdan Podariu
 ###Website: 
-<a href ="https://atozmarketplace.storage.googleapis.com/index.php" alt="https://atozmarketplace.storage.googleapis.com/index.php"> Store Website link </a>
+<a href ="http://ec2-3-17-206-192.us-east-2.compute.amazonaws.com/" alt="http://ec2-3-17-206-192.us-east-2.compute.amazonaws.com/"> Store Website link </a>
 
 ###Aisles
 ####Beverages
