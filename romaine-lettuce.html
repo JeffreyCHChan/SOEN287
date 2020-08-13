@@ -7,9 +7,11 @@
     <title>Romain Lettuce</title>
     <link rel="stylesheet" type="text/css" href="items.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 </head>
 
-<body onload="cartCheck()" >
+<body onload="cartCheck()"  >
 
     <nav class="navbar">
         <nav class="navbar">
@@ -59,12 +61,14 @@
             </div>
 
             <div class="quantity empty">
-                <button class="minus-btn" type="button" name="minus" onclick="minus()">-</button>
+
+                <button class="minus-btn" type="button" name="minus" onclick="minus(); sub()">-</button>
                 <form action="" method="post" id="form">
-                <input id="multi" type="text" name="name" value="0" readonly>
+                <input id="multi" type="text" name="Quantity" value="0" readonly >
                     <input type="hidden" name="name" value="Romaine Lettuce" >
                 </form>
-                <button class="plus-btn" type="button" name="plus" onclick="add()">+</button>
+                <button class="plus-btn" type="button" name="plus" onclick="add(); sub()">+</button>
+
                 <p id="tCost"></p>
 
             </div>
@@ -91,16 +95,17 @@
 
 
 
-    <script>
 
-
-window.onbeforeunload = function() {
-document.getElementById("form").submit();
-  
-};
-
-</script>
     <script src="items.js"></script>
+
+    <script>
+    var val=new array();
+    function sub(){
+
+    document.getElementById("form").submit();
+    }
+
+    </script>
 
     <?php
     include 'additem.php';

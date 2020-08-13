@@ -16,6 +16,7 @@ function __construct($category,$name,$unit_price,$quantity) {
   }
 
 }
+$index;
 $exist=0;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -28,11 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         for($i=0;$i<count($cartarray);$i++){
 
-           if($cartarray[$i]->name==$_POST['name']){
+           if($cartarray[$i]->name==$_POST['name']&&$cartarray[$i]->category=='Vegetables'){
 
            $exist=1;
-
+           $index=$i;
             }
+            else if($cartarray[$i]->name==$_POST['name'])
+            $exist=2;
 
 
         }
@@ -56,8 +59,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 }
+else if($exist==1){
+
+ $cartarray[$index]->quantity=$_POST['Quantity'];
+
+    $_SESSION['cart']=json_encode($cartarray);
+
+
+
+}
 else echo"<script type='text/javascript'>alert('the item already exist');</script>";
 }
+
 
 
 
