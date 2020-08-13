@@ -1,36 +1,36 @@
-#SOEN 287- Web Programming 
-######Created by Jeffrey Chak-Him Chan, Maxime Giroux, Philip Arvanitis, Nareg Mouradian, Bogdan Podariu
-###Website: 
+# SOEN 287- Web Programming 
+###### Created by Jeffrey Chak-Him Chan, Maxime Giroux, Philip Arvanitis, Nareg Mouradian, Bogdan Podariu
+### Website: 
 <a href ="http://ec2-3-17-206-192.us-east-2.compute.amazonaws.com/" alt="http://ec2-3-17-206-192.us-east-2.compute.amazonaws.com/"> Store Website link </a>
 
-###Aisles
-####Beverages
+### Aisles
+#### Beverages
 <ul>
 <li>7-UP</li>
 <li>Coca-Cola</li>
 <li>Milk</li>
 </ul>
-####Fruits
+#### Fruits
 <ul>
 <li>Apple</li>
 <li>Banana</li>
 <li>Raspberry</li>
 </ul>
-####Vegetables
+#### Vegetables
 <ul>
 <li>Hothouse Red Tomatoes</li>
 <li>English Cucumber</li>
 <li>Romaine Lettuce</li>
 </ul>
 
-####Baked Goods
+#### Baked Goods
 <ul>
 <li>Chocolate Cake</li>
 <li>Baguette</li>
 <li>Apple Pie</li>
 </ul>
 
-####Meats
+#### Meats
 <ul>
 <li>Pork</li>
 <li>Chicken Wings</li>
@@ -38,47 +38,47 @@
 <li>Smoked Salmon</li>
 </ul>
 
-###Cart
+### Cart
 Shopping cart for the user.
 
-###Signup
+### Signup
 Creates a new account.
-###Signin
+### Signin
 Allows for cutomers to log in and anutmatically displays a new button for administrators to access the backstore/backend.
 
-###Admin Page
+### Admin Page
 Allows access for backend/backstore pages.
 
-##Backend (only accessable if user is an administrator)
+## Backend (only accessable if user is an administrator)
 <p >For testing purposes</p>
 <p>username: mairo</p>
 <p>password: Maxime123</p>
-###Product
-###List
+### Product
+### List
 <p>Displays all the items from a database (an XML file was used in this case to store the data).</p>
-####Add
+#### Add
 <p>Add a new product to the database.</p>
-####Delete
+#### Delete
 <p>Deletes an items from the database.</p>
-####Edit
+#### Edit
 <p>Returns product information to allow for editing.</p>
 
-###Users
-####List
+### Users
+#### List
 <p>Displays all the users from a database (an XML file was used in this case to store the data).</p>
-####Add
+#### Add
 <p>Add a new user to the database.</p>
-####Delete
+#### Delete
 <p>Deletes an user from the database.</p>
-####Edit
+#### Edit
 <p>Returns user information to allow for editing.</p>
 
-###Order
-####List
+### Order
+#### List
 <p>Displays all the orders from a database (an XML file was used in this case to store the data).</p>
-####Add
+#### Add
 <p>Add a new orders to the database.</p>
-####Delete
+#### Delete
 <p>Deletes an orders from the database.</p>
-####Edit
+#### Edit
 <p>Returns order information to allow for editing.</p>
