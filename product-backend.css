@@ -149,3 +149,15 @@ body{
 .navbar-links li a:hover {
     color: black;
 }
+.itemDescMore {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.itemMenu {
+    margin: 0;
+    color: black;
+    font-weight: normal;
+    font-size: 10pt;
+}
