@@ -56,9 +56,11 @@
             <p class="size">(120 g avg.)</p>
 
             <br>
-            <button class="cart-btn" data-action="AddToCart">Add to Cart</button>
+
+            <button  type="button" class="cart-btn" data-action="AddToCart" onclick="fafa()">Add to Cart</button>
             <br>
             <form action="" method="post" id="form">
+                <input type="hidden" name="name" value="Baguette">
                 <input type="hidden" name="Quantity" value="0" id="quan">
             </form>
             <div class="itemCartInfo"></div>
@@ -88,14 +90,11 @@
         </div>
     </div>
     <script src="naregJSitem2.js"></script>
-<script>
-    window.onbeforeunload = closingCode;
-function closingCode(){
-   document.etElementById("quan").value = document.etElementById("quan").innerHTML
-   document.getElementById("form").submit();
-   return null; //<-- this prevents the dialog confirm box
-}
-</script>
+
+    <?php
+    include 'additem.php';
+    ?>
+
 
 </body>
 
