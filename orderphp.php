@@ -1,13 +1,18 @@
 <?php
+session_start();
 
 if(isset($_POST['btn1'])){
     $xml = new DOMDocument("1.0", "UTF-8");
     $xml->load('orderxml.xml');
    $main = json_decode($_SESSION['cart']);
-
+   if($_SESSION['order']== null){
+   $_SESSION['order']=1;
+    }
     $username="Elon Musk";
     $orderTag = $xml->createElement("order");
     $usernametag=$xml->createElement("username",$username);
+    $orderidtag=$xml->createElement("orderid", $_SESSION['order']);
+    $_SESSION['order']++;
     //variables
     for($i=0;$i<count($main);$i++){
     $productName=$main[$i]->name;
@@ -37,7 +42,7 @@ if(isset($_POST['btn1'])){
 
             $orderTag->appendChild($productNameTag);
 }
-
+    $orderTag->appendChild($orderidtag);
     $orderTag->appendChild($usernametag);
     $rootTag->appendChild($orderTag);
     $xml->formatoutput = true;

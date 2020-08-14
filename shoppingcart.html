@@ -96,7 +96,7 @@ if(isset($_POST['btn1'])){
     ?>
 
 
-    <div class="row desk">
+    <div class=" desk">
         <div class="grid-container">
             <div class="item1">
 
@@ -114,12 +114,8 @@ if(isset($_POST['btn1'])){
          <form action=""method="post"> <button type="submit" class="btn2" name="btn1" style="width:60%; font-size: 14px; text-align: left;; "> Buy--> Tot: <span id="tot"></span>$</button>
 
          </form>
-
     </pre>
-
             </p>
-
-
         </div>
         <div class="col-7 menu">
             <ul id="myUL">
@@ -129,9 +125,8 @@ if(isset($_POST['btn1'])){
     <div class="row">
         <div class="col-6" style="text-align: center">
             <button class="btn2" onclick="window.location.href='index.html';">Continue shopping</button>
-
         </div>
-        <div class="col-6" style="text-align: center">
+        <div class="col-6" style="text-align: center; float:right;">
             <h1 class="white">Number of Items: <span id="count"></span> </h1>
         </div>
     </div>
@@ -210,6 +205,9 @@ if(isset($_POST['btn1'])){
 
            document.getElementById("form").submit();
         }
+
+
+
 
         function displaytext(index) {
             return "Item: " + listofprod[index].product + "," + " Price: " + listofprod[index].price.toFixed(2) + "$";

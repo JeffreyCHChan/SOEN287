@@ -143,17 +143,17 @@ function totalPrice() {
    
 
 }
-function fafa(){
-if(document.getElementById('quan').value!=null){
-   var c=localStorage.getItem('itemList2');
-   var pat1=/\d{1,}/;
-   c=(c.match(/\d{1,}(?=}])/));
-   alert(c);
-   document.getElementById('quan').value=c;
-   document.getElementById('form').submit();
- }
+
+function cartadd(){
+var c=localStorage.getItem('itemList2');
+c= c.match(/\d{1,}(?=}])/);
+if(c!=null){
+document.getElementById('quan').value=c;
+document.getElementById('form').submit();
 
 }
+}
+
 
  
 

@@ -55,7 +55,11 @@
             <p class="size">(720 g avg.)</p>
 
             <br>
-            <button class="cart-btn" data-action="AddToCart">Add to Cart</button>
+            <button class="cart-btn" data-action="AddToCart" onclick="cartadd()">Add to Cart</button>
+            <form action="" method="post" id="form">
+                <input type="hidden" name="name" value="Chocolate Cake">
+                <input type="hidden" name="Quantity" value="0" id="quan">
+            </form>
             <br>
             <div class="itemCartInfo"></div>
             <hr>
@@ -88,7 +92,9 @@
 
     <script src="naregJSitem3.js"></script>
 
-
+    <?php
+    include 'additem.php';
+    ?>
 </body>
 
 </html>

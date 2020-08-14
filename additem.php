@@ -60,12 +60,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 }
 else if($exist==1){
+    if($_POST['Quantity']==0){
+ array_splice($cartarray,$index,1);
+  $_SESSION['cart']=json_encode($cartarray);
+  }
+  else{
 
  $cartarray[$index]->quantity=$_POST['Quantity'];
 
     $_SESSION['cart']=json_encode($cartarray);
 
-
+    }
 
 }
 else echo"<script type='text/javascript'>alert('the item already exist');</script>";

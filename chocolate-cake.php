@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baguette</title>
+    <title>Chocolate Cake</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="items.css">
 
@@ -12,7 +12,7 @@
 <header>
     <nav class="navbar">
         <div class="brand-title">
-            <a href="index.html"><img src="images/atozmarketplace.jpg"></a>
+            <a href="index.php"><img src="images/atozmarketplace.jpg"></a>
         </div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
@@ -24,14 +24,14 @@
             <ul>
                 <select onchange="window.location.href=this.value" style="color:white; background-color: rgb(82,79,79);"> 
                         <option>Select Aisle</option>
-                        <option value="beverages.html">Beverages</option>
-                        <option value="fruits.html">Fruits</option>
-                        <option value="vegetables.html">Vegetables</option>
-                        <option value="baked-goods.html">Baked Goods</option>
-                        <option value="meats.html">Meats</option>
+                        <option value="beverages.php">Beverages</option>
+                        <option value="fruits.php">Fruits</option>
+                        <option value="vegetables.php">Vegetables</option>
+                        <option value="baked-goods.php">Baked Goods</option>
+                        <option value="meats.php">Meats</option>
                     </select>
-                <li><a href="signin.html"><i class="fa fa-unlock-alt" ></i> Login</a></li>
-                <li><a href="shoppingcart.html"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>
+                <li><a href="signin.php"><i class="fa fa-unlock-alt" ></i> Login</a></li>
+                <li><a href="shoppingcart.php"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>
 
             </ul>
         </div>
@@ -45,24 +45,18 @@
 
     <div class="row center" style="margin-top: 150px;">
         <div class="col-4 col-s-4">
-            <img src="images/baguette.jpg" alt="Baguette">
+            <img src="images/choco-cake.jpg" alt="Chocolate Cake">
         </div>
-
         <div class="col-7 col-s-7 spacing">
             <p class="brand">AtoZ FreshMarket</p>
-            <p class="product">Baguette</p>
-            <p class="price">$1.99 ea.</p>
-            <p class="calcPrice" >1.99</p>
-            <p class="size">(120 g avg.)</p>
+            <p class="product">Chocolate Cake</p>
+            <p class="price">$12.50 ea.</p>
+            <p class="calcPrice" hidden>12.50</p>
+            <p class="size">(720 g avg.)</p>
 
             <br>
-
-            <button  type="button" class="cart-btn" data-action="AddToCart" onclick="cartadd()">Add to Cart</button>
+            <button class="cart-btn" data-action="AddToCart">Add to Cart</button>
             <br>
-            <form action="" method="post" id="form">
-                <input type="hidden" name="name" value="Baguette">
-                <input type="hidden" name="Quantity" value="0" id="quan">
-            </form>
             <div class="itemCartInfo"></div>
             <hr>
             <p class="descriptionHeader">Product Description</p>
@@ -75,25 +69,24 @@
             <button class="more">More Description</button>
             <div class="descriptionDisplay">
                 <p class="description">
-                    Freshly made baguette straight from the oven.
+                    Cake made with fresh chocolate and covered with more chocolate inside and out, perfect for chocolate lovers.
                     <br>
                     <br>
-                    <b>Origin:</b> France
+                    <b>Origin:</b> Italy
                     <br>
-                    <br> Product number: 28459
+                    <br> Product number: 97124
                     <br>
-                    <br> Ingredients: Eggs, wheat , flour.<br>
+                    <br> Ingredients: Eggs, flour, freshly ground cocoa beans , milk, butter , icing sugar, glucose.<br>
                     <br>
                 </p>
             </div>
             <hr>
         </div>
     </div>
-    <script src="naregJSitem2.js"></script>
 
-    <?php
-    include 'additem.php';
-    ?>
+
+
+    <script src="naregJSitem3.js"></script>
 
 
 </body>
