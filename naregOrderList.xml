@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <order>
+        <product>
+            <name>Pork Meat</name>
+            <section>Meats</section>
+            <quantity>7</quantity>
+            <price>83.93</price>
+        </product>
+        <product>
+            <name>Baguette</name>
+            <section>Baked Goods</section>
+            <quantity>10</quantity>
+            <price>19.99</price>
+        </product>
+        <username>Elon Musk</username>
+        <orderid>1</orderid>
+    </order>
+    <order>
+        <product>
+            <name>Steak</name>
+            <section>Meats</section>
+            <quantity>1</quantity>
+            <price>20.99</price>
+        </product>
+            <username>John Cena</username>
+            <orderid>2</orderid>
+    </order>
+</root>
