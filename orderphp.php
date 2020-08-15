@@ -4,25 +4,33 @@ session_start();
 if(isset($_POST['btn1'])){
     $xml = new DOMDocument("1.0", "UTF-8");
     $xml->load('orderxml.xml');
+    $xml2=simplexml_load_file("orderxml.xml") or die("Error: Cannot create object");
+    $ordercountTag = $xml->getElementsByTagName("ordercount")->item(0);
+
+  $ordercount=(int)$xml2->ordercount;
+
+
+   echo"<script type='text/javascript'>alert($ordercount);</script>";
    $main = json_decode($_SESSION['cart']);
-   if($_SESSION['order']== null){
-   $_SESSION['order']=1;
-    }
+   //if($_SESSION['order']== null){
+   //$_SESSION['order']=1;
+   // }
+
     $username="Elon Musk";
     $orderTag = $xml->createElement("order");
     $usernametag=$xml->createElement("username",$username);
-    $orderidtag=$xml->createElement("orderid", $_SESSION['order']);
-    $_SESSION['order']++;
+    $orderidtag=$xml->createElement("orderid", $ordercount);
+    //$_SESSION['order']++;
     //variables
     for($i=0;$i<count($main);$i++){
     $productName=$main[$i]->name;
     $section =  $main[$i]->category;
     $quantity= $main[$i]->quantity;
     $price =($main[$i]->quantity*$main[$i]->unit_price);
-
-
-
     $rootTag = $xml->getElementsByTagName("root")->item(0);
+
+
+
 
 
     $productNameTag = $xml->createElement("product");
@@ -42,6 +50,9 @@ if(isset($_POST['btn1'])){
 
             $orderTag->appendChild($productNameTag);
 }
+    $ordercount++;
+    $newtag=$xml->createElement("ordercount",$ordercount);
+    $rootTag-> replaceChild($newtag,$ordercountTag);
     $orderTag->appendChild($orderidtag);
     $orderTag->appendChild($usernametag);
     $rootTag->appendChild($orderTag);

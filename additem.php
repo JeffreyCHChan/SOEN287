@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 class cartitem{
 
 public $category;
@@ -48,6 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $cat=$Product->section;
         $nam=$Product->name;
         $un=$Product->price;
+
 
         array_push($cartarray,new cartitem("$cat","$nam","$un",$_POST['Quantity']));
 
