@@ -1,0 +1,448 @@
+<!--Bogdan Podariu 40156514-->
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en" xmlns:>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cartstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Shoping_cart</title>
+    <style>
+
+    </style>
+</head>
+<header>
+
+    <nav class="navbar">
+        <div class="brand-title">
+            <a href="index.html"><img src="images/atozmarketplace.jpg"></a>
+        </div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <select onchange="window.location.href=this.value" style="color:white; background-color: rgb(82,79,79);">
+                    <option>Select Aisle</option>
+                    <option value="beverages.php">Beverages</option>
+                    <option value="fruits.php">Fruits</option>
+                    <option value="vegetables.php">Vegetables</option>
+                    <option value="baked-goods.php">Baked Goods</option>
+                    <option value="meats.php">Meats</option>
+                </select>
+                <?php
+                if (isset($_SESSION['admin']) && $_SESSION['admin'] == "yes"){
+                            echo '<li><a href="admin.php"><i class="fa fa-cogs" aria-hidden="true"></i>Admin</a></li>';
+                             }
+
+                if (isset($_SESSION['username'])){
+                echo '<li><a href="signout.php"><i class="fa fa-unlock-alt"></i>Log Out</a></li>';
+                } else {
+                echo '<li><a href="signin.php"><i class="fa fa-unlock-alt"></i>Login</a></li>';
+                }
+                ?>
+                <li><a href="shoppingcart.php"><i class="fa fa-shopping-cart"></i> My Cart</a></li>
+
+            </ul>
+        </div>
+
+    </nav>
+
+</header>
+
+
+<body>
+<?php
+
+if(isset($_POST['btn1'])){
+
+
+        include 'orderphp.php';
+
+        }
+?>
+<?php
+
+if(isset($_POST['btn1'])){
+
+
+
+
+        }
+
+        else{
+
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
+
+
+
+
+        $main=json_decode($_POST['newarr']);
+
+        for($i=0;$i<count($main);$i++){
+
+        if($main[$i]==null){
+        array_splice($main,$i,1);
+        }
+        }
+
+
+        $_SESSION['cart']=json_encode($main);
+        }
+        }
+
+
+
+    ?>
+
+
+    <div class=" desk">
+        <div class="grid-container">
+            <div class="item1">
+
+                <h1 class="white">Shopping cart</h1>
+            </div>
+        </div>
+        <div class="col-4 checkout">
+            <p>
+                <pre>
+        CHECKOUT:
+            TPS: <span id="tps"></span>$
+        + TVQ: <span id="tvq"></span>$
+        price: <span id="summ"></span>$
+        __________
+         <form action=""method="post"> <button type="submit" class="btn2" name="btn1" style="width:60%; font-size: 14px; text-align: left;; "> Buy--> Tot: <span id="tot"></span>$</button>
+
+         </form>
+    </pre>
+            </p>
+        </div>
+        <div class="col-7 menu">
+            <ul id="myUL">
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6" style="text-align: center">
+            <button class="btn2" onclick="window.location.href='index.html';">Continue shopping</button>
+        </div>
+        <div class="col-6" style="text-align: center; float:right;">
+            <h1 class="white">Number of Items: <span id="count"></span> </h1>
+        </div>
+    </div>
+    <p hidden id="json"> <?php echo $_SESSION['cart'];?> </p>
+
+<form  action="" method="post" id="form">
+    <input type="hidden" id="return" name="newarr" value="0">
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var mainarr = new Array();
+        var secondarr = new Array();
+        var sum = 0;
+        var TPS;
+        var TVQ;
+        var TOT;
+        var quantity;
+
+        let counter = 0;
+
+        function item(category_param, product_param, unit_price_param, quantity_param) {
+            this.category = category_param;
+            this.product = product_param;
+            this.unit_price = unit_price_param;
+            this.price = unit_price_param * quantity_param;
+            this.quantity = quantity_param;
+
+        }
+
+        let listofprod = new Array();
+        var cartt=JSON.parse(document.getElementById("json").innerHTML);
+
+         for(var i=0;i<cartt.length;i++){
+
+        listofprod.push(new item(cartt[i].category,cartt[i].name, Number(cartt[i].unit_price),Number(cartt[i].quantity)));
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        function Storeupdate() {
+
+            for(var i=0;i< listofprod.length;i++){
+
+            if(listofprod[i]==null){
+            cartt[i]=null;
+            }
+            else{
+           cartt[i].category=listofprod[i].category;
+           cartt[i].name=listofprod[i].product;
+           cartt[i].unit_price=listofprod[i].unit_price;
+           cartt[i].quantity=listofprod[i].quantity;}
+
+           }
+
+           document.getElementById("return").value=JSON.stringify(cartt);
+
+           document.getElementById("form").submit();
+        }
+
+
+
+
+        function displaytext(index) {
+            return "Item: " + listofprod[index].product + "," + " Price: " + listofprod[index].price.toFixed(2) + "$";
+        }
+
+        function getQuantity(index) {
+            return listofprod[index].quantity;
+        }
+
+        function setQuantity(index, num) {
+            listofprod[index].quantity = num;
+        }
+
+        function displaylist() {
+            var i;
+
+
+            for (i = 0; i < listofprod.length; i++) {
+                counter++;
+                var li = document.createElement("li");
+                mainarr.push(li)
+
+                var t = document.createTextNode(displaytext(i));
+
+
+                var d = document.createElement("div");
+                var d2 = document.createElement("div");
+                var d3 = document.createElement("div");
+                d.className = "col1";
+                d2.className = "col2";
+                d3.className = "col3";
+
+                d.appendChild(t);
+                li.appendChild(d);
+
+                var button = document.createElement("BUTTON");
+                var txt = document.createTextNode("Delete");
+                var quantityDown = document.createElement("BUTTON");
+                var txtDown = document.createTextNode("-");
+                var quan = document.createElement("input");
+                var quantityUp = document.createElement("BUTTON");
+                var txtUp = document.createTextNode("+");
+                quantityDown.appendChild(txtDown);
+                quantityDown.className = "minus-btn";
+
+                quan.className = "quan";
+                quan.type = "text";
+                quan.value = getQuantity(i);
+                quantityUp.appendChild(txtUp);
+                quantityUp.className = "plus-btn";
+
+
+                button.appendChild(txt);
+                button.className = "btn";
+                d2.appendChild(quantityDown);
+                d2.appendChild(quan);
+                d2.appendChild(quantityUp);
+                li.appendChild(d2);
+                d3.appendChild(button);
+                li.appendChild(button);
+
+                if (listofprod[i].category == "Meats") {
+                    li.style.backgroundColor = "rgba(255,99,71,0.8)";
+                    li.onmouseover = function() {
+                        this.style.backgroundColor = "rgba(255,99,71,0.95)";
+                    }
+                    li.onmouseout = function() {
+                        this.style.backgroundColor = "rgba(255,99,71,0.8)";
+                    }
+                } else if (listofprod[i].category == "Baked-Goods") {
+                    li.style.backgroundColor = "rgba(245,222,179,0.8)";
+                    li.onmouseover = function() {
+                        this.style.backgroundColor = "rgba(245,222,179,0.95)";
+                    }
+                    li.onmouseout = function() {
+                        this.style.backgroundColor = "rgba(245,222,179,0.8)";
+                    }
+                } else if (listofprod[i].category == "Vegetables") {
+                    li.style.backgroundColor = "rgba(0,255,127,0.8)";
+                    li.onmouseover = function() {
+                        this.style.backgroundColor = "rgba(0,255,127,0.95)";
+                    }
+                    li.onmouseout = function() {
+                        this.style.backgroundColor = "rgba(0,255,127,0.8)";
+                    }
+                }
+                else if (listofprod[i].category == "Fruits") {
+                    li.style.backgroundColor = "rgba(173, 255, 47,0.8)";
+                    li.onmouseover = function() {
+                        this.style.backgroundColor = "rgba(173, 255, 47,0.95)";
+                    }
+                    li.onmouseout = function() {
+                        this.style.backgroundColor = "rgba(173, 255, 47,0.8)";
+                    }
+                }
+
+                document.getElementById("myUL").appendChild(li);
+            }
+        }
+        displaylist();
+
+        function computesum() {
+            var j;
+            for (j = 0; j < listofprod.length; j++) {
+                sum = sum + listofprod[j].price;
+            }
+            document.getElementById("summ").innerHTML = sum.toFixed(2);
+        }
+
+        function computetps() {
+            TPS = sum * 0.05
+            document.getElementById("tps").innerHTML = TPS.toFixed(2);
+        }
+
+        function computetvq() {
+            TVQ = sum * 0.0975
+            document.getElementById("tvq").innerHTML = TVQ.toFixed(2);
+        }
+
+        function computetot() {
+            TOT = sum + TPS + TVQ
+            document.getElementById("tot").innerHTML = TOT.toFixed(2);
+        }
+
+        document.getElementById("count").innerHTML = counter;
+
+        computesum();
+        computetps();
+        computetvq();
+        computetot();
+
+
+
+        var close = document.getElementsByClassName("btn");
+        var i;
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function() {
+                var div = (this.parentElement);
+                var ind = mainarr.indexOf(div);
+                sum = sum - listofprod[ind].price;
+
+                delete listofprod[ind];
+
+
+                div.style.display = "none";
+                delete mainarr[ind];
+
+
+
+
+
+                counter--;
+                document.getElementById("summ").innerHTML = sum.toFixed(2);
+                computetps();
+                computetvq();
+                computetot();
+                document.getElementById("count").innerHTML = counter;
+                Storeupdate();
+            }
+        }
+
+        var divarr = document.getElementsByClassName("col1");
+        var quanlist = document.getElementsByClassName("quan");
+        var add = document.getElementsByClassName("plus-btn");
+        var minus = document.getElementsByClassName("minus-btn");
+
+        var k;
+        for (k = 0; k < add.length; k++) {
+            add[k].onclick = function() {
+                var div2 = (this.parentElement).parentElement;
+                var ind2 = mainarr.indexOf(div2);
+                quantity = listofprod[ind2].quantity + 1;
+                setQuantity(ind2, quantity);
+                quanlist[ind2].value = getQuantity(ind2);
+                listofprod[ind2].price = quantity * listofprod[ind2].unit_price;
+                var newtxt = document.createTextNode(displaytext(ind2));
+                var newdiv = document.createElement("div");
+                newdiv.className = "col1";
+                newdiv.appendChild(newtxt);
+                mainarr[ind2].replaceChild(newdiv, divarr[ind2]);
+                divarr[ind2] = newdiv;
+                sum = sum + listofprod[ind2].unit_price;
+                if (sum <= 0) sum = 0.00;
+                document.getElementById("summ").innerHTML = sum.toFixed(2);
+                computetps();
+                computetvq();
+                computetot();
+                Storeupdate();
+            }
+        }
+
+        var k;
+        for (k = 0; k < add.length; k++) {
+            minus[k].onclick = function() {
+                var div2 = (this.parentElement).parentElement;
+                var ind2 = mainarr.indexOf(div2);
+                quantity = listofprod[ind2].quantity - 1;
+                if (quantity >= 1) {
+                    setQuantity(ind2, quantity);
+                    quanlist[ind2].value = getQuantity(ind2);
+                    listofprod[ind2].price = quantity * listofprod[ind2].unit_price;
+                    var newtxt = document.createTextNode(displaytext(ind2));
+                    var newdiv = document.createElement("div");
+                    newdiv.className = "col1";
+                    newdiv.appendChild(newtxt);
+                    mainarr[ind2].replaceChild(newdiv, divarr[ind2]);
+                    divarr[ind2] = newdiv;
+                    sum = sum - listofprod[ind2].unit_price;
+                    if (sum <= 0) sum = 0.00;
+                    document.getElementById("summ").innerHTML = sum.toFixed(2);
+                    computetps();
+                    computetvq();
+                    computetot();
+                    Storeupdate();
+                }
+            }
+        }
+    </script>
+
+
+
+
+
+
+</body>
+
+
+</html>
