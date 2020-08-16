@@ -170,7 +170,7 @@
 
 
 
-        $admin = test_userin($_POST["admin"]);
+        //$admin = test_userin($_POST["admin"]);
 
         //Uploading of data to xml file once there is no invalid data entries
         if(count($invalid) == 0){
@@ -186,7 +186,9 @@
                         $editUser->city=$city;
                         $editUser->province=$province;
                         $editUser->pcode=$pcode;
-                        $editUser->admin=$admin;
+                        if (isset($_POST['admin'])){
+                        $editUser->admin="on";
+                        }
                         if(!empty($password)){
                             $editUser->password=md5($password);
                         }
@@ -210,7 +212,9 @@
             $user->addChild('city', $city);
             $user->addChild('province', $province);
             $user->addChild('pcode', $pcode);
-            $user->addChild('admin', $admin);
+            if (isset($_POST['admin'])){ 
+            $user->addChild('admin', "on");
+            }
             $users->asXML("users/users.xml");
             header('Location: userlist2.0.php');
             die;
@@ -218,9 +222,6 @@
         }
     }
 
-    
-
-    
 
     function test_userin($data) {
         $data = trim($data);
@@ -354,7 +355,7 @@
                 </div>
 
                 <div>
-                    <p>Admin: <input type="checkbox" id="admin" name="admin" value="<?php print $admin ?>"></p>
+                    <p>Admin: <form method="POST"><input type="checkbox" id="admin" name="admin" value="<?php print $admin ?>"></form></p>
                 </div>
                 <input type="submit" name="usersub" style="background-color:lightblue"; value="Save" size="10">
 
