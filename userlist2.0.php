@@ -17,8 +17,11 @@
 <head>
 <link rel="stylesheet" type="text/css" href="product-backend.css">
 <script type = "text/javascript" src="userlistdelete.js"></script>
+</head>
 
-<nav class="navbar-links">
+<header>
+
+<nav class="navbar">
             <div class="brand-title"><a href="index.php"><img src="images/atozmarketplace.jpg"></a></div>
             <a href="#" class="toggle-button">
                 <span class="bar"></span>
@@ -56,13 +59,15 @@
             </div>
             
         </nav>
-</head>
 
-<header>
+        <div style="margin-top:150px;"> 
+
 <h1>User List</h1>
 </header>
 
 <body>
+
+        
 
 
 <div id='content'>

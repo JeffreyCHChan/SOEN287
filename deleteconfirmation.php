@@ -59,10 +59,13 @@ if(isset($_POST['delete'])){
 <!DOCTYPE html>
     <html>
         <head>
-            <h1 style="text-align: center">Confirmation of User Deletion</h1>
-            <link rel="stylesheet" type="text/css" href="product-backend.css">
+            
+            <link rel="stylesheet" type="text/css" href="product-backend.css"> 
+        </head>
 
-            <nav class="navbar-links">
+        <header>
+
+        <nav class="navbar">
             <div class="brand-title"><a href="index.php"><img src="images/atozmarketplace.jpg"></a></div>
             <a href="#" class="toggle-button">
                 <span class="bar"></span>
@@ -97,12 +100,20 @@ if(isset($_POST['delete'])){
                     <li><a href="shoppingcart.php"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>  
                  
                 </ul>  
-            </div>
-            
-        </nav>
-        </head>
+            </div>      
+            </nav>
+
+            <div style="margin-top: 150px">    
+
+            <h1 style="text-align: center">Confirmation of User Deletion</h1> 
+
+        </header>
 
         <body>
+
+
+        
+
             <p>Are you sure you would like to delete this user? (If not go back and refresh the page)</p>
             <p>Username: <?php echo $username?></p>
             <p>First Name: <?php echo $fname?></p>
