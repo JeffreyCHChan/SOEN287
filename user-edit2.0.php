@@ -242,7 +242,7 @@
     
 </head>
 <body>
-
+    
     <nav class="navbar">
             <div class="brand-title"><a href="index.php"><img src="images/atozmarketplace.jpg"></a></div>
             <a href="#" class="toggle-button">
