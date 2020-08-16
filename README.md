@@ -8,8 +8,11 @@
 
 ## Admin
  
+username: admin
+password: Montreal1
 ## Customer
-
+Username: testclient
+password: Montreal1
 ### Aisles
 #### Beverages
 <ul>
