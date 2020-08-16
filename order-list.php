@@ -1,4 +1,7 @@
 <!--Nareg Mouradian 40044254-->
+<?php 
+    session_start();        
+?>
 <html lang="en">
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +20,8 @@
             <th>Order Number</th>
             <th>Customer Name</th>
             <th>Total Price</th>
-            <th>Action</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </tr>
 
         <?php
@@ -35,10 +39,11 @@ foreach($xml->children() as $order) {
                 }
         echo $totalPrice;
         echo "</td>";
-        echo "<td><a href='order-profile.php'><button>Edit</button></a> / <button>Delete</button></td>";
+        echo "<td><form action='order-profile.php?order= echo '$order->orderid' method='GET'> <input name='order' type='submit' id='orderEd' value='$order->orderid'></td> </form>"; 
+        echo "<td><form action='deleteOrder.php?order= echo '$order->orderid' method='GET'> <input name='order' type='submit' id='orderDel' value='$order->orderid'></td> </form>";
         echo "</tr>";
         echo "<tr>";
-        echo "<td colspan='4'><button class='itemMore'>Items</button>";
+        echo "<td colspan='5'><button class='itemMore'>Items</button>";
         echo "<div class='itemDescMore'>";
         foreach($order->children() as $product)
     { 
@@ -72,9 +77,6 @@ foreach($xml->children() as $order) {
 ?>
     </table>
 
-
-    <!-- <a><button>Save</button></a> -->
-    <a href="order-profile.php"><button>Add an Order</button></a>
 
 </div>
 

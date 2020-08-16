@@ -1,4 +1,22 @@
 <!--Nareg Mouradian 40044254-->
+<?php
+   $orderid = $username ="";
+   $name = $quantity = $section = $price = "";
+   $order = simplexml_load_file("naregOrderList.xml");
+   $xml = new DOMDocument("1.0", "UTF-8");
+   $xml->load('naregOrderList.xml');
+   $orderid=$_GET['order'];
+   $xpath = new DOMXPATH($xml);
+   $_SESSION['edit']="yes";
+
+   foreach($xpath->query("/root/order[orderid='$orderid']") as $node){
+
+    $username = $node->getElementsByTagName('username')[0]->nodeValue;
+
+   }
+  
+  ?>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +25,18 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-  
+    <form id='form' action ='order-profile.php' method='get'>
+
 <div>    
 
     <h1 id = "OrderProfile"> Order Profile </h1>
 
     <table class="ProfileTable">
         <tr class="ProfileHeader">
-            <th colspan="4">Vanessa Lopez</th>
+            <th colspan="4">Customer Name: <?php echo $username ?></th>
+        </tr>
+        <tr class="ProfileHeader">
+            <th colspan="4">Order Number: <?php echo $_GET['order'] ?></th>
         </tr>
 
         <tr class="ProfileSubHeader">
@@ -24,93 +46,59 @@
             <td>Price</td>
         </tr>
     
-        <tr class="ProfileRest">
-            <td><select name="product" id="productSearch">
-                <option selected="" disabled="">Apple Pie</option>
-                <option value="Milk">Milk</option>
-                <option value="7-UP">7-UP</option>
-                <option value="Coca-Cola"> Coca-Cola</option>
-                <option value="EnglishCucumber">English Cucumber</option>
-                <option value="Hothouse-Red-Tomato">Hothouse Red Tomato</option>
-                <option value="Romain-Lettuce">Romain Lettuce</option>
-                <option value="Chicken-Wings">Chicken Wings</option>
-                <option value="Groundbeef">Groundbeef</option>
-                <option value="Pork-Meat">Pork Meat</option>
-                <option value="Smoked-Salmon">Smoked Salmon</option>
-                <option value="Apple-Pie">Apple Pie</option>
-                <option value="Baguette">Baguette</option>
-                <option value="Chocolate-Cake">Chocolate Cake</option>
-                <option value="Apple">Apple</option>
-                <option value="Banana">Banana</option>
-                <option value="Raspberry">Raspberry</option>
-            </select></td>
-            <td><input type="number" min="1" value="1"></td>
-            <td>Baked Goods</td>
-            <td>5.00$</td>
-        </tr>
-
+        <?php if(isset($_GET['order'])){
+           
+    foreach($order->order as $orders){
+        if($_GET['order'] == $orders->orderid){
+           
+            foreach($orders->product as $products){
+               echo "<tr class='ProfileRest'>";
+               echo "<td>" . $products->name . "</td>";
+               echo "<td><input type='number' name='qtt[]' min='1' value='". $products->quantity . "'></td>";
+               echo "<input type='hidden' value='$orderid' name='fixSave'>";
+               echo "<td>" . $products->section . "</td>";
+               echo "<td>" . $products->price . "</td>";
+            }
+            
         
-        <tr class="ProfileRest">
-            <td><select name="product" id="productSearch">
-                <option selected="" disabled="">Milk</option>
-                <option value="Milk">Milk</option>
-                <option value="7-UP">7-UP</option>
-                <option value="Coca-Cola"> Coca-Cola</option>
-                <option value="EnglishCucumber">English Cucumber</option>
-                <option value="Hothouse-Red-Tomato">Hothouse Red Tomato</option>
-                <option value="Romain-Lettuce">Romain Lettuce</option>
-                <option value="Chicken-Wings">Chicken Wings</option>
-                <option value="Groundbeef">Groundbeef</option>
-                <option value="Pork-Meat">Pork Meat</option>
-                <option value="Smoked-Salmon">Smoked Salmon</option>
-                <option value="Apple-Pie">Apple Pie</option>
-                <option value="Baguette">Baguette</option>
-                <option value="Chocolate-Cake">Chocolate Cake</option>
-                <option value="Apple">Apple</option>
-                <option value="Banana">Banana</option>
-                <option value="Raspberry">Raspberry</option>
-            </select></td>
-            <td><input type="number" min="1" value="1"></td>
-            <td>Beverages</td>
-            <td>12.00$</td>
-        </tr>
-
-        <tr class="ProfileRest">
-            <td><select name="product" id="productSearch">
-                <option selected="" disabled="">Ground Beef</option>
-                <option value="Milk">Milk</option>
-                <option value="7-UP">7-UP</option>
-                <option value="Coca-Cola"> Coca-Cola</option>
-                <option value="EnglishCucumber">English Cucumber</option>
-                <option value="Hothouse-Red-Tomato">Hothouse Red Tomato</option>
-                <option value="Romain-Lettuce">Romain Lettuce</option>
-                <option value="Chicken-Wings">Chicken Wings</option>
-                <option value="Groundbeef">Groundbeef</option>
-                <option value="Pork-Meat">Pork Meat</option>
-                <option value="Smoked-Salmon">Smoked Salmon</option>
-                <option value="Apple-Pie">Apple Pie</option>
-                <option value="Baguette">Baguette</option>
-                <option value="Chocolate-Cake">Chocolate Cake</option>
-                <option value="Apple">Apple</option>
-                <option value="Banana">Banana</option>
-                <option value="Raspberry">Raspberry</option>
-            </select></td>
-            <td><input type="number" min="1" value="1"></td>
-            <td>Meats</td>
-            <td>12.00$</td>
-        </tr>
-
-        <tr>
-            <th class="ProfileHeader" colspan="3">Total</th>
-            <td style="background-color: white;">29.00$</td>
-        </tr>
+        }
+       
+    } 
+   
+}
+    ?>
  
-
+ </form>
     </table>
-    <a href="order-list.php"><button>Save</button></a>
+    <!-- <form action="order-list.php" method="get" ></form> -->
+    <input type="submit" value="Save" name="saveC">
 
  
 </div>
+
+<?php
+
+if(isset($_GET['saveC'])){
+   
+$i = 0;
+
+  foreach($order->children() as $orders)
+{
+             foreach($orders->children() as $products)
+    {
+         $products->quantity = $_GET['qtt'][$i];
+         $i = $i+1;  
+       
+    }   
+   }  
+
+file_put_contents("naregOrderList.xml" , $order->saveXML());
+
+header("Location: order-list.php");
+}
+
+?>
+
 
     </body> 
 </html>

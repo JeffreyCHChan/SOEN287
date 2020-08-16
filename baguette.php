@@ -1,4 +1,7 @@
 <!--Nareg Mouradian 40044254-->
+<?php 
+    session_start();        
+?>
 <html lang="en">
 
 <head>
@@ -30,7 +33,17 @@
                         <option value="baked-goods.php">Baked Goods</option>
                         <option value="meats.php">Meats</option>
                     </select>
-                <li><a href="signin.php"><i class="fa fa-unlock-alt" ></i> Login</a></li>
+                    <?php
+                        if (isset($_SESSION['admin']) && $_SESSION['admin'] == "yes"){
+                            echo '<li><a href="admin.php"><i class="fa fa-cogs" aria-hidden="true"></i>Admin</a></li>';
+                        }   
+                                            
+                        if (isset($_SESSION['username'])){
+                            echo '<li><a href="signout.php"><i class="fa fa-unlock-alt"></i>Log Out</a></li>';
+                        } else {
+                            echo '<li><a href="signin.php"><i class="fa fa-unlock-alt"></i>Login</a></li>';
+                        }
+                    ?>
                 <li><a href="shoppingcart.php"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>
 
             </ul>

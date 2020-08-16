@@ -1,6 +1,6 @@
 //Nareg Mouradian 40044254
 
-//More Description button implementation of the accordion feature
+//Item button implementation of the accordion feature
 var descInfo = document.getElementsByClassName("itemMore");
 
     for( var i=0; i<descInfo.length; i++) {
