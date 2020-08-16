@@ -4,11 +4,11 @@
 ### Website: 
 <a href ="http://ec2-3-17-206-192.us-east-2.compute.amazonaws.com/" alt="http://ec2-3-17-206-192.us-east-2.compute.amazonaws.com/"> Store Website link </a>
 
-#Login Info
+# Login Info
 
-##Admin
+# #Admin
 
-##Customer
+## Customer
 
 ### Aisles
 #### Beverages
