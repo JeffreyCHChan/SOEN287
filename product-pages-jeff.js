@@ -24,7 +24,7 @@ function cokeAdd(){
     //if(){} //maybe check if it is less than the current inventory
     cQuantity++;
     document.getElementById("quantity").value = cQuantity;
-    sessionStorage.setItem(("refreshCoke", cQuantity), cQuantity);
+    sessionStorage.setItem(this.names, cQuantity);
 }
 
 function sodaAdd(){
