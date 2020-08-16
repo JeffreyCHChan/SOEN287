@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 
 if(isset($_POST['btn1'])){
     $xml = new DOMDocument("1.0", "UTF-8");
@@ -10,18 +10,15 @@ if(isset($_POST['btn1'])){
   $ordercount=(int)$xml2->ordercount;
 
 
-   
-   $main = json_decode($_SESSION['cart']);
-   //if($_SESSION['order']== null){
-   //$_SESSION['order']=1;
-   // }
 
-    $username="Elon Musk";
+   $main = json_decode($_SESSION['cart']);
+
+
+    $username=$_SESSION['username'];
     $orderTag = $xml->createElement("order");
     $usernametag=$xml->createElement("username",$username);
     $orderidtag=$xml->createElement("orderid", $ordercount);
-    //$_SESSION['order']++;
-    //variables
+
     for($i=0;$i<count($main);$i++){
     $productName=$main[$i]->name;
     $section =  $main[$i]->category;
