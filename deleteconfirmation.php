@@ -62,7 +62,7 @@ if(isset($_POST['delete'])){
             <h1 style="text-align: center">Confirmation of User Deletion</h1>
             <link rel="stylesheet" type="text/css" href="product-backend.css">
 
-            <nav class="navbar">
+            <nav class="navbar-links">
             <div class="brand-title"><a href="index.php"><img src="images/atozmarketplace.jpg"></a></div>
             <a href="#" class="toggle-button">
                 <span class="bar"></span>

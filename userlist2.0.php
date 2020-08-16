@@ -18,7 +18,7 @@
 <link rel="stylesheet" type="text/css" href="product-backend.css">
 <script type = "text/javascript" src="userlistdelete.js"></script>
 
-<nav class="navbar">
+<nav class="navbar-links">
             <div class="brand-title"><a href="index.php"><img src="images/atozmarketplace.jpg"></a></div>
             <a href="#" class="toggle-button">
                 <span class="bar"></span>
