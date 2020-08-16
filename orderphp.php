@@ -10,7 +10,7 @@ if(isset($_POST['btn1'])){
   $ordercount=(int)$xml2->ordercount;
 
 
-   echo"<script type='text/javascript'>alert($ordercount);</script>";
+   
    $main = json_decode($_SESSION['cart']);
    //if($_SESSION['order']== null){
    //$_SESSION['order']=1;
