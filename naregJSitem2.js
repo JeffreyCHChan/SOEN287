@@ -143,5 +143,17 @@ function totalPrice() {
    
 
 }
+
+function cartadd(){
+var c=localStorage.getItem('itemList2');
+c= c.match(/\d{1,}(?=}])/);
+if(c!=null){
+document.getElementById('quan').value=c;
+document.getElementById('form').submit();
+
+}
+}
+
+
  
 
