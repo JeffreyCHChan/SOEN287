@@ -21,7 +21,6 @@
         $xpath = new DOMXPATH($xml);
         $_SESSION['edit']="yes";
 
-        echo "ADMIN BUTTON AUTOMATICALLY UNCHECKED ON EDIT";
 
         foreach($xpath->query("/users/user[username='$username']") as $node){
 
@@ -240,7 +239,11 @@
     <title>User_edit</title>
     <link rel="stylesheet" type="text/css" href="product-backend.css">
 
-    <nav class="navbar-links">
+    
+</head>
+<body>
+
+    <nav class="navbar">
             <div class="brand-title"><a href="index.php"><img src="images/atozmarketplace.jpg"></a></div>
             <a href="#" class="toggle-button">
                 <span class="bar"></span>
@@ -278,8 +281,12 @@
             </div>
             
         </nav>
-</head>
-<body>
+
+        <div style="margin-top:150px;"> 
+
+        <p style="text-align:center">ADMIN BUTTON AUTOMATICALLY UNCHECKED ON EDIT</p>
+    
+        
 
     <div style="text-align: center">
         <h2> User Add/Edit </h2>
