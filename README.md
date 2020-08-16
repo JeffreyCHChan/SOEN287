@@ -6,8 +6,8 @@
 
 # Login Info
 
-# #Admin
-
+## Admin
+ 
 ## Customer
 
 ### Aisles
