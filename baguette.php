@@ -15,7 +15,7 @@
 <header>
     <nav class="navbar">
         <div class="brand-title">
-            <a href="index.php"><img src="images/atozmarketplace.jpg"></a>
+            <a href="index.html"><img src="images/atozmarketplace.jpg"></a>
         </div>
         <a href="#" class="toggle-button">
             <span class="bar"></span>
@@ -27,11 +27,11 @@
             <ul>
                 <select onchange="window.location.href=this.value" style="color:white; background-color: rgb(82,79,79);"> 
                         <option>Select Aisle</option>
-                        <option value="beverages.php">Beverages</option>
-                        <option value="fruits.php">Fruits</option>
-                        <option value="vegetables.php">Vegetables</option>
-                        <option value="baked-goods.php">Baked Goods</option>
-                        <option value="meats.php">Meats</option>
+                        <option value="beverages.html">Beverages</option>
+                        <option value="fruits.html">Fruits</option>
+                        <option value="vegetables.html">Vegetables</option>
+                        <option value="baked-goods.html">Baked Goods</option>
+                        <option value="meats.html">Meats</option>
                     </select>
                     <?php
                         if (isset($_SESSION['admin']) && $_SESSION['admin'] == "yes"){
@@ -44,7 +44,7 @@
                             echo '<li><a href="signin.php"><i class="fa fa-unlock-alt"></i>Login</a></li>';
                         }
                     ?>
-                <li><a href="shoppingcart.php"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>
+                <li><a href="shoppingcart.html"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>
 
             </ul>
         </div>
@@ -65,12 +65,17 @@
             <p class="brand">AtoZ FreshMarket</p>
             <p class="product">Baguette</p>
             <p class="price">$1.99 ea.</p>
-            <p class="calcPrice" hidden>1.99</p>
+            <p class="calcPrice" >1.99</p>
             <p class="size">(120 g avg.)</p>
 
             <br>
-            <button class="cart-btn" data-action="AddToCart">Add to Cart</button>
+
+            <button  type="button" class="cart-btn" data-action="AddToCart" onclick="cartadd()">Add to Cart</button>
             <br>
+            <form action="" method="post" id="form">
+                <input type="hidden" name="name" value="Baguette">
+                <input type="hidden" name="Quantity" value="0" id="quan">
+            </form>
             <div class="itemCartInfo"></div>
             <hr>
             <p class="descriptionHeader">Product Description</p>
@@ -98,6 +103,11 @@
         </div>
     </div>
     <script src="naregJSitem2.js"></script>
+
+    <?php
+    include 'additem.php';
+    ?>
+
 
 </body>
 
