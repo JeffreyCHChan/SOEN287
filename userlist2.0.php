@@ -17,6 +17,45 @@
 <head>
 <link rel="stylesheet" type="text/css" href="product-backend.css">
 <script type = "text/javascript" src="userlistdelete.js"></script>
+
+<nav class="navbar">
+            <div class="brand-title"><a href="index.php"><img src="images/atozmarketplace.jpg"></a></div>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+    
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <select onchange="window.location.href=this.value" style="color:white; background-color: rgb(82,79,79);"> 
+                        <option value="aisle.php">Select Aisle</option>
+                        <option value="beverages.php">Beverages</option>
+                        <option value="fruits.php">Fruits</option>
+                        <option value="vegetables.php">Vegetables</option>
+                        <option value="baked-goods.php">Baked Goods</option>
+                        <option value="meats.php">Meats</option>
+                    </select>
+
+                    <?php   
+                        if (isset($_SESSION['admin']) && $_SESSION['admin'] == "yes"){
+                            echo '<li><a href="admin.php"><i class="fa fa-cogs" aria-hidden="true"></i>Admin</a></li>';
+                        }
+                        
+                        if (isset($_SESSION['username'])){
+                            echo '<li><a href="signout.php"><i class="fa fa-unlock-alt"></i>Log Out</a></li>';
+                        } else {
+                            echo '<li><a href="signin.php"><i class="fa fa-unlock-alt"></i>Login</a></li>';
+                        }
+                ?>
+
+                    
+                    <li><a href="shoppingcart.php"><i class="fa fa-shopping-cart" ></i> My Cart</a></li>  
+                 
+                </ul>  
+            </div>
+            
+        </nav>
 </head>
 
 <header>
