@@ -1,11 +1,14 @@
 <?php /* Nareg Mouradian 40044254 */ 
-
-    session_start();        
+session_start(); 
+if (!isset($_SESSION['admin']) || $_SESSION['admin'] != "yes"){
+    header ('location: index.php');
+}
+     
 
     if(isset($_POST['delete'])){
 
         $xml = new DOMDocument("1.0", "UTF-8");
-        $xml->load('naregOrderList.xml');
+        $xml->load('orderxml.xml');
 
         $orderid=$_GET['order'];
         $xpath = new DOMXPATH($xml);
@@ -15,7 +18,7 @@
         }
 
         $xml->formatoutput=true;
-        $xml->save('naregOrderList.xml');
+        $xml->save('orderxml.xml');
         
         header("Location: order-list.php");
     }

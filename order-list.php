@@ -1,6 +1,10 @@
 <!--Nareg Mouradian 40044254-->
 <?php 
-    session_start();        
+    session_start(); 
+    if (!isset($_SESSION['admin']) || $_SESSION['admin'] != "yes"){
+        header ('location: index.php');
+    }
+    
 ?>
 <html lang="en">
     <head>
@@ -26,7 +30,7 @@
 
         <?php
 
-$xml = simplexml_load_file('naregOrderList.xml') or die("Error: Cannot create an object");
+$xml = simplexml_load_file('orderxml.xml') or die("Error: Cannot create an object");
 foreach($xml->children() as $order) {
         echo "<tr>";
         echo "<td>$order->orderid</td>";

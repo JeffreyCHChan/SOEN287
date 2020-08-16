@@ -1,10 +1,15 @@
 <!--Nareg Mouradian 40044254-->
-<?php
+<?php 
+    session_start(); 
+    if (!isset($_SESSION['admin']) || $_SESSION['admin'] != "yes"){
+        header ('location: index.php');
+    }
+    
    $orderid = $username ="";
    $name = $quantity = $section = $price = "";
-   $order = simplexml_load_file("naregOrderList.xml");
+   $order = simplexml_load_file("orderxml.xml");
    $xml = new DOMDocument("1.0", "UTF-8");
-   $xml->load('naregOrderList.xml');
+   $xml->load('orderxml.xml');
    $orderid=$_GET['order'];
    $xpath = new DOMXPATH($xml);
    $_SESSION['edit']="yes";
@@ -70,7 +75,7 @@
  
  </form>
     </table>
-    <!-- <form action="order-list.php" method="get" ></form> -->
+  
     <input type="submit" value="Save" name="saveC">
 
  
@@ -92,7 +97,7 @@ $i = 0;
     }   
    }  
 
-file_put_contents("naregOrderList.xml" , $order->saveXML());
+file_put_contents("orderxml.xml" , $order->saveXML());
 
 header("Location: order-list.php");
 }
